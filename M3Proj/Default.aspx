@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <h1>
             <span class="newStyle1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img alt="logo " class="auto-style1" src="logos/logo.jpeg" />Change2</span></h1>
+            <img alt="logo " class="auto-style1" src="logos/logo.jpeg" />Change3</span></h1>
         <p class="lead">&nbsp;</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more About us»</a></p>
     </div>
