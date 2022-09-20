@@ -91,6 +91,11 @@ namespace M3Proj
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Account/Login.aspx");
+        }
     }
 
 }

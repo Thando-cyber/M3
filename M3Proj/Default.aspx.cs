@@ -6,11 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Timers;
+
 namespace M3Proj
 {
     public partial class _Default : Page
     {
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,7 +21,7 @@ namespace M3Proj
             string query2 = "SELECT* FROM Teachers where teach_email = @email2";
 
             SqlConnection con = new SqlConnection(conString);
-            SqlCommand command = new SqlCommand(query1,con);
+            SqlCommand command = new SqlCommand(query1, con);
             SqlCommand command2 = new SqlCommand(query2, con);
             DataTable dt = new DataTable();
             DataTable dt2 = new DataTable();
@@ -37,10 +39,19 @@ namespace M3Proj
                 Session["userType"] = "student";
             }
 
-            else if(dt2.Rows.Count > 0){
+            else if (dt2.Rows.Count > 0)
+            {
                 Session["userType"] = "teacher";
             }
-                
+
+
+
+
         }
-    }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Account/Login.aspx");
+        }
+    }      
 }

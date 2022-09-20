@@ -1,0 +1,105 @@
+﻿.loginForm{
+display:flex;
+justify-content:center;
+align-items:center;
+background:#eeeeee;
+height:85vh;
+
+}
+
+.form{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    background:red;
+    width:62%;
+    height:73vh;
+    border-radius:15px;
+
+}
+
+.box1{
+    background-color:white;
+    width:52%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    
+    
+ 
+}
+
+.panel{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:48%;
+    background-color:#F9FAFC;
+    padding-bottom:30px;
+}
+
+.formgroup{
+    padding-left:80px;
+    
+}
+
+.logincontrol{
+    width:290px;
+    border-radius:5px;
+    border:1px solid;
+    height:25px;
+    padding-left:8px;
+}
+
+.container1{
+    margin-top:50px;
+    margin-bottom:20px;
+}
+
+.lbl{
+    margin-bottom:8px;
+    font-family:Poppins;
+}
+
+.loginBtn{
+    margin-top:10px;
+    width:290px;
+    height:27px;
+    font-size:16px;
+    background-color:#407BFF;
+    border:none;
+    border-radius:5px;
+    color:white;
+}
+
+.loginBtn:hover{
+     background-image:linear-gradient(to bottom right,#8c97ef,#dddaf7);
+}
+
+.head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    width:270px;
+}
+
+.head h1{
+    font-size:21px;
+    margin-right:12px;
+}
+
+.head .reglink{
+    color:blue;
+}
+
+.panel img{
+  height:80%;
+}
+
+.container4{
+    margin-bottom:18px;
+}
+
+

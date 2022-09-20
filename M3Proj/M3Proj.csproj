@@ -199,13 +199,25 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="CSS\defaultstyle.css" />
+    <Content Include="CSS\loginstyle.css" />
+    <Content Include="CSS\masterstyle.css" />
     <Content Include="logos\logo.jpeg" />
+    <Content Include="Photos\1.jpg" />
+    <Content Include="Photos\2.jpg" />
+    <Content Include="Photos\3.jpg" />
+    <Content Include="Photos\4.jpg" />
+    <Content Include="Photos\5.jpg" />
+    <Content Include="Photos\6.jpg" />
+    <Content Include="Photos\academics.jpg" />
+    <Content Include="Photos\culture.jpg" />
+    <Content Include="Photos\download-removebg-preview.png" />
+    <Content Include="Photos\manage.jpg" />
+    <Content Include="Photos\Privacy policy-rafiki.svg" />
+    <Content Include="Photos\sport.jpg" />
     <Content Include="Teacher.aspx" />
     <Content Include="teacherstyle.css" />
     <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -428,7 +440,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
