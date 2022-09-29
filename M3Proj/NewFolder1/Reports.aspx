@@ -17,7 +17,7 @@
     <br />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         
-    <rsweb:ReportViewer ID="ReportViewer4" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" style="text-align: center">
+    <rsweb:ReportViewer ID="ReportViewer4" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" style="text-align: center" Height="1310px" Width="964px">
         <localreport reportpath="NewFolder1\academicResults.rdlc">
             <datasources>
                 <rsweb:ReportDataSource DataSourceId="ReportDataSource" Name="DataSet1" />

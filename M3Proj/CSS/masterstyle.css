@@ -1,4 +1,12 @@
 ﻿
+
+.school_logo {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    
+}
 * {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;

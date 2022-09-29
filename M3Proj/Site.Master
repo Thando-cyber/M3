@@ -98,7 +98,7 @@
                     <!-- logo -->
                     <div class="box_size">
                         <div class="school_logo">
-                            <a href="~/"> <img runat="server" src="Photos/download-removebg-preview.png" /> </a> 
+                            <a href="Default.aspx"> <img runat="server" src="Photos/download-removebg-preview.png" /> </a> 
                         </div>
                     </div>
 
@@ -118,9 +118,9 @@
                     <div class="box_size">
                         <div>Follow Us:</div>
                             <div class="follow">
-                                <li><a href="">Instagram</a></li>
-                                <li><a href="">Facebook</a></li>
-                                <li><a href="">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/explore/locations/393800642/south-africa/pietermaritzburg-kwazulu-natal/kharina-secondary-school/?hl=en">Instagram</a></li>
+                                <li><a href="https://m.facebook.com/profile.php?id=352684331434050">Facebook</a></li>
+                                <li><a href="~/">Twitter</a></li>
                             </div>
                     </div>
                 </div>
