@@ -43,7 +43,6 @@ namespace M3Proj
 
                 Session["userType"] = "student";
             }
-
             else if (dt2.Rows.Count > 0)
             {
                 Session["userType"] = "teacher";
