@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Reports" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="M3Proj.NewFolder1.Reports" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Reports.aspx.cs" Inherits="Reports" %>
+<%@ Page Title="Reports" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="M3Proj.NewFolder1.Reports" %>
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 <%@ Register assembly="Microsoft.ReportViewer.WebForms" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -33,7 +34,6 @@
     </rsweb:ReportViewer>
     <asp:SqlDataSource ID="ReportDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT student.classID, subjectResults.*, classes.* FROM student INNER JOIN subjectResults ON student.stu_ID = subjectResults.studentID INNER JOIN classes ON student.classID = classes.class_id "></asp:SqlDataSource>
     <br />
-   
     <br />
     <br />
     <br />

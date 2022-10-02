@@ -49,5 +49,19 @@ namespace M3Proj.NewFolder1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource ReportDataSource;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new M3Proj.SiteMaster Master
+        {
+            get
+            {
+                return ((M3Proj.SiteMaster)(base.Master));
+            }
+        }
     }
 }

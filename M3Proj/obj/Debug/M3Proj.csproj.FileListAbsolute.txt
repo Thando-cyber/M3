@@ -404,7 +404,7 @@ C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\M3Proj.dll.config
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.SqlServer.Types.dll
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.WinForms.DLL
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.WebForms.DLL
-C:\Users\Makro\source\repos\M3Proj3\M3Proj\obj\Debug\RdlCompile.cache
-C:\Users\Makro\source\repos\M3Proj3\M3Proj\obj\Debug\RdlCompile.compiled
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.Common.dll
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Makro\source\repos\M3Proj3\M3Proj\obj\Debug\RdlCompile.cache
+C:\Users\Makro\source\repos\M3Proj3\M3Proj\obj\Debug\RdlCompile.compiled
