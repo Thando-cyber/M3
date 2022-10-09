@@ -80,6 +80,11 @@ namespace M3Proj
                 dropdown1.Visible= true;
 
             }
+            else if (Session["userType"].ToString().Equals("Admin"))
+            {
+                dropdown1.Visible = true;
+                dropdown.Visible = true;
+            }
              else {
                 dropdown1.Visible = false;
                 dropdown.Visible= false;

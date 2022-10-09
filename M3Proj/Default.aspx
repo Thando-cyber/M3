@@ -26,11 +26,6 @@
          <div  class ="headerimg">
              <img src="Photos/1.jpg" />
          </div>
-       
-
-
- 
-      
           
   </section>
 
@@ -111,7 +106,7 @@
 		         school fees and doing other reasonable forms of fund-raising. The school fund is a<br>
 		          combination of school fees, the fundraising money and donations. 
               </p>
-                <a runat="server" href="~/About"><button>Read more about Kharina</button></a>      
+                <a runat="server" href="~/About"><a button>Read more about Kharina</a></a>      
              
           </div>
 

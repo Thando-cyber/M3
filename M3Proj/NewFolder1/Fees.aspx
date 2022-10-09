@@ -3,6 +3,7 @@
     <br />
     <br />
     <br />
+    &nbsp;
     <br />
     <br />
     <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="769px">
@@ -16,6 +17,7 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#00547E" />
     </asp:GridView>
+    &nbsp;&nbsp;&nbsp;
     <br />
     <br />
     <br />

@@ -17,10 +17,17 @@
   
     
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="CSS/footer.css" rel="stylesheet" />
       <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
             <link rel ="stylesheet" href="teacherstyle.css" />
           
+          
           </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <link rel ="stylesheet" href="teacherstyle.css" />
+          
+          </asp:ContentPlaceHolder>
+
     
 
 </head>
@@ -42,21 +49,31 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About.aspx">About</a></li>
                         <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
-                        <li class="nav-item dropdown" id="dropdown" runat ="server">
-                            <a class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#">Students<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/NewFolder1/Report.aspx">Payments</a></li>
+
+                        <li class="dropdown" id="dropdown" runat ="server">
+                            <a class="dropbtn" href="#" >Students<span class="caret"></span></a>
+                            <ul class="dropdown-content">
+                                <li><a runat="server" href="~/NewFolder1/Payments.aspx">Payments</a></li>
                                 <li><a runat="server" href="~/NewFolder1/Fees.aspx">Fees</a></li>
+                            
                             </ul>
                         </li>
-                        <li class="nav-item dropdown" id="dropdown1" runat ="server">
+                        <!--asp:DropDownList ID="DropDownList1" runat="server">
+                                <asp:ListItem Text="Item 1" Value="/NewFolder1/Teacher.aspx"/>
+                                <asp:ListItem Text="Item 2" Value="/NewFolder1/Subjects.aspx"/>
+                                <asp:ListItem Text="Item 3" Value="3"/>
+                                <asp:ListItem Text="Item 4" Value="4"/>
+                                <asp:ListItem Text="Item 5" Value="5"/>
+                        </!--asp:DropDownList-->
+                        <li class="dropdown" id="dropdown1" runat ="server">
                              <a class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#">Teacher<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Teacher.aspx">Students</a></li>
+                            <ul class="dropdown-content">
+                                <li><a runat="server" href="~/NewFolder1/Teacher.aspx">Students</a></li>
                                 <li><a runat="server" href="~/NewFolder1/Subjects.aspx">Subjects</a></li>
                             </ul>
                         </li>
                     </ul>
+                    
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="navright">
@@ -80,11 +97,42 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
+
         </div>
+
+        <footer>
+                <div class="footer_area">
+                    <!-- logo -->
+                    <div class="box_size">
+                        <div class="school_logo">
+                            <a href="Default.aspx"> <img runat="server" src="Photos/download-removebg-preview.png" /> </a> 
+                        </div>
+                    </div>
+
+                    
+                    <!-- menu -->
+                    <div class="box_size">
+                        <div>Menu:</div>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="About.aspx">About Us</a></li>
+                                <li><a href="Contact.aspx">Contact Us</a></li>
+                                <li><a href="~/Account/Login.aspx">Log In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="box_size">
+                        <div>Follow Us:</div>
+                            <div class="follow">
+                                <li><a href="https://www.instagram.com/explore/locations/393800642/south-africa/pietermaritzburg-kwazulu-natal/kharina-secondary-school/?hl=en">Instagram</a></li>
+                                <li><a href="https://m.facebook.com/profile.php?id=352684331434050">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                            </div>
+                    </div>
+                </div>
+                <p class="copyright">&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
     </form>
 </body>
 </html>
