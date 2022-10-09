@@ -406,5 +406,3 @@ C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.WinForms.D
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.WebForms.DLL
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.Common.dll
 C:\Users\Makro\source\repos\M3Proj3\M3Proj\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
-C:\Users\Makro\source\repos\M3Proj3\M3Proj\obj\Debug\RdlCompile.cache
-C:\Users\Makro\source\repos\M3Proj3\M3Proj\obj\Debug\RdlCompile.compiled
