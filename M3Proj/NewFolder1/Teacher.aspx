@@ -23,7 +23,7 @@
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="stu_ID" HeaderText="Student ID" ReadOnly="True" SortExpression="stu_ID" />
-                    <asp:BoundField DataField="classID" HeaderText="Class" SortExpression="classID" />
+                    <asp:BoundField DataField="classID" HeaderText="Class ID" SortExpression="classID" />
                     <asp:BoundField DataField="stu_name" HeaderText="Name" SortExpression="stu_name" />
                     <asp:BoundField DataField="stu_surname" HeaderText="Surname" SortExpression="stu_surname" />
                     <asp:BoundField DataField="stu_address" HeaderText="Address" SortExpression="stu_address" />
