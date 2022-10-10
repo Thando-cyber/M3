@@ -10,7 +10,7 @@
                   Kharina Secondary School is a traditional high school<br />
                   based in Pietermariztburg, South Africa.<br /> 
                   Founded in 1930, we are committed to the best practice<br />
-                  for students in all aspects of our school.<br />
+                  for students in all aspect of our school.<br />
                   The values we instil in our students guide them on their journey<br />
                   to adulthood and finding their purpose.
               </p>
