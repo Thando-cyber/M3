@@ -70,25 +70,34 @@ namespace M3Proj
         protected void Page_Load(object sender, EventArgs e)
         {
             dropdown1.Visible = false;
-            dropdown.Visible = false;
-
+            dropdown2.Visible = false;
+            dropdown3.Visible = false;
+            dropdown4.Visible = false;
             if (Session["userType"].ToString().Equals("student")) {
-                dropdown.Visible = true;
-            
-            }else if(Session["userType"].ToString().Equals("teacher"))
+                dropdown1.Visible = true;
+                dropdown2.Visible = true;
+
+            }
+            else if(Session["userType"].ToString().Equals("teacher"))
             {
-                dropdown1.Visible= true;
+                dropdown3.Visible= true;
+                dropdown4.Visible = true;
 
             }
             else if (Session["userType"].ToString().Equals("Admin"))
             {
                 dropdown1.Visible = true;
-                dropdown.Visible = true;
+                dropdown2.Visible = true;
+                dropdown3.Visible = true;
+                dropdown4.Visible = true;
             }
-             else {
+            else 
+            {
                 dropdown1.Visible = false;
-                dropdown.Visible= false;
-             }
+                dropdown2.Visible= false;
+                dropdown3.Visible = false;
+                dropdown4.Visible = false;
+            }
 
         }
 

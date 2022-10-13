@@ -52,9 +52,6 @@ namespace M3Proj
                 Session["userType"] = "Admin";
             }
 
-
-
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)

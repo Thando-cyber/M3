@@ -49,23 +49,10 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About.aspx">About</a></li>
                         <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
-
-                        <li class="dropdown" id="dropdown" runat ="server">
-                            <a class="dropbtn" href="#" >Students<span class="caret"></span></a>
-                            <ul class="dropdown-content">
-                                <li><a runat="server" href="~/NewFolder1/Payments.aspx">Payments</a></li>
-                                <li><a runat="server" href="~/NewFolder1/Fees.aspx">Fees</a></li>
-                            
-                            </ul>
-                        </li>
-                        
-                        <li class="dropdown" id="dropdown1" runat ="server">
-                             <a class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#">Teacher<span class="caret"></span></a>
-                            <ul class="dropdown-content">
-                                <li><a runat="server" href="~/NewFolder1/Teacher.aspx">Students</a></li>
-                                <li><a runat="server" href="~/NewFolder1/Subjects.aspx">Subjects</a></li>
-                            </ul>
-                        </li>
+                        <li class="dropdown" id="dropdown1" runat="server"><a runat="server" href="~/NewFolder1/Payments.aspx">Payments</a></li>
+                        <li class="dropdown" id="dropdown2" runat="server"><a runat="server" href="~/NewFolder1/Fees.aspx">Fees</a></li>
+                        <li class="dropdown" id="dropdown3" runat="server"><a runat="server" href="~/NewFolder1/Teacher.aspx">Students</a></li>
+                        <li class="dropdown" id="dropdown4" runat="server"><a runat="server" href="~/NewFolder1/Subjects.aspx">Subjects</a></li>
                     </ul>
                     
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
