@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Teacher.aspx.cs" Inherits="M3Proj.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <link rel="stylesheet" href="teacherstyle.css" />
+    <link rel="stylesheet" href="\teacherstyle.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -21,6 +21,7 @@
         <div class ="gridbox">
             <asp:GridView ID="GridView1" CssClass="mydatagrid" PagerStyle-CssClass="pager"  HeaderStyle-CssClass="header"  RowStyle-CssClass="rows" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" DataKeyNames="stu_ID" DataSourceID="SqlDataSource2">
                 <Columns>
+
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="stu_ID" HeaderText="Student ID" ReadOnly="True" SortExpression="stu_ID" />
                     <asp:BoundField DataField="classID" HeaderText="Class ID" SortExpression="classID" />

@@ -73,9 +73,11 @@ namespace M3Proj
             dropdown2.Visible = false;
             dropdown3.Visible = false;
             dropdown4.Visible = false;
+            dropdown5.Visible = false;
             if (Session["userType"].ToString().Equals("student")) {
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
+                
 
             }
             else if(Session["userType"].ToString().Equals("teacher"))
@@ -90,6 +92,7 @@ namespace M3Proj
                 dropdown2.Visible = true;
                 dropdown3.Visible = true;
                 dropdown4.Visible = true;
+                dropdown5.Visible = true;
             }
             else 
             {
@@ -97,6 +100,7 @@ namespace M3Proj
                 dropdown2.Visible= false;
                 dropdown3.Visible = false;
                 dropdown4.Visible = false;
+                dropdown5.Visible = false;
             }
 
         }
