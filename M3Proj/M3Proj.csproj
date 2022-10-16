@@ -220,6 +220,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="CSS\about_contact.css" />
     <Content Include="CSS\defaultstyle.css" />
     <Content Include="CSS\footer.css" />
     <Content Include="CSS\loginstyle.css" />
