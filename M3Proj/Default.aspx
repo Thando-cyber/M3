@@ -4,14 +4,18 @@
         
     <section class ="s1">
 
+        
+        <div class="welcomeArea">
+
+
           <div class ="lines">
                <h1> Welcome to <br /> Kharina Secondary School <br /> Management System </h1>
               <p>
-                  Kharina Secondary School is a traditional high school<br />
-                  based in Pietermariztburg, South Africa.<br /> 
-                  Founded in 1930, we are committed to the best practice<br />
-                  for students in all aspect of our school.<br />
-                  The values we instil in our students guide them on their journey<br />
+                  Kharina Secondary School is a traditional high school
+                  based in Pietermariztburg, South Africa.
+                  Founded in 1930, we are committed to the best practice
+                  for students in all aspect of our school.
+                  The values we instil in our students guide them on their journey
                   to adulthood and finding their purpose.
               </p>
 
@@ -27,17 +31,18 @@
              <img src="Photos/1.jpg" />
          </div>
           
+    </div>
   </section>
 
-    <h1 class="heading"> Main Pillars of the school</h1>
+    <h1 class="heading"> Main Pillars of the School</h1>
      <section class =" categorybox">
          
       <div class ="boxes">
           <img src ="Photos/academics.jpg" />
           <div class="title"><h2> ACADEMICS</h2> </div>
           <div class="words"><p> Academic achievement is important for the successful development
-               of young people in society. <br />
-              Students who do well in school are better<br />
+               of young people in society. 
+              Students who do well in school are better
               able to make the transition into adulthood </p> </div>
           
       </div>
@@ -45,26 +50,26 @@
        <div class ="boxes">
           <img src ="Photos/sport.jpg" />
           <div class="title"><h2> SPORT</h2> </div>
-          <div class="words"> <p>Sport allows learners an opportunity to express themselves <br />
+          <div class="words"> <p>Sport allows learners an opportunity to express themselves
               and connect with other people. The social benefits play a vital role
-              in the development of the learner <br />
-              in society by teaching them <br />
+              in the development of the learner 
+              in society by teaching them 
               how to contribute to a team.</p> </div>
       </div>
 
        <div class ="boxes">
           <img src ="Photos/culture.jpg" />
           <div class="title"><h2> CULTURE</h2> </div>
-           <div class="words"><p> culture can improve students' ability to learn<br />
-                by creating a positive environment that builds<br />
+           <div class="words"><p> culture can improve students' ability to learn
+                by creating a positive environment that builds
                 relationships among students and teachers.</p> </div>
       </div>
 
        <div class ="boxes">
           <img src="Photos/manage.jpg" />
           <div class="title"><h2> MANAGEMENT</h2> </div>
-           <div class="words"><p> School managers shape the teachers development,<br />
-                determine the educational goals of the school,<br />
+           <div class="words"><p> School managers shape the teachers development,
+                determine the educational goals of the school,
                 direct educational applications to achieve educational .</p> </div>
       </div>
 
@@ -76,9 +81,9 @@
                <h1> Kharina Secondary School stories. </h1>
                 <div class="dash1"></div>
               <p>
-                  Here, we endeavour to celebrate and inspire every one of our more than 500<br /> 
-                  diversely talented young students. Boys and Girls from across South Africa<br />
-                  come here to immerse themselves in a rare,<br />
+                  Here, we endeavour to celebrate and inspire every one of our more than 500 
+                  diversely talented young students. Boys and Girls from across South Africa
+                  come here to immerse themselves in a rare,
                   intentional blend of experiences that inspire self-knowledge, expansion and generosity.
               </p>
                         
@@ -101,12 +106,12 @@
                <h1> About Kharina Secondary School. </h1>
                 <div class="dash2"></div>
               <p>
-                  Kharina Secondary is a public school, a quintile level 5 and a Fee-Paying school.<br />
-		          The main source of income for the school is through government funding, by charging<br />
-		         school fees and doing other reasonable forms of fund-raising. The school fund is a<br>
+                  Kharina Secondary is a public school, a quintile level 5 and a Fee-Paying school.
+		          The main source of income for the school is through government funding, by charging
+		         school fees and doing other reasonable forms of fund-raising. The school fund is a
 		          combination of school fees, the fundraising money and donations. 
               </p>
-                <a runat="server" href="~/About"><a button>Read more about Kharina</a></a>      
+                <a class="button" runat="server" href="~/About">Read more about Kharina</a>      
              
           </div>
 
