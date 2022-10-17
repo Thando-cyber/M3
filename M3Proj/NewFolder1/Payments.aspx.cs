@@ -15,25 +15,13 @@ namespace M3Proj.NewFolder1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            object email = Session["Email"];
-            string str1 = email.ToString();
-            
-            
-            char char1 = ' ';
-            foreach (char ch in str1)
-            {
-                if (ch != '@')
-                {
-                    char1 += ch;
-                }
-                else
-                {
-                    break;
-                }
-            }
-            string stu = char1.ToString();
-            int x = Convert.ToInt32(stu);
-            object obj = x;
+            //object email = Session["Email"];
+            string str1 = Session["Email"].ToString();
+            int n1 = str1.IndexOf("@");
+            string str2 = str1.Substring(0, n1);
+
+
+            object obj = str2;
             //Session["ID"] = stu;              
 
             string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";

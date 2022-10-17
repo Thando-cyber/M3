@@ -7,7 +7,7 @@
     <div _designerregion="0">
     </div>
     <br />
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+    <asp:GridView ID="GridView1" runat="server">
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [PaymentService] WHERE ([stu_ID] = @stu_ID)">
         <SelectParameters>
