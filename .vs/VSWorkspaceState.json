@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\M3Proj",
+    "\\M3Proj\\CSS"
   ],
-  "SelectedNode": "\\M3Proj.sln",
+  "SelectedNode": "\\M3Proj\\Site.Master.cs",
   "PreviewInSolutionExplorer": false
 }
