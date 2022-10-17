@@ -21,6 +21,7 @@ namespace M3Proj
         {
             Session.Add("Email", "");
             Session.Add("userType", "");
+            Session.Add("ID","");
             
             // Code that runs on application startup
             //RouteConfig.RegisterRoutes(RouteTable.Routes);
