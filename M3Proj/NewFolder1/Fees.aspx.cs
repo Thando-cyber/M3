@@ -38,9 +38,6 @@ namespace M3Proj.NewFolder1
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
