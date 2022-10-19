@@ -19,7 +19,20 @@
     <section class ="s1">
 
         <div class ="gridbox">
-            <asp:GridView ID="GridView1" CssClass="mydatagrid" PagerStyle-CssClass="pager"  HeaderStyle-CssClass="header"  RowStyle-CssClass="rows" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            <asp:GridView ID="GridView1" CssClass="mydatagrid" PagerStyle-CssClass="pager"  HeaderStyle-CssClass="header"  RowStyle-CssClass="rows" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" DataKeyNames="stu_ID" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="stu_ID" HeaderText="Student ID" ReadOnly="True" SortExpression="stu_ID" />
+                    <asp:BoundField DataField="classID" HeaderText="Class ID" SortExpression="classID" />
+                    <asp:BoundField DataField="stu_name" HeaderText="Name" SortExpression="stu_name" />
+                    <asp:BoundField DataField="stu_surname" HeaderText="Surname" SortExpression="stu_surname" />
+                    <asp:BoundField DataField="stu_address" HeaderText="Address" SortExpression="stu_address" />
+                    <asp:BoundField DataField="stu_email" HeaderText="Email" SortExpression="stu_email" />
+                    <asp:BoundField DataField="stu_age" HeaderText="Age" SortExpression="stu_age" />
+                    <asp:BoundField DataField="stu_gender" HeaderText="Gender" SortExpression="stu_gender" />
+                    <asp:BoundField DataField="stu_Fees" HeaderText="Fees" SortExpression="stu_Fees" />
+                    <asp:BoundField DataField="parentContact" HeaderText="Contact" SortExpression="parentContact" />
+                </Columns>
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -30,6 +43,12 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [student] WHERE ([classID] = @classID)">
+                <SelectParameters>
+                    <asp:SessionParameter DefaultValue="0" Name="classID" SessionField="classID" Type="Int32" />
+                    
+                </SelectParameters>
+            </asp:SqlDataSource>
             <br />
             <asp:GridView ID="GridView2" runat="server">
             </asp:GridView>

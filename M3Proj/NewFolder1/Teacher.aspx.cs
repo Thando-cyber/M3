@@ -22,7 +22,7 @@ namespace M3Proj
             string email = Session["Email"].ToString();
             command.Parameters.AddWithValue("@email", Session["Email"].ToString());
             //int total = (int)command.ExecuteScalar();
-
+  
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable DT = new DataTable();
             DataSet ds = new DataSet();
@@ -37,12 +37,9 @@ namespace M3Proj
             
             
                 
-            div1.Controls.Add(new LiteralControl("<h1>" +Session["Email"].ToString()+ "</h1>"));
+            /*div1.Controls.Add(new LiteralControl("<h1>" +Session["Email"].ToString()+ "</h1>"));
             div1.Controls.Add(new LiteralControl("<h1>" +teachID+ "</h1>"));
-            
-
-            
-
+            */
 
             Session.Add("teacher", "");
 
@@ -60,8 +57,8 @@ namespace M3Proj
             }
             Session["classID"] = classId;
 
-
-            string query3 = "SELECT * FROM student WHERE classID = @classId";
+            
+            /*string query3 = "SELECT * FROM student WHERE classID = @classId";
             SqlCommand command3 = new SqlCommand(query3, con);
             command3.Parameters.AddWithValue("@classID", Session["classID"]);
             SqlDataAdapter da3 = new SqlDataAdapter(command3);
@@ -72,7 +69,7 @@ namespace M3Proj
             DT3 = data.Tables["student"];
             GridView2.DataSource = DT3;
             GridView2.DataBind();
-            con.Close();
+            con.Close();*/
         }
     }
 }

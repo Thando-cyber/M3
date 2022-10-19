@@ -69,6 +69,10 @@ namespace M3Proj
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie userInfo = new HttpCookie("userInfo");
+            userInfo["Email"] = Session["Email"].ToString();
+            userInfo["UserStatus"] = Session["userType"].ToString();
+
             dropdown1.Visible = false;
             dropdown2.Visible = false;
             dropdown3.Visible = false;

@@ -22,6 +22,7 @@ namespace M3Proj
             Session.Add("Email", "");
             Session.Add("userType", "");
             Session.Add("classID",0);
+            Session.Add("stuID","");
 
             
             // Code that runs on application startup

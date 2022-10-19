@@ -21,19 +21,19 @@ namespace M3Proj.NewFolder1
             string str2 = str1.Substring(0, n1);
 
 
-            object obj = str2;
+            Session["stuID"] = str2;
             //Session["ID"] = stu;              
 
-            string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
+            /*string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
             SqlConnection con = new SqlConnection(conString);
             string query = "SELECT * FROM PaymentService WHERE stu_ID = @ID";
             SqlCommand sqlCommand = new SqlCommand(query, con);
-            sqlCommand.Parameters.AddWithValue("@ID", obj);
+            sqlCommand.Parameters.AddWithValue("@ID", Session["stuID"]);
             SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
             da.Fill(dt);
             GridView1.DataSource = dt;
-            GridView1.DataBind();
+            GridView1.DataBind();*/
         }
     }
 }

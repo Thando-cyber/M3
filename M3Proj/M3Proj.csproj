@@ -241,7 +241,10 @@
     <Content Include="Photos\download-removebg-preview.png" />
     <Content Include="Photos\manage.jpg" />
     <Content Include="Photos\Privacy policy-rafiki.svg" />
+    <Content Include="Photos\8.jpg" />
+    <Content Include="Photos\9.jpg" />
     <Content Include="Photos\sport.jpg" />
+    <Content Include="Photos\7.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
