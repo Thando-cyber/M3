@@ -66,8 +66,9 @@
                         <AnonymousTemplate>
                             <ul class="navright">
                                 <li><a runat="server" href="~/Account/Register.aspx">Register</a></li>
-                                <li>
-                                    <asp:Button ID="Button1" CssClass="button" runat="server" Text="Log in" OnClick="Button1_Click" /></li>
+                                <li class="button">
+                                    <asp:Button ID="Button1" CssClass="button" runat="server" Text="Log in" OnClick="Button1_Click" />
+                                </li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>

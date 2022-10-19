@@ -120,15 +120,14 @@ html body{
 }
 
 .navright .button {
-    height:30px;
+    height:28px;
     width: 70px;
     background:#204cf7;
     border:none;
     border-radius:7px;
     color:white;
     cursor:pointer;
-   
-
+    margin-top: -2px;
 }
 
 .navright .button:hover{

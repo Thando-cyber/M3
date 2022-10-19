@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="auto-style1">
+    <div class="content">
 		<h2>About Kharina Secondary</h2>
         <br />
 
@@ -28,27 +28,16 @@
 		</p>
 		 <br />
 		<p>The focus of education at Kharina Secondary is to provide students with opportunities to learn and succeed in an healthy environment regardless of ability, gender, race or special need. By setting high standards of attainment, providing a broadly based and balanced curriculum, the students are taught and given the concepts, knowledge and skills to be confident in their world.</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<img alt="Group of students standing next to each other" class="auto-style2" src="Photos/7.jpg" /></p>
-
+	
+		<div class="">
+			<img alt="Group of students standing next to each other" class="auto-style2" src="Photos/7.jpg" />
+		</div>
 	</div>
+
+    
 
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <link rel ="stylesheet" href="teacherstyle.css" />
-    <style type="text/css">
-        .auto-style1 {
-            padding: 60px 0 0 60px;
-            width: 84%;
-            text-align: left;
-            margin-bottom: 30px;
-            height: 813px;
-        }
-        .auto-style2 {
-            width: 527px;
-            height: 316px;
-        }
-    </style>
+    
 </asp:Content>
 
