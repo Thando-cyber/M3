@@ -223,12 +223,32 @@
     <Content Include="CSS\about_contact.css" />
     <Content Include="CSS\defaultstyle.css" />
     <Content Include="CSS\footer.css" />
+    <Content Include="CSS\info.css" />
+    <Content Include="CSS\info2.css" />
     <Content Include="CSS\loginstyle.css" />
     <Content Include="CSS\masterstyle.css" />
+    <Content Include="logos\22002.png" />
+    <Content Include="logos\22004.png" />
+    <Content Include="logos\22005.png" />
+    <Content Include="logos\22006.png" />
+    <Content Include="logos\22007.png" />
+    <Content Include="logos\22011.png" />
+    <Content Include="logos\AndrewGreet7860.png" />
+    <Content Include="logos\CraigFedi9.png" />
+    <Content Include="logos\GeorgeMalty3515.png" />
+    <Content Include="logos\JenniferGreer7476.png" />
+    <Content Include="logos\Jones2211.png" />
+    <Content Include="logos\JSampson.png" />
     <Content Include="logos\logo.jpeg" />
+    <Content Include="logos\NosiphoZulu2345.png" />
+    <Content Include="logos\OwenWilson6688.png" />
+    <Content Include="logos\ResseGrant231.png" />
+    <Content Include="logos\RettaSmith1219.png" />
     <Content Include="NewFolder1\AdminControl.aspx" />
+    <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
     <Content Include="NewFolder1\Reports.aspx" />
+    <Content Include="NewFolder1\Geninfo.aspx" />
     <Content Include="NewFolder1\Teacher.aspx" />
     <Content Include="Photos\1.jpg" />
     <Content Include="Photos\2.jpg" />
@@ -469,6 +489,13 @@
     <Compile Include="NewFolder1\Fees.aspx.designer.cs">
       <DependentUpon>Fees.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\GeninfoChange.aspx.cs">
+      <DependentUpon>GeninfoChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\GeninfoChange.aspx.designer.cs">
+      <DependentUpon>GeninfoChange.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewFolder1\Payments.aspx.cs">
       <DependentUpon>Payments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -489,6 +516,13 @@
     </Compile>
     <Compile Include="NewFolder1\Results.aspx.designer.cs">
       <DependentUpon>Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Geninfo.aspx.cs">
+      <DependentUpon>Geninfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Geninfo.aspx.designer.cs">
+      <DependentUpon>Geninfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Subjects.aspx.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>

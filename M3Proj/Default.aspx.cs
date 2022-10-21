@@ -41,15 +41,15 @@ namespace M3Proj
             if (dt.Rows.Count > 0)
             {
 
-                Session["userType"] = "student";
+                Session["userType"] = "Student";
             }
             else if (dt2.Rows.Count > 0)
             {
-                Session["userType"] = "teacher";
+                Session["userType"] = "Teacher";
             }
             else if (dt3.Rows.Count > 0)
             {
-                Session["userType"] = "Admin";
+                Session["userType"] = "Administrator";
             }
 
         }
