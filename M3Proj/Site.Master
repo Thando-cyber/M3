@@ -50,6 +50,7 @@
                        </div> 
                         <a class="navbar-brand" runat="server" href="~/">Kharina Secondary School</a>
                 </div>
+            <div id="al" runat="server"><>
                 <div class="navlinks">
                     <ul class="navleft">
                         <li><a runat="server" href="~/">Home</a></li>

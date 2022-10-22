@@ -24,7 +24,7 @@ namespace M3Proj.NewFolder1
         public string cont = " ";
         public string FullName = " ";
         public string str2 = " ";
-        public string Title = " ";
+        public string title = " ";
         protected void Page_Load(object sender, EventArgs e)
         {
             

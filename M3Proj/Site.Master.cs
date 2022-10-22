@@ -79,6 +79,7 @@ namespace M3Proj
             dropdown4.Visible = false;
             dropdown5.Visible = false;
             dropdown6.Visible = false;
+            
 
             if (Session["userType"].ToString().Equals("Student")) {
                 dropdown1.Visible = true;

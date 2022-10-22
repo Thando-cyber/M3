@@ -9,7 +9,7 @@
                 <!-- Breadcrumb -->
                 <nav aria-label="breadcrumb" class="main-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><%= Title%> Profile</li>
+                        <li class="breadcrumb-item active" aria-current="page"><%= title%> Profile</li>
                     </ol>
                 </nav>
                 <!-- /Breadcrumb -->
@@ -41,7 +41,7 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Full Name</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div id="Name" class="col-sm-9 text-secondary" style="width:300px">
                                         <%= FullName %>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Email</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div id="Email" class="col-sm-9 text-secondary" style="width:300px">
                                         <%= Session["Email"].ToString()%>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Phone</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div id="Contact" class="col-sm-9 text-secondary" style="width:300px">
                                         <%= cont %>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Mobile</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div id="cont" class="col-sm-9 text-secondary" style="width:300px">
                                         <%= cont %>
                                     </div>
                                 </div>
@@ -77,14 +77,14 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Address</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div id="Address" class="col-sm-9 text-secondary" style="width:300px">
                                         <%= Address %>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <a class="btn btn-info " target="__blank" href="~/NewFolder1/GeninfoChange.aspx">Edit Information</a>
+                                        <a class="btn btn-info"  href="GeninfoChange.aspx">Edit Information</a>
                                     </div>
                                 </div>
                             </div>
