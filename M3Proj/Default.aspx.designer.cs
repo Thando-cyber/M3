@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M3Proj {
-    
-    
-    public partial class _Default {
-        
+namespace M3Proj
+{
+
+
+    public partial class _Default
+    {
+
         /// <summary>
         /// Button1 control.
         /// </summary>
