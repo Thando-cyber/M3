@@ -62,6 +62,9 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Full Name</h6>
                                     </div>
+                                    <div id="mthoko" runat="server">
+
+                                    </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="text" class="form-control" value="John Doe">
                                     </div>

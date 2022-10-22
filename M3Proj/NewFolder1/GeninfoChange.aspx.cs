@@ -11,6 +11,7 @@ using System.Security.Principal;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
 
+
 namespace M3Proj.NewFolder1
 {
     public partial class GeninfoChange : System.Web.UI.Page
@@ -57,6 +58,9 @@ namespace M3Proj.NewFolder1
                 }
 
                 FullName = Name + " " + Surname;
+                
+                
+                
             }
             else if (Session["userType"].ToString() == "Teacher")
             {

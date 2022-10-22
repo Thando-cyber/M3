@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M3Proj
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace M3Proj {
+    
+    
+    public partial class SiteMaster {
+        
         /// <summary>
         /// ContentPlaceHolder control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder;
-
+        
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
@@ -31,7 +29,16 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-
+        
+        /// <summary>
+        /// mthoko control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mthoko;
+        
         /// <summary>
         /// dropdown1 control.
         /// </summary>
@@ -40,7 +47,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdown1;
-
+        
         /// <summary>
         /// dropdown2 control.
         /// </summary>
@@ -49,7 +56,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdown2;
-
+        
         /// <summary>
         /// dropdown3 control.
         /// </summary>
@@ -58,7 +65,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdown3;
-
+        
         /// <summary>
         /// dropdown4 control.
         /// </summary>
@@ -67,7 +74,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdown4;
-
+        
         /// <summary>
         /// dropdown5 control.
         /// </summary>
@@ -76,7 +83,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdown5;
-
+        
         /// <summary>
         /// dropdown6 control.
         /// </summary>
@@ -85,7 +92,7 @@ namespace M3Proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdown6;
-
+        
         /// <summary>
         /// MainContent control.
         /// </summary>

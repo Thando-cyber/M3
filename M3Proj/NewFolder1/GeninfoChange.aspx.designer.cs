@@ -7,11 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M3Proj.NewFolder1
-{
-
-
-    public partial class GeninfoChange
-    {
+namespace M3Proj.NewFolder1 {
+    
+    
+    public partial class GeninfoChange {
+        
+        /// <summary>
+        /// mthoko control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mthoko;
     }
 }

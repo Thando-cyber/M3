@@ -50,6 +50,8 @@
                        </div> 
                         <a class="navbar-brand" runat="server" href="~/">Kharina Secondary School</a>
                 </div>
+
+            <div id="mthoko" runat="server"></div>
                 <div class="navlinks">
                     <ul class="navleft">
                         <li><a runat="server" href="~/">Home</a></li>
