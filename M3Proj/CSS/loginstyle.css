@@ -2,8 +2,8 @@
 display:flex;
 justify-content:center;
 align-items:center;
-background:#eeeeee;
-height:85vh;
+background:white;
+height:80vh;
 
 }
 
@@ -12,9 +12,10 @@ height:85vh;
     flex-direction:row;
     flex-wrap:wrap;
     background:red;
-    width:62%;
+    width:75%;
     height:73vh;
     border-radius:15px;
+    border:0.7px solid #dddaf7;
 
 }
 
@@ -102,4 +103,8 @@ height:85vh;
     margin-bottom:18px;
 }
 
+.page-header {
+    margin-bottom: 1rem;
+    padding: 10rem 0 6rem 0;
+}
 

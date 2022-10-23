@@ -1,128 +1,261 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="M3Proj._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-        <link rel="stylesheet" href ="CSS/defaultstyle.css" />
-    <section class ="s1">
+      
 
-        
-        <div class="welcomeArea">
-
-
-          <div class ="lines">
-               <h1> Welcome to <br /> Kharina Secondary School <br /> Management System </h1>
-              <p>
-                  Kharina Secondary School is a traditional high school
+   <div class="container-xxl bg-primary hero-header n1">
+                <div class="container">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated zoomIn"> Welcome to Kharina Secondary School  Management System </h1>
+                            <p class="text-white pb-3 animated zoomIn">Kharina Secondary School is a traditional high school
                   based in Pietermariztburg, South Africa.
                   Founded in 1930, we are committed to the best practice
                   for students in all aspect of our school.
                   The values we instil in our students guide them on their journey
-                  to adulthood and finding their purpose.
-              </p>
+                  to adulthood and finding their purpose.</p>
+                            <a href="About.aspx" class="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="img/Webinar-bro.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <!-- Navbar & Hero End -->
 
-              <div class="headerbtn">
 
-                  <asp:Button CssClass="logbtn" ID="Button1" runat="server" Text="Log in" OnClick="Button1_Click" />
-              <a runat="server" href="~/Account/Register.aspx" class="regbtn">Register</a>
-              </div>
-             
-          </div>
 
-         <div  class ="headerimg">
-             <img src="Photos/1.jpg" />
-         </div>
-          
-    </div>
-  </section>
-
-    <h1 class="heading"> Main Pillars of the School</h1>
-     <section class =" categorybox">
-         
-      <div class ="boxes">
-          <img src ="Photos/academics.jpg" />
-          <div class="title"><h2> ACADEMICS</h2> </div>
-          <div class="words"><p> Academic achievement is important for the successful development
+    <!-- Pillars -->
+        <div class="container-xxl py-6">
+            <div class="container">
+                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Our Foundations</div>
+                    <h2 class="mb-5">Main Pillars of the School</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-user-tie fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="#">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3">Academic Excellence</h5>
+                                <span>Academic achievement is important for the successful development
                of young people in society. 
-              Students who do well in school are better
-              able to make the transition into adulthood </p> </div>
-          
-      </div>
-
-       <div class ="boxes">
-          <img src ="Photos/sport.jpg" />
-          <div class="title"><h2> SPORT</h2> </div>
-          <div class="words"> <p>Sport allows learners an opportunity to express themselves
-              and connect with other people. The social benefits play a vital role
-              in the development of the learner 
-              in society by teaching them 
-              how to contribute to a team.</p> </div>
-      </div>
-
-       <div class ="boxes">
-          <img src ="Photos/culture.jpg" />
-          <div class="title"><h2> CULTURE</h2> </div>
-           <div class="words"><p> culture can improve students' ability to learn
+              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-chart-pie fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="#">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3">Sport Achievement</h5>
+                                <span>Sport allows learners an opportunity to express themselves
+                                and connect with other people</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-chart-line fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="#">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3">Culture Exploration</h5>
+                                <span>Culture can improve students' ability to learn
                 by creating a positive environment that builds
-                relationships among students and teachers.</p> </div>
-      </div>
+                relationships among students and teachers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-chart-area fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="#">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3">Financial Literacy</h5>
+                                <span>Our school prides itself for teaching the next generation to be financially savy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-balance-scale fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="#">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3">Management</h5>
+                                <span> School managers shape the teachers development,
+                                determine the educational goals of the school</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-house-damage fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="#">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3">Kindness & Love</h5>
+                                <span>Raising leaders who'll be empathetic towards others and always yern to help others</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pillars end -->
 
-       <div class ="boxes">
-          <img src="Photos/manage.jpg" />
-          <div class="title"><h2> MANAGEMENT</h2> </div>
-           <div class="words"><p> School managers shape the teachers development,
-                determine the educational goals of the school,
-                direct educational applications to achieve educational .</p> </div>
-      </div>
+
+     <!-- About Start -->
+        <div class="container-xxl py-6">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="img/Thesis-amico.svg">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">About Us</div>
+                        <h2 class="mb-4">Award Wining School in Pietermaritzburg</h2>
+                        <p class="mb-4">Kharina Secondary is a public school, a quintile level 5 and a Fee-Paying school.
+			The main source of income for the school is through government funding, by charging 
+			school fees and doing other reasonable forms of fund-raising. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod</p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12 d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-user-tie text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h6>Subjects</h6>
+                                    <span>Subject packages that include isiZulu, Tourism, Business Studies, Consumer Studies and 
+			                         Computer Applications Technology are proving to be popular </span>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-chart-line text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h6>Our Genesis</h6>
+                                    <span>Founded in 1982, Kharina Secondary School is a public secondary school located in Northdale, Pietermaritzburg</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="About.aspx">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
 
 
-    </section>
-
-    <section class ="s2">
-         <div class ="lines2">
-               <h1> Kharina Secondary School stories. </h1>
-                <div class="dash1"></div>
-              <p>
-                  Here, we endeavour to celebrate and inspire every one of our more than 500 
-                  diversely talented young students. Boys and Girls from across South Africa
-                  come here to immerse themselves in a rare,
-                  intentional blend of experiences that inspire self-knowledge, expansion and generosity.
-              </p>
-                        
-             
-          </div>
-
-         <div  class ="s2img">
-             <img src="Photos/3.jpg"/>
-         </div>
-
-    </section>
-
-      <section class ="s3">
-
-           <div  class ="s3img">
-             <img src="Photos/2.jpg"/>
-         </div>
-
-         <div class ="lines3">
-               <h1> About Kharina Secondary School. </h1>
-                <div class="dash2"></div>
-              <p>
-                  Kharina Secondary is a public school, a quintile level 5 and a Fee-Paying school.
-		          The main source of income for the school is through government funding, by charging
-		         school fees and doing other reasonable forms of fund-raising. The school fund is a
-		          combination of school fees, the fundraising money and donations. 
-              </p>
-                <a class="button" runat="server" href="~/About">Read more about Kharina</a>      
-             
-          </div>
-
-        
-
-    </section>
-   
-
+      <!-- Testimonial Start -->
+        <div class="container-xxl py-6">
+            <div class="container">
+                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Testimonial</div>
+                    <h2 class="mb-5">What The Parents Say!</h2>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Met the most pleasant and polite students. A true reflection of the teachers and members at the institute. An amazing and welcoming visit.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg">
+                            <div class="ps-3">
+                                <h6 class="mb-1">Mthokozisi Nxumalo</h6>
+                                <small>Parent</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Great boarding school for boys. Fantastic facilities and grounds</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg">
+                            <div class="ps-3">
+                                <h6 class="mb-1">Ihsaan Bhamjee</h6>
+                                <small>Parent</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Brilliant school</br>
+                            Best in southern hemisphere
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg">
+                            <div class="ps-3">
+                                <h6 class="mb-1">Thandolwethu Sithole</h6>
+                                <small>Parent</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Awesome staff and a very warm welcoming I senced solidarity between staff and management. Keep it up. Very clean environment.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg">
+                            <div class="ps-3">
+                                <h6 class="mb-1">Telamiso</h6>
+                                <small>Parent</small>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Beautiful place with a lovely atmosphere and very friendly people. Very good academic track record. Wonderful sporting facilties.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg">
+                            <div class="ps-3">
+                                <h6 class="mb-1">Chris</h6>
+                                <small>Parent</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder">
-    <link rel="stylesheet" href ="CSS/defaultstyle.css" />
+    <link rel="stylesheet" href="CSS/masterstyle.css" />
     
 </asp:Content>
 

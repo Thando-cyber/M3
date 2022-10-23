@@ -584,3 +584,8 @@ C:\Users\User\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.csproj.CoreCompileInpu
 C:\Users\User\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.csproj.CopyComplete
 C:\Users\User\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.pdb
+C:\Users\NXUMALO\Source\Repos\M3Proj3\M3Proj\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\NXUMALO\Source\Repos\M3Proj3\M3Proj\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\NXUMALO\Source\Repos\M3Proj3\M3Proj\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\NXUMALO\Source\Repos\M3Proj3\M3Proj\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\NXUMALO\Source\Repos\M3Proj3\M3Proj\bin\Microsoft.SqlServer.Types.dll

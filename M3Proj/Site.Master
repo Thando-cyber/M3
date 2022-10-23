@@ -7,7 +7,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="CSS/masterstyle.css" />
+    <meta charset="utf-8">
+  
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+  
     <link href="CSS/footer.css" rel="stylesheet" />
     <link href="CSS/loginstyle.css" rel="stylesheet" />
     <link href="CSS/teacherstyle.css" rel="stylesheet" />
@@ -16,8 +23,28 @@
     <title><%: Page.Title %> - Kharina Secondary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-   
+
+      <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="CSS/masterstyle.css" />
+   
+  
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
@@ -37,95 +64,148 @@
     
 
 </head>
-<body>
+<body class="b1">
     <form runat="server">
-        
+     <div class="container-xxl bg-white p-0">
+       
+            <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                            
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="~/Default.aspx" class="navbar-brand p-0">
+                    <h1 class="m-0 title">Kharina Secondary School</h1>
+                     
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="Default.aspx" class="nav-item nav-link d1">Home</a>
+                        <a href="About.aspx" class="nav-item nav-link">About</a>
+                         <a href="Contact.aspx" class="nav-item nav-link">Contact</a>
+                         <div class="nav-item dropdown">
+                            <a id="page1" runat="server" href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a id="dropdown1"  runat="server" href="NewFolder1/Geninfo.aspx" class="dropdown-item ">Profile</a>
+                                <a  id="dropdown2" runat="server" href ="NewFolder1/Fees.aspx" class="dropdown-item">Fees</a>
+                                <a  id="dropdown3" runat="server" href="NewFolder1/Students.aspx" class="dropdown-item">Students</a>
+                                <a  id="dropdown4" runat="server" href="NewFolder1/Subjects.aspx" class="dropdown-item">Subjects</a>
+                                <a  id="dropdown5" runat="server" href="NewFolder1/AdminControl.aspx" class="dropdown-item">Admin</a>
+                                <a  id="dropdown6" runat="server" href="NewFolder1/Payments.aspx" class="dropdown-item">Payment</a>
+                               
+                               
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="navbox">
-            
-                <div class="navlogo">
 
-                       <div>
-                           <a href="~/"> <img runat="server" src="Photos/download-removebg-preview.png" /> </a> 
-                       </div> 
-                        <a class="navbar-brand" runat="server" href="~/">Kharina Secondary School</a>
-                </div>
-            
-                <div class="navlinks">
-                    <ul class="navleft">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">About</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
-                        <li class="dropdown" id="dropdown1" runat="server"><a runat="server" href="~/NewFolder1/Payments.aspx">Payments</a></li>
-                        <li class="dropdown" id="dropdown2" runat="server"><a runat="server" href="~/NewFolder1/Fees.aspx">Fees</a></li>
-                        <li class="dropdown" id="dropdown3" runat="server"><a runat="server" href="~/NewFolder1/Teacher.aspx">Students</a></li>
-                        <li class="dropdown" id="dropdown4" runat="server"><a runat="server" href="~/NewFolder1/Subjects.aspx">Subjects</a></li>
-                        <li class="dropdown" id="dropdown5" runat="server"><a runat="server" href="~/NewFolder1/AdminControl.aspx">Admin</a></li>
-                        <li class="dropdown" id="dropdown6" runat="server"><a runat="server" href="~/NewFolder1/Geninfo.aspx">Profile</a></li>
-                    </ul>
-                    
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                            <ul class="navright">
-                                <li><a runat="server" href="~/Account/Register.aspx">Register</a></li>
-                                <li class="button">
-                                    <asp:Button ID="Button1" CssClass="button" runat="server" Text="Log in" OnClick="Button1_Click" />
-                                </li>
-                            </ul>
+                            <a href="Account/Login.aspx"  ID="Button1" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5" OnClick="Button1_Click">Login</a>
+                           
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello <%: Context.User.Identity.GetUserName() %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
+                            
+                                <a runat="server" style="color:#FFFfff;" class= "nav-item nav-link" href="Account/Manage" title="Manage your account">Hello <%: Context.User.Identity.GetUserName() %> !</a>
+                                
+                                    <asp:LoginStatus  runat="server" style="color:#FFFfff;" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            
                         </LoggedInTemplate>
                     </asp:LoginView>
+                    
                 </div>
-            </div>
-       
-        <div class="container body-content">
+            </nav>
+
+                   
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
 
-        </div>
+   
 
-        <footer>
-                <div class="footer_area">
-                    <!-- logo -->
-                    <div class="box_size">
-                        <div class="school_logo">
-                            <a href="Default.aspx"> <img runat="server" src="Photos/download-removebg-preview.png" /> </a> 
+     
+   
+     </div>
+          <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i> 390 Regina Road
+	                     Northdale
+	                     Pietermaritzburg</p>
+                        <p><i class="fa fa-phone-alt me-3"></i> 033 391 4551</p>
+                        <p><i class="fa fa-envelope me-3"></i>kharinasecondary@telkomsa.net</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-
-                    
-                    <!-- menu -->
-                    <div class="box_size">
-                        <div>Menu:</div>
-                        <div class="menu">
-                            <ul>
-                                <li><a href="About.aspx">About Us</a></li>
-                                <li><a href="Contact.aspx">Contact Us</a></li>
-                                <li><a href="~/Account/Login.aspx">Log In</a></li>
-                            </ul>
-                        </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Quick Link</h5>
+                        <a class="btn btn-link" href="About.aspx">About Us</a>
+                        <a class="btn btn-link" href="Contact.aspx">Contact Us</a>
+                        <a class="btn btn-link" href="#">Privacy Policy</a>
+                        <a class="btn btn-link" href="#">Terms & Condition</a>
+                       
                     </div>
                     
-                    <div class="box_size">
-                        <div>Follow Us:</div>
-                            <div class="follow">
-                                <ul>
-                                <li><a href="https://www.instagram.com/explore/locations/393800642/south-africa/pietermaritzburg-kwazulu-natal/kharina-secondary-school/?hl=en">Instagram</a></li>
-                                <li><a href="https://m.facebook.com/profile.php?id=352684331434050">Facebook</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                </ul>
-                            </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Subscribe to our newletter for the latest updates</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
                     </div>
                 </div>
-                <p class="copyright">&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-    </form>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; Kharina Secondary School, All Right Reserved. 
+							
+							
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="Default.aspx">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="Default.aspx" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+     </div>
+
+
+     </form>
+    
 </body>
 </html>

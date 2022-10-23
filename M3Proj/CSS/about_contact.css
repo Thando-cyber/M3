@@ -25,3 +25,7 @@
     height: 316px;
 }
 
+.fees {
+    display:flex;
+    justify-content:center;
+}
