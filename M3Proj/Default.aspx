@@ -29,7 +29,7 @@
     <!-- Pillars -->
         <div class="container-xxl py-6">
             <div class="container">
-                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                     <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Our Foundations</div>
                     <h2 class="mb-5">Main Pillars of the School</h2>
                 </div>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Brilliant school</br>
+                        <br><p>Brilliant school</br>
                             Best in southern hemisphere
                         </p>
                         <div class="d-flex align-items-center">

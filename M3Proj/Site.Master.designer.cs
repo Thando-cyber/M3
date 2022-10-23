@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M3Proj {
-    
-    
-    public partial class SiteMaster {
-        
+namespace M3Proj
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// ContentPlaceHolder control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder;
-        
+
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
+
         /// <summary>
         /// page1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor page1;
-        
+
         /// <summary>
         /// dropdown1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown1;
-        
+
         /// <summary>
         /// dropdown2 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown2;
-        
+
         /// <summary>
         /// dropdown3 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown3;
-        
+
         /// <summary>
         /// dropdown4 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown4;
-        
+
         /// <summary>
         /// dropdown5 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown5;
-        
+
         /// <summary>
         /// dropdown6 control.
         /// </summary>
@@ -92,7 +94,70 @@ namespace M3Proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown6;
-        
+
+        /// <summary>
+        /// page1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor page1;
+
+        /// <summary>
+        /// dropdown1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown1;
+
+        /// <summary>
+        /// dropdown2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown2;
+
+        /// <summary>
+        /// dropdown3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown3;
+
+        /// <summary>
+        /// dropdown4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown4;
+
+        /// <summary>
+        /// dropdown5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown5;
+
+        /// <summary>
+        /// dropdown6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor dropdown6;
+
         /// <summary>
         /// MainContent control.
         /// </summary>
