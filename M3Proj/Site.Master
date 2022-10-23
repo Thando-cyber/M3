@@ -81,9 +81,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="Default.aspx" class="nav-item nav-link d1">Home</a>
-                        <a href="About.aspx" class="nav-item nav-link">About</a>
-                         <a href="Contact.aspx" class="nav-item nav-link">Contact</a>
+                        <a href="/" class="nav-item nav-link d1">Home</a>
+                        <a href="/About.aspx" class="nav-item nav-link">About</a>
+                         <a href="/Contact.aspx" class="nav-item nav-link">Contact</a>
                          <div class="nav-item dropdown">
                             <a id="page1" runat="server" href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
