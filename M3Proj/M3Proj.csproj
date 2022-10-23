@@ -77,21 +77,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.Common\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.ProcessingObjectModel\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\MicosoftReportViewerWebForms_v11.1.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
-    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -221,12 +206,54 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="CSS\about_contact.css" />
+    <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\defaultstyle.css" />
     <Content Include="CSS\footer.css" />
     <Content Include="CSS\info.css" />
     <Content Include="CSS\info2.css" />
     <Content Include="CSS\loginstyle.css" />
     <Content Include="CSS\masterstyle.css" />
+    <Content Include="img\about.png" />
+    <Content Include="img\hero.png" />
+    <Content Include="img\logo-1.png" />
+    <Content Include="img\logo-2.png" />
+    <Content Include="img\logo-3.png" />
+    <Content Include="img\logo-4.png" />
+    <Content Include="img\logo-5.png" />
+    <Content Include="img\logo-6.png" />
+    <Content Include="img\logo-7.png" />
+    <Content Include="img\logo-8.png" />
+    <Content Include="img\newsletter.png" />
+    <Content Include="img\shape-bottom.png" />
+    <Content Include="img\team-1.jpg" />
+    <Content Include="img\team-2.jpg" />
+    <Content Include="img\team-3.jpg" />
+    <Content Include="img\team-4.jpg" />
+    <Content Include="img\testimonial-1.jpg" />
+    <Content Include="img\testimonial-2.jpg" />
+    <Content Include="img\testimonial-3.jpg" />
+    <Content Include="img\testimonial-4.jpg" />
+    <Content Include="img\Thesis-amico.svg" />
+    <Content Include="img\undraw_Educator_re_ju47.png" />
+    <Content Include="img\Webinar-bro.svg" />
+    <Content Include="js\main.js" />
+    <Content Include="lib\animate\animate.css" />
+    <Content Include="lib\animate\animate.min.css" />
+    <Content Include="lib\easing\easing.js" />
+    <Content Include="lib\easing\easing.min.js" />
+    <Content Include="lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="lib\owlcarousel\owl.carousel.js" />
+    <Content Include="lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="lib\waypoints\waypoints.min.js" />
+    <Content Include="lib\wow\wow.js" />
+    <Content Include="lib\wow\wow.min.js" />
     <Content Include="logos\22002.png" />
     <Content Include="logos\22004.png" />
     <Content Include="logos\22005.png" />
@@ -247,7 +274,6 @@
     <Content Include="NewFolder1\AdminControl.aspx" />
     <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
-    <Content Include="NewFolder1\Reports.aspx" />
     <Content Include="NewFolder1\Geninfo.aspx" />
     <Content Include="NewFolder1\Teacher.aspx" />
     <Content Include="Photos\1.jpg" />
@@ -301,17 +327,6 @@
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="Dataset\Reports.xsc">
-      <DependentUpon>Reports.xsd</DependentUpon>
-    </Content>
-    <None Include="Dataset\Reports.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Reports.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Dataset\Reports.xss">
-      <DependentUpon>Reports.xsd</DependentUpon>
-    </Content>
     <Content Include="NewFolder1\academicResults.rdlc" />
     <Content Include="GroupPmb2DataSet.xsc">
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
@@ -324,6 +339,90 @@
     <Content Include="GroupPmb2DataSet.xss">
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="lib\waypoints\links.php" />
+    <Content Include="scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="scss\bootstrap\scss\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\_badge.scss" />
+    <Content Include="scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\_card.scss" />
+    <Content Include="scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="scss\bootstrap\scss\_close.scss" />
+    <Content Include="scss\bootstrap\scss\_containers.scss" />
+    <Content Include="scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="scss\bootstrap\scss\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\_functions.scss" />
+    <Content Include="scss\bootstrap\scss\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="scss\bootstrap\scss\_images.scss" />
+    <Content Include="scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="scss\bootstrap\scss\_modal.scss" />
+    <Content Include="scss\bootstrap\scss\_nav.scss" />
+    <Content Include="scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\_popover.scss" />
+    <Content Include="scss\bootstrap\scss\_progress.scss" />
+    <Content Include="scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="scss\bootstrap\scss\_root.scss" />
+    <Content Include="scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="scss\bootstrap\scss\_tables.scss" />
+    <Content Include="scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="scss\bootstrap\scss\_type.scss" />
+    <Content Include="scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -454,11 +553,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dataset\Reports.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reports.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -502,13 +596,6 @@
     </Compile>
     <Compile Include="NewFolder1\Payments.aspx.designer.cs">
       <DependentUpon>Payments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewFolder1\Reports.aspx.cs">
-      <DependentUpon>Reports.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\Reports.aspx.designer.cs">
-      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Results.aspx.cs">
       <DependentUpon>Results.aspx</DependentUpon>
@@ -565,6 +652,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
+    <Folder Include="Dataset\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

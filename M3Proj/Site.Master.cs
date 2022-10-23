@@ -73,6 +73,7 @@ namespace M3Proj
             userInfo["Email"] = Session["Email"].ToString();
             userInfo["UserStatus"] = Session["userType"].ToString();
 
+            page1.Visible = false;
             dropdown1.Visible = false;
             dropdown2.Visible = false;
             dropdown3.Visible = false;
@@ -83,6 +84,7 @@ namespace M3Proj
             
 
             if (Session["userType"].ToString().Equals("Student")) {
+                page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
                 dropdown6.Visible = true;
@@ -91,21 +93,26 @@ namespace M3Proj
             }
             else if(Session["userType"].ToString().Equals("Teacher"))
             {
+                page1.Visible = true;
+                dropdown1.Visible = true;
                 dropdown3.Visible= true;
                 dropdown4.Visible = true;
-                dropdown6.Visible = true;
+               
 
             }
             else if (Session["userType"].ToString().Equals("Administrator"))
             {
+                page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
                 dropdown3.Visible = true;
                 dropdown4.Visible = true;
                 dropdown5.Visible = true;
+                dropdown6.Visible = true;
             }
             else 
             {
+                page1.Visible = false;
                 dropdown1.Visible = false;
                 dropdown2.Visible= false;
                 dropdown3.Visible = false;
