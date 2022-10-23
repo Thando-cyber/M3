@@ -59,6 +59,19 @@ namespace M3Proj.NewFolder1
 
                 FullName = name + " " + Surname;
                 FirstName.Text = name;
+                FirstName.ReadOnly = true;
+                lastname.Text=Surname;
+                lastname.ReadOnly= true;
+                email.Text=Session["Email"].ToString();
+                email.ReadOnly= true;
+                TextBox1.Text= gender;
+                TextBox1.ReadOnly = true;
+
+                /*
+                addre.Text= Address;
+                Mobile.Text=cont;
+                contac.Text=cont;
+                */
             }
             else if (Session["userType"].ToString() == "Teacher")
             {
@@ -91,8 +104,19 @@ namespace M3Proj.NewFolder1
                 }
              
                 FullName = name + " " + Surname;
-                FirstName.Text = name;
                 
+                
+                FirstName.Text = name;
+                FirstName.ReadOnly = true;
+                lastname.Text=Surname;
+                lastname.ReadOnly= true;
+                email.Text=Session["Email"].ToString();
+                email.ReadOnly= true;
+                TextBox1.Text= gender;
+                TextBox1.ReadOnly = true;
+
+                
+
                 //.Controls.Add(new LiteralControl("<script type = 'text/javascript'> alert('The user is a student')<script>"));
 
             }
@@ -100,7 +124,8 @@ namespace M3Proj.NewFolder1
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
-        {/*
+        {
+
             if (Session["userType"].ToString() == "Student")
             {
                 string sqlStmt;
@@ -108,43 +133,68 @@ namespace M3Proj.NewFolder1
                 SqlConnection cn = null;
                 SqlCommand cmd = null;
                 //SqlDateTime sqldatenull;
-                try
+                sqlStmt = "Update student SET stu_name=@FirstName ,stu_surname=@LastName,stu_address=@Address,parentContact=@contact WHERE  stu_email = @Email";
+                conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
+                cn = new SqlConnection(conString);
+                cmd = new SqlCommand(sqlStmt, cn);
+                cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                cmd.Parameters.AddWithValue("@LastName", lastname.Text);
+                cmd.Parameters.AddWithValue("@Address", addre.Text);
+                cmd.Parameters.AddWithValue("@contact",contac.Text);
+                cmd.Parameters.AddWithValue("@Email",Session["Email"]);
+                /*
+                if (contac.Text == " ")
                 {
-                    sqlStmt = "Update student SET stu_name=@FirstName ,stu_surname=@LastName,stu_address=@Address,parentContact=@contact WHERE stu_ID=@Email";
-                    conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
-                    cn = new SqlConnection(conString);
-                    cmd = new SqlCommand(sqlStmt, cn);
-                    cmd.Parameters.Add(new SqlParameter("@FirstName", SqlDbType.NVarChar, 11));
-                    cmd.Parameters.Add(new SqlParameter("@LastName", SqlDbType.NVarChar, 40));
-                    //cmd.Parameters.Add(new SqlParameter('@Date', SqlDbType.DateTime));
-                    //sqldatenull = SqlDateTime.Null;
-                    cmd.Parameters["@FirstName"].Value = FirstName.Text;
-                    cmd.Parameters["@LastName"].Value = LastName.Text;
-                    if (FirstName.Text == "")
-                    {
-                        //cmd.Parameters['@Date'].Value =sqldatenull;
-                        //cmd.Parameters['@Date'].Value = DBNull.Value;
-                    }
-                    else
-                    {
-                        //cmd.Parameters['@Date'].Value = DateTime.Parse(txtDate.Text);
-                    }
-                    cn.Open();
-                    cmd.ExecuteNonQuery();
-                    
+                    Label1.Text= "Contact cannot be empty";
                 }
-                catch (Exception ex)
+                else if (addre.Text ==" ")
                 {
-                    //Label1.Text = ex.Message;
+                    Label1.Text= "Address cannot be empty";
                 }
-                finally
+                else if (Mobile.Text== " ")
                 {
-                    cn.Close();
+                    Label1.Text= "Mobile cannot be empty";
                 }
+                */
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                Label1.Text = "Record Inserted Succesfully";
+                
             }else if (Session["userType"].ToString() == "Teacher")
             {
+                string sqlStmt;
+                string conString;
+                SqlConnection cn = null;
+                SqlCommand cmd = null;
+                //SqlDateTime sqldatenull;
+                sqlStmt = "Update Teachers SET teach_firstname=@FirstName ,teach_lastname=@LastName,Address=@Address,pcontactNum=@contact WHERE  teach_email = @Email";
+                conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
+                cn = new SqlConnection(conString);
+                cmd = new SqlCommand(sqlStmt, cn);
+                cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                cmd.Parameters.AddWithValue("@LastName", lastname.Text);
+                cmd.Parameters.AddWithValue("@Address", addre.Text);
+                cmd.Parameters.AddWithValue("@contact", contac.Text);
+                cmd.Parameters.AddWithValue("@Email", Session["Email"]);
+                /*
+                if (contac.Text == " ")
+                {
+                    Label1.Text= "Contact cannot be empty";
+                }
+                else if (addre.Text ==" ")
+                {
+                    Label1.Text= "Address cannot be empty";
+                }
+                else if (Mobile.Text== " ")
+                {
+                    Label1.Text= "Mobile cannot be empty";
+                }
+                */
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                Label1.Text = "Record Inserted Succesfully";
 
-            }*/
+            }
         }
     }
 }

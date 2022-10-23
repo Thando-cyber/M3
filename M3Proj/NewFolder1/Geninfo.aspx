@@ -30,7 +30,30 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
-                                    <img src="../logos/<%=Session["ID"].ToString()%>.png" alt="<%= FullName %>" class="rounded-circle" width="150">
+                                    <div >
+                                        <img src="../logos/<%=Session["ID"].ToString()%>.png" alt="<%= FullName %>" class="rounded-circle" width="150" />
+                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="subResultID" DataSourceID="SqlDataSource1">
+                                            <Columns>
+                                                <asp:BoundField DataField="subjectID" HeaderText="Subject" SortExpression="subjectID" />
+                                                <asp:BoundField DataField="termResult" HeaderText="Result" SortExpression="termResult" />
+                                                <asp:BoundField DataField="TermNo" HeaderText="Term" SortExpression="TermNo" />
+                                            </Columns>
+                                            <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+                                            <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+                                            <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+                                            <RowStyle BackColor="White" ForeColor="#003399" />
+                                            <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                                            <SortedAscendingCellStyle BackColor="#EDF6F6" />
+                                            <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
+                                            <SortedDescendingCellStyle BackColor="#D6DFDF" />
+                                            <SortedDescendingHeaderStyle BackColor="#002876" />
+                                        </asp:GridView>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [subjectResults] WHERE ([studentID] = @studentID)">
+                                            <SelectParameters>
+                                                <asp:SessionParameter DefaultValue="&quot;&quot;" Name="studentID" SessionField="ID" Type="String" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                    </div>
                                     <div class="mt-3">
                                         <h4><%= Name %></h4>
                                         <p class="text-secondary mb-1"><%= Title %></p>
@@ -58,16 +81,16 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row">
+                                <div id="text6" class="row">
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Email</h6>
                                     </div>
-                                    <div id="Email" class="col-sm-9 text-secondary" style="width:300px">
+                                    <div id="emai" class="col-sm-9 text-secondary" style="width:300px">
                                         <%= Session["Email"].ToString()%>
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row">
+                                <div id="text5" class="row">
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Phone</h6>
                                     </div>
@@ -76,21 +99,39 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row">
+                                <div id="text4" class="row">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Mobile</h6>
+                                        <h6 class="mb-0">Gender</h6>
                                     </div>
-                                    <div id="cont" class="col-sm-9 text-secondary" style="width:300px">
-                                        <%= cont %>
+                                    <div id="gend" class="col-sm-9 text-secondary" style="width:300px">
+                                        <%= gender %>
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row">
+                                <div id="text3" class="row">
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Address</h6>
                                     </div>
-                                    <div id="Address" class="col-sm-9 text-secondary" style="width:300px">
+                                    <div id="Address" class="col-sm-9 text-secondary" style="width:500px">
                                         <%= Address %>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div id="text2" class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Fees</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" style="width:300px">
+                                        <%= fees %>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div id="text1" class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Grade</h6>
+                                    </div>
+                                    <div id="" class="col-sm-9 text-secondary" style="width:300px">
+                                        <%= gradeDiv %>
                                     </div>
                                 </div>
                                 <hr>
