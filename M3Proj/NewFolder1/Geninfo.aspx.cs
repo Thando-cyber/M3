@@ -25,12 +25,17 @@ namespace M3Proj.NewFolder1
         public string FullName = " ";
         public string str2 = " ";
         public string title = " ";
+        public string gradeDiv = "";
+        public string teachId = " ";
         protected void Page_Load(object sender, EventArgs e)
         {
             
             if (Session["userType"].ToString() == "Student")
             {
-                Title = Session["userType"].ToString();
+                int idClass = 0;
+                int grade = 0;
+                char div = ' ';
+                title = Session["userType"].ToString();
                 string str1 = Session["Email"].ToString();
                 int n1 = str1.IndexOf("@");
                 str2 = str1.Substring(0, n1);
@@ -54,14 +59,29 @@ namespace M3Proj.NewFolder1
                     gender = Convert.ToString(dr["stu_gender"]);
                     fees = Convert.ToDecimal(dr["stu_Fees"]);
                     cont = Convert.ToString(dr["parentContact"]);
-
+                    idClass = Convert.ToInt32(dr["classID"]);
+                    
+                }
+                string query2 = "SELECT * FROM classes WHERE class_id= @classID";
+                SqlCommand com = new SqlCommand(query2, con);
+                com.Parameters.AddWithValue("@classID",idClass);
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable DT = new DataTable();
+                da.Fill(DT);
+                foreach(DataRow dr in DT.Rows)
+                {
+                    grade = Convert.ToInt32(dr["grade"]);
+                    div = Convert.ToChar(dr["Division"]);
+                    teachId = Convert.ToString(dr["teacher_id"]);
                 }
 
                 FullName = Name + " " + Surname;
+                gradeDiv = grade.ToString()+div.ToString();
+
             }
             else if (Session["userType"].ToString() == "Teacher")
             {
-                
+                 
                 string str1 = Session["Email"].ToString();
                 int n1 = str1.IndexOf("@");
                 str2 = str1.Substring(0, n1);
@@ -85,7 +105,7 @@ namespace M3Proj.NewFolder1
                     gender = Convert.ToString(dr["gender"]);
                     //fees = Convert.ToDecimal(dr["stu_Fees"]);
                     cont = Convert.ToString(dr["contactNum"]);
-                    Title = Convert.ToString(dr["teach_title"]);
+                    title = Convert.ToString(dr["teach_title"]);
 
                 }
 
