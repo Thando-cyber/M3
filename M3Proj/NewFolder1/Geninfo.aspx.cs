@@ -25,7 +25,7 @@ namespace M3Proj.NewFolder1
         public string FullName = " ";
         public string str2 = " ";
         public string title = " ";
-        public string gradeDiv = "";
+        public string gradeDiv = " ";
         public string teachId = " ";
         protected void Page_Load(object sender, EventArgs e)
         {
