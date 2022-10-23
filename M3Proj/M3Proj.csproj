@@ -247,7 +247,6 @@
     <Content Include="NewFolder1\AdminControl.aspx" />
     <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
-    <Content Include="NewFolder1\Reports.aspx" />
     <Content Include="NewFolder1\Geninfo.aspx" />
     <Content Include="NewFolder1\Teacher.aspx" />
     <Content Include="Photos\1.jpg" />
@@ -502,13 +501,6 @@
     </Compile>
     <Compile Include="NewFolder1\Payments.aspx.designer.cs">
       <DependentUpon>Payments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewFolder1\Reports.aspx.cs">
-      <DependentUpon>Reports.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\Reports.aspx.designer.cs">
-      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Results.aspx.cs">
       <DependentUpon>Results.aspx</DependentUpon>
