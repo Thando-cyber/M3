@@ -275,7 +275,7 @@
     <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
     <Content Include="NewFolder1\Geninfo.aspx" />
-    <Content Include="NewFolder1\Teacher.aspx" />
+    <Content Include="NewFolder1\Students.aspx" />
     <Content Include="Photos\1.jpg" />
     <Content Include="Photos\2.jpg" />
     <Content Include="Photos\3.jpg" />
@@ -618,12 +618,12 @@
     <Compile Include="NewFolder1\Subjects.aspx.designer.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Teacher.aspx.cs">
-      <DependentUpon>Teacher.aspx</DependentUpon>
+    <Compile Include="NewFolder1\Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NewFolder1\Teacher.aspx.designer.cs">
-      <DependentUpon>Teacher.aspx</DependentUpon>
+    <Compile Include="NewFolder1\Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

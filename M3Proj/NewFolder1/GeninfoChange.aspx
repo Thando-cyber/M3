@@ -2,6 +2,17 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 	<link rel="stylesheet" href ="../CSS/info.css" /> 
+
+    <div class="container-xxl position-relative p-0">        
+    <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">Edit Details</h1>
+                    
+                </div>
+            </div>
+        </div>
+
+
     <div class="auto-style3">
         <div class="container">
             <div class="main-body">

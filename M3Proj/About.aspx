@@ -51,8 +51,10 @@
 			vast needs of its learners.
                                     </span>
                                 </div>
-                            </div>
-                        
+                                </div>
+
+                        </div>
+                        </div> 
                 </div>
             </div>
         </div>

@@ -72,7 +72,7 @@
         <div class="container-xxl position-relative p-0">
                             
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="Default.aspx" class="navbar-brand p-0">
+                <a href="~/Default.aspx" class="navbar-brand p-0">
                     <h1 class="m-0 title">Kharina Secondary School</h1>
                      
                 </a>
@@ -89,7 +89,7 @@
                             <div class="dropdown-menu m-0">
                                 <a id="dropdown1"  runat="server" href="NewFolder1/Geninfo.aspx" class="dropdown-item">Profile</a>
                                 <a  id="dropdown2" runat="server" href ="NewFolder1/Fees.aspx" class="dropdown-item">Fees</a>
-                                <a  id="dropdown3" runat="server" href="NewFolder1/Teacher.aspx" class="dropdown-item">Teacher</a>
+                                <a  id="dropdown3" runat="server" href="NewFolder1/Students.aspx" class="dropdown-item">Students</a>
                                 <a  id="dropdown4" runat="server" href="NewFolder1/Subjects.aspx" class="dropdown-item">Subjects</a>
                                 <a  id="dropdown5" runat="server" href="NewFolder1/AdminControl.aspx" class="dropdown-item">Admin</a>
                                 <a  id="dropdown6" runat="server" href="NewFolder1/Payments.aspx" class="dropdown-item">Payment</a>
