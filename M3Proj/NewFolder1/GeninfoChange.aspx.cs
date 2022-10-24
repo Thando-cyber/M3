@@ -167,7 +167,7 @@ namespace M3Proj.NewFolder1
                 SqlConnection cn = null;
                 SqlCommand cmd = null;
                 //SqlDateTime sqldatenull;
-                sqlStmt = "Update Teachers SET teach_firstname=@FirstName ,teach_lastname=@LastName,Address=@Address,pcontactNum=@contact WHERE  teach_email = @Email";
+                sqlStmt = "Update Teachers SET teach_firstname=@FirstName ,teach_lastname=@LastName,Address=@Address,contactNum=@contact WHERE  teach_email = @Email";
                 conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
                 cn = new SqlConnection(conString);
                 cmd = new SqlCommand(sqlStmt, cn);
