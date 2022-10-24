@@ -543,7 +543,6 @@ C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.Owin.Security.Google.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.ReportViewer.WinForms.DLL
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.ScriptManager.MSAjax.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.ScriptManager.WebForms.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.SqlServer.Types.dll
@@ -553,7 +552,6 @@ C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Owin.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\System.Web.Optimization.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\System.Web.Providers.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\WebGrease.dll
-C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\User\Source\Repos\M4Proj\M3Proj\bin\Microsoft.AI.Web.xml
