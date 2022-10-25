@@ -27,15 +27,16 @@ namespace M3Proj
         protected void Page_Load(object sender, EventArgs e)
         {
             getStudent();
-            if (!Page.IsPostBack)
-            {
-                datagrid.DataBind();
-                this.datagrid.SelectedIndex = 0;
-                
-            }
 
-           
-        
+            datagrid.HeaderRow.Cells[1].Text = "ID";
+            datagrid.HeaderRow.Cells[3].Text = "Name";
+            datagrid.HeaderRow.Cells[4].Text = "Surname";
+            datagrid.HeaderRow.Cells[8].Text = "Gender";
+            datagrid.HeaderRow.HorizontalAlign = HorizontalAlign.Left;
+
+
+
+
 
         }
 
@@ -43,7 +44,7 @@ namespace M3Proj
 
             string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
             SqlConnection con = new SqlConnection(conString);
-            con.Open();
+            
             string query = "SELECT * FROM Teachers WHERE teach_email = @email ";
             SqlCommand command = new SqlCommand(query, con);
             string email = Session["Email"].ToString();
@@ -113,8 +114,12 @@ namespace M3Proj
                 e.Row.Cells[9].Visible = false;
                 e.Row.Cells[10].Visible = false;
 
+
+
             }
         
         }
+
+        
     }
 }

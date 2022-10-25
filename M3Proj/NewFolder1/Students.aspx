@@ -28,8 +28,9 @@
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
 									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
 									<p class="text-muted font-size-sm"><%= sEmail %></p>
-									<button class="btn btn-primary">Add Mark</button>
-									<button class="btn btn-outline-primary">View Report</button>
+									<asp:Button ID="Button3" Cssclass="btn btn-primary" runat="server" Text="Add Mark" />
+                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary" runat="server" Text="View Report" />
+									
 								</div>
 							</div>
 							<hr class="my-4">
@@ -55,12 +56,22 @@
 						</div>
 					</div>
 				</div>
+
+
+
 				<div class="col-lg-8">
 					<div class="card">
+                      
+                      
 						<div class="card-body">
-                            
-                            <asp:GridView  ID="datagrid" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
- HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" DataSourceID="ObjectDataSource1" OnRowCreated="datagrid_RowCreated" >
+                          
+                                <div class="input-group">
+  <input id="searchTb" runat="server" type="search" class="form-control rounded" placeholder="Search student" aria-label="Search" aria-describedby="search-addon" />
+  
+                                    <asp:Button ID="Button4" runat="server" Text="Search"  Cssclass="btn btn-outline-primary" />
+</div>
+                            <asp:GridView  style="border-radius:5px;" ID  ="datagrid" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
+ HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" DataSourceID="ObjectDataSource1" OnRowCreated="datagrid_RowCreated"   >
                                 <Columns>
                                     <asp:CommandField ShowSelectButton="True" />
                                 </Columns>
@@ -79,6 +90,10 @@
 					</div>
 					
 				</div>
+
+
+
+
 			</div>
 		</div>
 	</div>
@@ -104,6 +119,15 @@ body{
 .me-2 {
     margin-right: .5rem!important;
 }
+
+.rounded {
+    border-radius: 2px !important;
+}
+
+ .input-group {
+        margin-bottom: 15px;
+        width:65% !important;
+}
 </style>
 
 <script type="text/javascript">
@@ -120,6 +144,7 @@ body{
 width: 100%;
 border: solid 1px black;
 min-width: 80%;
+border-radius:5px;
 }
 .header
 {
