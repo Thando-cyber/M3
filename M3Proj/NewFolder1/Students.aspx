@@ -26,7 +26,7 @@
 								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
 								<div class="mt-3">
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
-									<p class="text-secondary mb-1"><%= sID%></p>
+									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
 									<p class="text-muted font-size-sm"><%= sEmail %></p>
 									<button class="btn btn-primary">Add Mark</button>
 									<button class="btn btn-outline-primary">View Report</button>
@@ -117,13 +117,13 @@ body{
 
 .mydatagrid
 {
-width: 80%;
-border: solid 2px black;
+width: 100%;
+border: solid 1px black;
 min-width: 80%;
 }
 .header
 {
-background-color: #7293FA;
+background-color:  #0E2E50;
 font-family: Arial;
 color: White;
 border: none 0px transparent;
@@ -134,17 +134,17 @@ font-size: 16px;
 
 .rows
 {
-background-color: #fff;
+background-color:#7293FA;
 font-family: Arial;
 font-size: 14px;
-color: #000;
+color: #fff;
 min-height: 25px;
 text-align: left;
 border: none 0px transparent;
 }
 .rows:hover
 {
-background-color: #0E2E50;
+background-color: #0b1a75;
 font-family: Arial;
 color: #fff;
 text-align: left;
