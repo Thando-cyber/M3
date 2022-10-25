@@ -107,13 +107,12 @@ namespace M3Proj
             if (e.Row.Cells.Count > 1) {
                
                 e.Row.Cells[2].Visible = false;
-                e.Row.Cells[4].Visible = false;
                 e.Row.Cells[5].Visible = false;
                 e.Row.Cells[6].Visible = false;
                 e.Row.Cells[7].Visible = false;
-                e.Row.Cells[8].Visible = false;
                 e.Row.Cells[9].Visible = false;
-             
+                e.Row.Cells[10].Visible = false;
+
             }
         
         }
