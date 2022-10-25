@@ -17,19 +17,19 @@
   
     <link href="CSS/footer.css" rel="stylesheet" />
     <link href="CSS/loginstyle.css" rel="stylesheet" />
-    <link href="CSS/teacherstyle.css" rel="stylesheet" />
+    
     <link href="CSS/about_contact.css" rel="stylesheet" />
 
     <title><%: Page.Title %> - Kharina Secondary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 
       <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
@@ -45,31 +45,33 @@
       <link rel="stylesheet" href="CSS/masterstyle.css" />
    
   
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
     
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
  
       <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
-            <link rel ="stylesheet" href="teacherstyle.css" />
+            
           
           
           </asp:ContentPlaceHolder>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            <link rel ="stylesheet" href="teacherstyle.css" />
+            
           
           </asp:ContentPlaceHolder>
 
     
 
 </head>
-<body class="b1">
+<body class="b1" style="margin-top: 0px;">
     <form runat="server">
      <div class="container-xxl bg-white p-0">
        
             <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
+        <div class="container-xxl position-relative p-0" style="
+    margin-bottom: 20px;
+">
                             
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="~/Default.aspx" class="navbar-brand p-0">
@@ -83,37 +85,34 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="/" class="nav-item nav-link d1">Home</a>
                         <a href="/About.aspx" class="nav-item nav-link">About</a>
-                         <a href="/Contact.aspx" class="nav-item nav-link">Contact</a>
-                         <div class="nav-item dropdown">
+                        <a href="/Contact.aspx" class="nav-item nav-link">Contact</a>
+                        <div class="nav-item dropdown">
                             <a id="page1" runat="server" href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
-                                <a id="dropdown1"  runat="server" href="NewFolder1/Geninfo.aspx" class="dropdown-item ">Profile</a>
-                                <a  id="dropdown2" runat="server" href ="NewFolder1/Fees.aspx" class="dropdown-item">Fees</a>
-                                <a  id="dropdown3" runat="server" href="NewFolder1/Students.aspx" class="dropdown-item">Students</a>
-                                <a  id="dropdown4" runat="server" href="NewFolder1/Subjects.aspx" class="dropdown-item">Subjects</a>
-                                <a  id="dropdown5" runat="server" href="NewFolder1/AdminControl.aspx" class="dropdown-item">Admin</a>
-                                <a  id="dropdown6" runat="server" href="NewFolder1/Payments.aspx" class="dropdown-item">Payment</a>
-                               
-                               
+                                <a id="dropdown1" runat="server" href="NewFolder1/Geninfo.aspx" class="dropdown-item ">Profile</a>
+                                <a id="dropdown2" runat="server" href="NewFolder1/Fees.aspx" class="dropdown-item">Fees</a>
+                                <a id="dropdown3" runat="server" href="NewFolder1/Students.aspx" class="dropdown-item">Students</a>
+                                <a id="dropdown4" runat="server" href="NewFolder1/Subjects.aspx" class="dropdown-item">Subjects</a>
+                                <a id="dropdown5" runat="server" href="NewFolder1/AdminControl.aspx" class="dropdown-item">Admin</a>
+                                <a id="dropdown6" runat="server" href="NewFolder1/Payments.aspx" class="dropdown-item">Payment</a>
+                              
                             </div>
+                            
                         </div>
                     </div>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                                    <AnonymousTemplate>
+                                        <a href="Account/Login.aspx" id="Button1" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5" onclick="Button1_Click">Login</a>
 
+                                    </AnonymousTemplate>
+                                    <LoggedInTemplate>
 
-                     <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <a href="Account/Login.aspx"  ID="Button1" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5" OnClick="Button1_Click">Login</a>
-                           
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            
-                                <a runat="server" style="color:#FFFfff;" class= "nav-item nav-link" href="Account/Manage" title="Manage your account">Hello <%: Context.User.Identity.GetUserName() %> !</a>
-                                
-                                    <asp:LoginStatus  runat="server" style="color:#FFFfff;" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                            
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                    
+                                        <a runat="server" class="nav-item nav-link" href="Account/Manage" title="Manage your account">Hello <%= name %> !</a>
+
+                                        <asp:LoginStatus CssClass="nav-item nav-link" runat="server" Style="color: red;" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
                 </div>
             </nav>
 
@@ -147,8 +146,8 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h5 class="text-white mb-4">Quick Link</h5>
-                        <a class="btn btn-link" href="About.aspx">About Us</a>
-                        <a class="btn btn-link" href="Contact.aspx">Contact Us</a>
+                        <a class="btn btn-link" href="/About.aspx">About Us</a>
+                        <a class="btn btn-link" href="/Contact.aspx">Contact Us</a>
                         <a class="btn btn-link" href="#">Privacy Policy</a>
                         <a class="btn btn-link" href="#">Terms & Condition</a>
                        
@@ -174,7 +173,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="Default.aspx">Home</a>
+                                <a href="/">Home</a>
                                 <a href="#">Cookies</a>
                                 <a href="#">Help</a>
                                 <a href="#">FQAs</a>
@@ -188,7 +187,7 @@
 
 
         <!-- Back to Top -->
-        <a href="Default.aspx" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="<%= HttpContext.Current.Request.Url.AbsolutePath%>" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
    
 
     <!-- JavaScript Libraries -->

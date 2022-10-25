@@ -1,7 +1,13 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="M3Proj._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="utf-8">
+  
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+     <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/masterstyle.css" />
 
    <div class="container-xxl bg-primary hero-header n1">
                 <div class="container">
@@ -124,14 +130,14 @@
                         <div class="service-item rounded h-100">
                             <div class="d-flex justify-content-between">
                                 <div class="service-icon">
-                                    <i class="fa fa-house-damage fa-2x"></i>
+                                    <i class="fa fa-house-damage fa-2x" style="color: white"></i>
                                 </div>
                                 <a class="service-btn" href="#">
                                     <i class="fa fa-link fa-2x"></i>
                                 </a>
                             </div>
                             <div class="p-5">
-                                <h5 class="mb-3">Kindness & Love</h5>
+                                <h5 class="mb-3">Kindness & Love</h5>.
                                 <span>Raising leaders who'll be empathetic towards others and always yern to help others</span>
                             </div>
                         </div>
@@ -216,8 +222,7 @@
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Brilliant school</br>
-                            Best in southern hemisphere
+                        <p>Brilliant school.The Best in southern hemisphere
                         </p>
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg">

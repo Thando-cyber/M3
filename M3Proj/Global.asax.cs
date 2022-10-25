@@ -24,9 +24,11 @@ namespace M3Proj
             Session.Add("classID",0);
             Session.Add("stuID","");
             Session.Add("ID","");
+            Session.Add("teachID", "");
+            Session.Add("userType2", " ");
 
 
-            
+
             // Code that runs on application startup
             //RouteConfig.RegisterRoutes(RouteTable.Routes);
             //BundleConfig.RegisterBundles(BundleTable.Bundles);

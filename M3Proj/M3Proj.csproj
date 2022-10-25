@@ -193,6 +193,11 @@
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\js\main.js" />
+    <Content Include="Account\lib\easing\easing.min.js" />
+    <Content Include="Account\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Account\lib\waypoints\waypoints.min.js" />
+    <Content Include="Account\lib\wow\wow.min.js" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
@@ -258,8 +263,18 @@
     <Content Include="logos\22004.png" />
     <Content Include="logos\22005.png" />
     <Content Include="logos\22006.png" />
-    <Content Include="logos\22007.png" />
+    <Content Include="logos\22001.png" />
+    <Content Include="logos\22008.png" />
     <Content Include="logos\22011.png" />
+    <Content Include="logos\22012.png" />
+    <Content Include="logos\22014.png" />
+    <Content Include="logos\22020.png" />
+    <Content Include="logos\22022.png" />
+    <Content Include="logos\22023.png" />
+    <Content Include="logos\22024.png" />
+    <Content Include="logos\22025.png" />
+    <Content Include="logos\22026.png" />
+    <Content Include="logos\22027.png" />
     <Content Include="logos\AndrewGreet7860.png" />
     <Content Include="logos\CraigFedi9.png" />
     <Content Include="logos\GeorgeMalty3515.png" />
@@ -271,6 +286,7 @@
     <Content Include="logos\OwenWilson6688.png" />
     <Content Include="logos\ResseGrant231.png" />
     <Content Include="logos\RettaSmith1219.png" />
+    <Content Include="logos\TreadLight5327.png" />
     <Content Include="NewFolder1\AdminControl.aspx" />
     <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
@@ -291,6 +307,7 @@
     <Content Include="Photos\9.jpg" />
     <Content Include="Photos\sport.jpg" />
     <Content Include="Photos\7.jpg" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
