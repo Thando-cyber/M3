@@ -148,7 +148,7 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="img/Thesis-amico.svg">
+                        <img class="img-fluid" src="img/Studying-pana.svg">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">About Us</div>
@@ -175,6 +175,36 @@
                                     <h6>Our Genesis</h6>
                                     <span>Founded in 1982, Kharina Secondary School is a public secondary school located in Northdale, Pietermaritzburg</span>
                                 </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="About.aspx">Read More</a>
+                    </div>
+                </div>
+                <div></div>
+                                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="img/Teacher student-amico.svg">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="margin-top:20px" >Our Goals</div>
+                        <h2 class="mb-4">Inspiring The Next Generation Of Leaders </h2>
+                        <p class="mb-4">Here at Kharina we strive to help every learner reach their own greatest potential. We don&#39;t just measure success in academic merits alone but allow every student the oppurtunity to show us and themselves what they&#39;re really capable of. We offer many extra curricular activities and mental health support services to give students as many experiences in their life.</p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12 d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-user-tie text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h6>Sports</h6>
+                                    <span>We believe that in order to have a healthy and productive&nbsp; mind one must first achieve a healthy and productive body. Our wide selection of sport which range from <strong>FOOTBALL ,CRICKET,HOCKEY,RUGBY </strong>and<strong> TENNIS.</strong>&nbsp; These give pur learners a path towards socializing amongst their fellow pupils and making unforgettable moments.</span></div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-chart-line text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h6>Therapy</h6>
+                                    The school has a resident mental health assistant to help students from the many pressures of addolescent life. We know that this is a hard time in our students life and we aim to help in every way possible.</div>
                             </div>
                         </div>
                         <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="About.aspx">Read More</a>
@@ -217,8 +247,7 @@
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <br><p>Brilliant school</br>
-                            Best in southern hemisphere
+                        <<p>Brilliant school.The Best in southern hemisphere
                         </p>
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg">
@@ -259,4 +288,16 @@
     <link rel="stylesheet" href="CSS/masterstyle.css" />
     
 </asp:Content>
+
+<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+    <link rel ="stylesheet" href="teacherstyle.css" />
+    <style type="text/css">
+        .newStyle1 {
+            font-family: sans-serif;
+            font-size: medium;
+            font-weight: lighter;
+        }
+    </style>
+</asp:Content>
+
 

@@ -24,7 +24,7 @@
                             Welcome Back 
                             </h1>
 
-                            <asp:HyperLink ID="RegisterHyperLink"  ccsclass="reglink" ViewStateMode="Disabled" runat ="server">Register</asp:HyperLink>
+                            <asp:HyperLink ID="RegisterHyperLink"  ccsclass="reglink" ViewStateMode="Disabled" runat ="server"></asp:HyperLink>
                         </div>
                         
                
