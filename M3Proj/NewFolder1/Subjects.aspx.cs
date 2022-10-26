@@ -57,7 +57,7 @@ namespace M3Proj.NewFolder1
             sqlCommand.Parameters.AddWithValue("@subjID",subjID);
             sqlCommand.Parameters.AddWithValue("@teachID",subteachID);
             sqlCommand.Parameters.AddWithValue("@result",_final);
-
+            
 
 
         }

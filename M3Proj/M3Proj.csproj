@@ -230,6 +230,8 @@
     <Content Include="img\logo-8.png" />
     <Content Include="img\newsletter.png" />
     <Content Include="img\shape-bottom.png" />
+    <Content Include="img\Studying-pana.svg" />
+    <Content Include="img\Teacher student-amico.svg" />
     <Content Include="img\team-1.jpg" />
     <Content Include="img\team-2.jpg" />
     <Content Include="img\team-3.jpg" />

@@ -12,79 +12,83 @@
             </div>
         </div>
     </div>
-    <div class="nav-item dropdown" style="left: inherit; top: inherit;width:50px;">
-        <a id="page1" runat="server" href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Terms</a>
-        <div class="dropdown-menu m-0">
-                <a id="term1" class="dropdown-item" value="1">Term 1</a>
-                <a id="term2" class="dropdown-item" value="2">Term 2</a>            
-                <a id="term3" class="dropdown-item" value="3">Term 3</a>
-                <a id="term4" class="dropdown-item" value="4">Term 4</a>
-        </div>
-    </div>
 
-    <center>
-        
-                    
-        <table border="1" cellspacing="5" class="styled-table" bgcolor="white">
-            <caption><b>Enter Marks</b></caption>
-            <tr style="background: silver;">
-                <th rowspan="2">Name</th>
-                <th colspan="6">Marks</th>
-            </tr>
-            <tr style="background: silver;">
-                <th>Assessment 1</th>
-                <th>Assessment 2</th>
-                <th>Assessment 3</th>
-                <th>Assessment 4</th>
-                <th>Test 1</th>
-                <th>Test 2</th>
+                        <div class="dropdown-menu m-0">
+                            <a id="term1" class="dropdown-item" value="1">Term 1</a>
+                            <a id="term2" class="dropdown-item" value="2">Term 2</a>
+                            <a id="term3" class="dropdown-item" value="3">Term 3</a>
+                            <a id="term4" class="dropdown-item" value="4">Term 4</a>
+                        </div>
+                   
+                    <center>
+                        <div>
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:Button ID="Button1" runat="server" Text="Button" />
+                        </div>
+
+                        <table border="1" cellspacing="5" class="styled-table" bgcolor="white">
+                            <caption><b>Enter Marks</b></caption>
+                            
+                            <tr style="background: silver;">
+                                <th rowspan="2">Name</th>
+                                <th colspan="6">Marks</th>
+                            </tr>
+                            <tr style="background: silver;">
+                                <th>Assessment 1</th>
+                                <th>Assessment 2</th>
+                                <th>Assessment 3</th>
+                                <th>Assessment 4</th>
+                                <th>Test 1</th>
+                                <th>Test 2</th>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="name"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses1"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses2"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses3"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses4"></asp:TextBox>
+
+                                </td>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test1"></asp:TextBox>
+
+                                </td>
+                                <td>
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test2"></asp:TextBox>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="7" height="30">
+                                    <input type="submit" value="Calculate" onclick="Sub()" class="btn btn-primary">
+                                    <asp:Button ID="btnCapt" Text="Capture" CssClass="btn-outline-primary" runat="server"></asp:Button>
+                                </th>
+                            </tr>
+                        </table>
+                        <br>
+                        <table border="1" cellspacing="5" bgcolor="white"
+                            height="100" width="500" cellpadding="5" id="TableScore">
+                            <caption><b>Student Data</b></caption>
+                            <tr>
+                                <th width="180">Name</th>
+                                <th>Final</th>
+                                <!--th>Average</th-->
+                                <th>Pass Or Fail</th>
+                            </tr>
+                        </table>
+                    </center>
                 
-            </tr>
-            <tr>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="name" ></asp:TextBox>
-                    </td>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" id="Asses1"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" id="Asses2"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" id="Asses3"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" id="Asses4"></asp:TextBox>
 
-                </td>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test1"></asp:TextBox>
-
-                </td>
-                <td>
-                    <asp:TextBox type="text" ClientIDMode="static" runat="server" id="Test2"></asp:TextBox>
-
-                </td>
-            </tr>
-            <tr>
-                <th colspan="7" height="30">
-                    <input type="submit" value="Calculate" onclick="Sub()" class="btn btn-primary">
-                    <asp:Button ID ="btnCapt" Text="Capture" CssClass="btn-outline-primary" runat="server"></asp:Button>
-                </th>
-            </tr>
-        </table>
-        <br>
-        <table border="1" cellspacing="5" bgcolor="white"
-            height="100" width="500" cellpadding="5" id="TableScore">
-            <caption><b>Student Data</b></caption>
-            <tr>
-                <th width="180">Name</th>
-                <th>Final</th>
-                <!--th>Average</th-->
-                <th>Pass Or Fail</th>
-            </tr>
-        </table>
-    </center>
     <script type="text/javascript">
         function Sub() {
             var n, k, A1, A2, A3, A4, T1, T2, sum, avg;
@@ -126,3 +130,7 @@
         }
     </script>
 </asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+    <link rel ="stylesheet" href="../teacherstyle.css" />
+</asp:Content>
+

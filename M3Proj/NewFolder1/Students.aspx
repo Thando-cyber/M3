@@ -83,7 +83,7 @@
                             </asp:GridView>
 
 
-						    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="getStudent" TypeName="M3Proj.WebForm1"></asp:ObjectDataSource>
+						    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="getStudent" TypeName="M3Proj.WebForm1" OldValuesParameterFormatString="original_{0}"></asp:ObjectDataSource>
 
 
 						</div>

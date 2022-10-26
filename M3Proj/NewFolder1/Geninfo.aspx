@@ -27,7 +27,7 @@
 
     <div class="auto-style3">
         <div class="container">
-            <div class="main-body">
+            <div-- class="main-body">
                 <!-- Breadcrumb -->
                 <nav aria-label="breadcrumb" class="main-breadcrumb">
                     <ol class="breadcrumb">
@@ -35,12 +35,14 @@
                     </ol>
                 </nav>
                 <!-- /Breadcrumb -->
+                <center>
                 <div runat="server" id="sear">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox type="text" ID="Box2" runat="server" AutoPostBack="true" value=""></asp:TextBox>
-                    <asp:Button ID="But2" runat="server" Text="Search" OnClick="Button2_Click" />
+                    <asp:TextBox type="text" ID="Box2" runat="server" AutoPostBack="true" value="" CssClass="offset-sm-0" Width="122px"></asp:TextBox>
+                    <asp:Button ID="But2" runat="server" Text="Search" Cssclass="btn btn-outline-primary" OnClick="Button2_Click" />
                     <asp:Label runat="server" ID="warn1" Style="color:red"></asp:Label>
                 </div>
+                </center>
                 <div class="row gutters-sm">
                     <div class="col-md-4 mb-3">
                         <div class="card">
@@ -64,6 +66,7 @@
                             </div>
                         </div>
                     </div>
+                <!--/--div-->
                     <div class="col-md-8">
                         <div class="card mb-3">
                             <div class="card-body">
@@ -130,6 +133,13 @@
                                     </div>
                                 </div>
                                 <hr runat="server" id="line7"/>
+                                <div runat="server" id="tex7" class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0"> Class Teacher</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary" style="width: 300px"><%=clateac%>(@<%=teachId %>)</div>
+                                </div>
+                                <hr runat="server" id="hr1"/>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <a class="btn btn-info" href="GeninfoChange.aspx">Edit Information</a>
@@ -140,8 +150,7 @@
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
+            
 
 
  </asp:Content>
