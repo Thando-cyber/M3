@@ -14,7 +14,8 @@
                   for students in all aspect of our school.
                   The values we instil in our students guide them on their journey
                   to adulthood and finding their purpose.</p>
-                            <a href="About.aspx" class="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</a>
+
+                             <a href="About.aspx" class="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img class="img-fluid animated zoomIn" src="img/Webinar-bro.svg" alt="">

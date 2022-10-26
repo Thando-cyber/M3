@@ -284,6 +284,7 @@
     <Content Include="Photos\6.jpg" />
     <Content Include="Photos\academics.jpg" />
     <Content Include="Photos\culture.jpg" />
+    <Content Include="Photos\download-removebg-preview-modified.png" />
     <Content Include="Photos\download-removebg-preview.png" />
     <Content Include="Photos\manage.jpg" />
     <Content Include="Photos\Privacy policy-rafiki.svg" />
@@ -291,6 +292,7 @@
     <Content Include="Photos\9.jpg" />
     <Content Include="Photos\sport.jpg" />
     <Content Include="Photos\7.jpg" />
+    <Content Include="Report2.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -314,7 +316,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="NewFolder1\Fees.aspx" />
-    <Content Include="NewFolder1\Results.aspx" />
+    <Content Include="NewFolder1\Report.aspx" />
     <Content Include="NewFolder1\Subjects.aspx" />
     <Content Include="NewFolder1\Web.config" />
     <Content Include="Default.aspx" />
@@ -329,6 +331,17 @@
     <Content Include="NewFolder1\academicResults.rdlc" />
     <Content Include="GroupPmb2DataSet.xsc">
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsStudent.xsc">
+      <DependentUpon>dsStudent.xsd</DependentUpon>
+    </Content>
+    <None Include="dsStudent.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStudent.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsStudent.xss">
+      <DependentUpon>dsStudent.xsd</DependentUpon>
     </Content>
     <None Include="GroupPmb2DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -559,6 +572,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dsStudent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStudent.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -596,12 +614,12 @@
     <Compile Include="NewFolder1\Payments.aspx.designer.cs">
       <DependentUpon>Payments.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Results.aspx.cs">
-      <DependentUpon>Results.aspx</DependentUpon>
+    <Compile Include="NewFolder1\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NewFolder1\Results.aspx.designer.cs">
-      <DependentUpon>Results.aspx</DependentUpon>
+    <Compile Include="NewFolder1\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Geninfo.aspx.cs">
       <DependentUpon>Geninfo.aspx</DependentUpon>
@@ -623,6 +641,13 @@
     </Compile>
     <Compile Include="NewFolder1\Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.aspx.cs">
+      <DependentUpon>Report2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report2.aspx.designer.cs">
+      <DependentUpon>Report2.aspx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
