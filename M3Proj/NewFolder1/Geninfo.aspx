@@ -122,7 +122,7 @@
                                         <h6 class="mb-0">Fees</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary" style="width:300px">
-                                        <%= fees %>
+                                        <%= fees.ToString("0.00") %>
                                     </div>
                                 </div>
                                 <hr>
