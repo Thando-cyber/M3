@@ -669,3 +669,5 @@ C:\Users\Makro\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.csproj.CopyComplete
 C:\Users\Makro\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.dll
 C:\Users\Makro\Source\Repos\M4Proj\M3Proj\obj\Debug\M3Proj.pdb
 C:\Users\Makro\source\repos\M4Proj\M3Proj\obj\Debug\M3Proj.csproj.AssemblyReference.cache
+C:\Users\Makro\source\repos\M4Proj\M3Proj\obj\Debug\RdlCompile.cache
+C:\Users\Makro\source\repos\M4Proj\M3Proj\obj\Debug\RdlCompile.compiled

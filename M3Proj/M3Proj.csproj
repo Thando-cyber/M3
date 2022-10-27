@@ -207,7 +207,6 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="CSS\about_contact.css" />
     <Content Include="CSS\bootstrap.min.css" />
-    <Content Include="CSS\defaultstyle.css" />
     <Content Include="CSS\footer.css" />
     <Content Include="CSS\info.css" />
     <Content Include="CSS\info2.css" />
