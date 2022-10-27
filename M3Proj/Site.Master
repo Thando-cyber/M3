@@ -15,10 +15,7 @@
 
 
   
-    <link href="CSS/footer.css" rel="stylesheet" />
-    <link href="CSS/loginstyle.css" rel="stylesheet" />
-    <link href="CSS/teacherstyle.css" rel="stylesheet" />
-    <link href="CSS/about_contact.css" rel="stylesheet" />
+   
 
     <title><%: Page.Title %> - Kharina Secondary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -42,8 +39,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="CSS/masterstyle.css" />
-   
+    <link rel="stylesheet" href="CSS/masterstyle.css" />
+    <link href="CSS/loginstyle.css" rel="stylesheet" />
   
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -52,12 +49,10 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
  
       <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
-            <link rel ="stylesheet" href="teacherstyle.css" />
           
           
           </asp:ContentPlaceHolder>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            <link rel ="stylesheet" href="teacherstyle.css" />
           
           </asp:ContentPlaceHolder>
 
