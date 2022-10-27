@@ -16,10 +16,15 @@ namespace M3Proj.NewFolder1
         protected void Page_Load(object sender, EventArgs e)
         {
             //object email = Session["Email"];
+            sear.Visible = false;
             string str1 = Session["Email"].ToString();
             int n1 = str1.IndexOf("@");
             string str2 = str1.Substring(0, n1);
+            if (Session["userType"].ToString() =="Administration" )
+            {
+                sear.Visible = true;
 
+            }
 
             Session["stuID"] = str2;
             //Session["ID"] = stu;              

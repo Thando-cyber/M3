@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M3Proj.Account {
-    
-    
-    public partial class Login {
-        
+namespace M3Proj.Account
+{
+
+
+    public partial class Login
+    {
+
         /// <summary>
         /// RegisterHyperLink control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace M3Proj.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-        
+
         /// <summary>
         /// ErrorMessage control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace M3Proj.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessage;
-        
+
         /// <summary>
         /// FailureText control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace M3Proj.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal FailureText;
-        
+
         /// <summary>
         /// Email control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace M3Proj.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Email;
-        
+
         /// <summary>
         /// Password control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace M3Proj.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Password;
-        
+
         /// <summary>
         /// RememberMe control.
         /// </summary>

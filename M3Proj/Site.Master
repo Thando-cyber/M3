@@ -22,14 +22,14 @@
 
     <title><%: Page.Title %> - Kharina Secondary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 
       <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
@@ -45,7 +45,7 @@
       <link rel="stylesheet" href="CSS/masterstyle.css" />
    
   
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
     
@@ -64,7 +64,7 @@
     
 
 </head>
-<body class="b1">
+<body class="b1" style="margin-top: 0px;">
     <form runat="server">
      <div class="container-xxl bg-white p-0">
        
@@ -107,7 +107,7 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             
-                                <a runat="server" style="color:#FFFfff;" class= "nav-item nav-link" href="Account/Manage" title="Manage your account">Hello <%: Context.User.Identity.GetUserName() %> !</a>
+                                <a runat="server" style="color:#FFFfff;" class= "nav-item nav-link" href="Account/Manage" title="Manage your account">Hello <%= name %> !</a>
                                 
                                     <asp:LoginStatus  runat="server" style="color:#FFFfff;" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                             
@@ -188,7 +188,7 @@
 
 
         <!-- Back to Top -->
-        <a href="/Default.aspx" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="<%=HttpContext.Current.Request.Url.AbsolutePath %>"" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
    
 
     <!-- JavaScript Libraries -->

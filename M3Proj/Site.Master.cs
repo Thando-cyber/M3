@@ -7,11 +7,16 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace M3Proj
 {
+    //string currpage = HttpContext.Current.Request.Url.AbsolutePath;
     public partial class SiteMaster : MasterPage
     {
+        public string name = " ";
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
@@ -69,6 +74,9 @@ namespace M3Proj
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
             HttpCookie userInfo = new HttpCookie("userInfo");
             userInfo["Email"] = Session["Email"].ToString();
             userInfo["UserStatus"] = Session["userType"].ToString();
@@ -77,27 +85,50 @@ namespace M3Proj
             dropdown1.Visible = false;
             dropdown2.Visible = false;
             dropdown3.Visible = false;
-            
             dropdown4.Visible = false;
             dropdown5.Visible = false;
             dropdown6.Visible = false;
             
 
-            if (Session["userType"].ToString().Equals("Student")) {
+            if (Session["userType"].ToString().Equals("Student")) 
+            {
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
                 dropdown6.Visible = true;
-                
+                SqlConnection con = new SqlConnection(conString);
+                string query = "SELECT * FROM student WHERE stu_email = @Email";
+                SqlCommand sqlCommand = new SqlCommand(query, con);
+                sqlCommand.Parameters.AddWithValue("@Email", Session["Email"]);
+                SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
+                DataTable dt = new DataTable();
+                DA.Fill(dt);
 
-            }
+                foreach (DataRow dr in dt.Rows)
+                {
+                    name = Convert.ToString(dr["stu_name"]);
+                }
+
+                }
             else if(Session["userType"].ToString().Equals("Teacher"))
             {
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown3.Visible= true;
                 dropdown4.Visible = true;
-               
+                SqlConnection con = new SqlConnection(conString);
+                string query = "SELECT * FROM Teachers WHERE teach_email = @Email";
+                SqlCommand sqlCommand = new SqlCommand(query, con);
+                sqlCommand.Parameters.AddWithValue("@Email", Session["Email"]);
+                SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
+                DataTable dt = new DataTable();
+                DA.Fill(dt);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    name = Convert.ToString(dr["teach_firstname"]);
+                }
+
 
             }
             else if (Session["userType"].ToString().Equals("Administrator"))

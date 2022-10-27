@@ -28,7 +28,7 @@
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
 									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
 									<p class="text-muted font-size-sm"><%= sEmail %></p>
-									<asp:Button ID="Button3" Cssclass="btn btn-primary" runat="server" Text="Add Mark" />
+									<asp:Button ID="Button3" Cssclass="btn btn-primary" runat="server" Text="Add Mark"  />
                                     <asp:Button ID="Button2" CssClass="btn btn-outline-primary" runat="server" Text="View Report" />
 									
 								</div>
@@ -64,16 +64,17 @@
                       
                       
 						<div class="card-body">
-                          
-                                <div class="input-group">
-  <input id="searchTb" runat="server" type="search" class="form-control rounded" placeholder="Search student" aria-label="Search" aria-describedby="search-addon" />
-  
-                                    <asp:Button ID="Button4" runat="server" Text="Search"  Cssclass="btn btn-outline-primary" />
-</div>
-                            <asp:GridView  style="border-radius:5px;" ID  ="datagrid" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
- HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" DataSourceID="ObjectDataSource1" OnRowCreated="datagrid_RowCreated"   >
+                          <asp:GridView  style="border-radius:5px;" ID  ="datagrid" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
+ HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" DataSourceID="SqlDataSource1"   DataKeyNames="stu_ID" AutoGenerateColumns="False" OnRowDataBound="datagrid_RowDataBound"   >
                                 <Columns>
                                     <asp:CommandField ShowSelectButton="True" />
+                                    <asp:BoundField DataField="stu_ID" HeaderText="stu_ID" ReadOnly="True" SortExpression="stu_ID" />
+                                    <asp:BoundField DataField="stu_name" HeaderText="stu_name" SortExpression="stu_name" />
+                                    <asp:BoundField DataField="stu_surname" HeaderText="stu_surname" SortExpression="stu_surname" />
+                                    <asp:BoundField DataField="stu_email" HeaderText="stu_email" SortExpression="stu_email" />
+                                    <asp:BoundField DataField="stu_age" HeaderText="stu_age" SortExpression="stu_age" />
+                                    <asp:BoundField DataField="stu_gender" HeaderText="stu_gender" SortExpression="stu_gender" />
+                                    <asp:BoundField DataField="parentContact" HeaderText="parentContact" SortExpression="parentContact" />
                                 </Columns>
 <HeaderStyle CssClass="header"></HeaderStyle>
 
@@ -83,7 +84,12 @@
                             </asp:GridView>
 
 
-						    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="getStudent" TypeName="M3Proj.WebForm1"></asp:ObjectDataSource>
+						        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString2 %>" SelectCommand="SELECT [stu_ID], [stu_name], [stu_surname], [stu_email], [stu_age], [stu_gender], [parentContact] FROM [student] WHERE ([classID] = @classID)">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="Label1" Name="classID" PropertyName="Text" Type="Int32" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
 
 						</div>
@@ -149,6 +155,7 @@ border-radius:5px;
 .header
 {
 background-color:  #0E2E50;
+
 font-family: Arial;
 color: White;
 border: none 0px transparent;
