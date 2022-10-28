@@ -92,7 +92,7 @@
                                 
                                 <a  id="dropdown7" runat="server" href="NewFolder1/GenSubjectInfo.aspx" class="dropdown-item">Subject Details</a>
                                 <a  id="dropdown8" runat="server" href="NewFolder1/admins.aspx" class="dropdown-item">Admin Overview</a>
-                                <a  id="dropdown9" runat="server" href="NewFolder1/Teacher.aspx" class="dropdown-item">Teacher Overview </a>
+                                <a  id="dropdown9" runat="server" href="NewFolder1/Teachers.aspx" class="dropdown-item">Teacher Overview </a>
                                 
 
                                 
