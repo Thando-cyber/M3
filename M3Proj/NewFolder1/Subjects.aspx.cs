@@ -62,13 +62,7 @@ namespace M3Proj.NewFolder1
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            SqlDataSource1.Insert();
-            TextBox1.Text = " ";
-            TextBox2.Text = " ";
-            TextBox3.Text = " ";
-        }
+        
     }
 
 }

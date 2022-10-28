@@ -88,7 +88,10 @@ namespace M3Proj
             dropdown4.Visible = false;
             dropdown5.Visible = false;
             dropdown6.Visible = false;
-            
+            dropdown7.Visible = false;
+            dropdown8.Visible = false;
+            dropdown9.Visible = false;
+
 
             if (Session["userType"].ToString().Equals("Student")) 
             {
@@ -140,6 +143,10 @@ namespace M3Proj
                 dropdown4.Visible = true;
                 dropdown5.Visible = true;
                 dropdown6.Visible = true;
+                dropdown7.Visible = true;
+                dropdown8.Visible = true;
+                dropdown9.Visible = true;
+
             }
             else 
             {
@@ -150,6 +157,10 @@ namespace M3Proj
                 dropdown4.Visible = false;
                 dropdown5.Visible = false;
                 dropdown6.Visible = false;
+                dropdown7.Visible = false;
+                dropdown8.Visible = false;
+                dropdown9.Visible = false;
+
             }
 
         }

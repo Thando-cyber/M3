@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\M3Proj",
-    "\\M3Proj\\NewFolder1"
+    "\\M3Proj"
   ],
-  "SelectedNode": "\\M3Proj\\NewFolder1\\Payments.aspx",
+  "SelectedNode": "\\M3Proj\\Global.asax",
   "PreviewInSolutionExplorer": false
 }
