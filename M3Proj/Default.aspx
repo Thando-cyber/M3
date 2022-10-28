@@ -186,7 +186,7 @@
                         <img class="img-fluid" src="img/Teacher student-amico.svg">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="margin-top:20px" >Our Goals</div>
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="margin-top:15vh" >Our Goals</div>
                         <h2 class="mb-4">Inspiring The Next Generation Of Leaders </h2>
                         <p class="mb-4">Here at Kharina we strive to help every learner reach their own greatest potential. We don&#39;t just measure success in academic merits alone but allow every student the oppurtunity to show us and themselves what they&#39;re really capable of. We offer many extra curricular activities and mental health support services to give students as many experiences in their life.</p>
                         <div class="row g-3 mb-4">
