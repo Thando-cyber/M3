@@ -88,7 +88,8 @@
                                 <a  id="dropdown4" runat="server" href="NewFolder1/Subjects.aspx" class="dropdown-item">Subjects</a>
                                 <a  id="dropdown5" runat="server" href="NewFolder1/AdminControl.aspx" class="dropdown-item">Admin</a>
                                 <a  id="dropdown6" runat="server" href="NewFolder1/Payments.aspx" class="dropdown-item">Payment</a>
-                                                             
+                                             
+                                
                                 <a  id="dropdown7" runat="server" href="NewFolder1/GenSubjectInfo.aspx" class="dropdown-item">Subject Details</a>
                                 <a  id="dropdown8" runat="server" href="NewFolder1/admins.aspx" class="dropdown-item">Admin Overview</a>
                                 <a  id="dropdown9" runat="server" href="NewFolder1/Teacher.aspx" class="dropdown-item">Teacher Overview </a>
