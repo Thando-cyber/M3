@@ -34,7 +34,7 @@
     <br />
     <br />
     <div style="text-align:center;">
-        <h2>Amount Owed by Student:  R <%= amount.ToString("0.00") %></h2>  
+        <h2>Amount Owed by Student:  R <%= /*amount.ToString("0.00")*/amount.ToString("n2") %></h2>  
     </div>
     <br />
     <br />

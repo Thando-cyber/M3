@@ -205,6 +205,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="NewFolder1\Admins.aspx" />
     <Content Include="CSS\about_contact.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\footer.css" />
@@ -212,6 +213,7 @@
     <Content Include="CSS\info2.css" />
     <Content Include="CSS\loginstyle.css" />
     <Content Include="CSS\masterstyle.css" />
+    <Content Include="NewFolder1\GenSubjectInfo.aspx" />
     <Content Include="img\about.png" />
     <Content Include="img\hero.png" />
     <Content Include="img\logo-1.png" />
@@ -322,6 +324,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="NewFolder1\Teachers.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -554,6 +557,13 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\Admins.aspx.cs">
+      <DependentUpon>Admins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Admins.aspx.designer.cs">
+      <DependentUpon>Admins.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -575,6 +585,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsStudent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\GenSubjectInfo.aspx.cs">
+      <DependentUpon>GenSubjectInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\GenSubjectInfo.aspx.designer.cs">
+      <DependentUpon>GenSubjectInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -665,6 +682,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="NewFolder1\Teachers.aspx.cs">
+      <DependentUpon>Teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Teachers.aspx.designer.cs">
+      <DependentUpon>Teachers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

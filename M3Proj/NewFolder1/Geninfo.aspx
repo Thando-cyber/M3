@@ -120,7 +120,7 @@
                                         <h6 class="mb-0">Fees</h6>
                                     </asp:Label>
                                     <div class="col-sm-9 text-secondary" style="width: 300px">
-                                        R<%= fees %>
+                                        R<%= fees.ToString("n2") %>
                                     </div>
                                 </div>
                                 <hr runat="server" id="line6" /> 

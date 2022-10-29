@@ -31,13 +31,13 @@ namespace M3Proj.NewFolder1
         {
             if (Session["userType"].ToString() == "Student")
             {
-                Session["userType2"]= "Student";
-                Search.Visible = false; 
+                Session["userType2"] = "Student";
+                Search.Visible = false;
                 title = Session["userType"].ToString();
                 string str1 = Session["Email"].ToString();
                 int n1 = str1.IndexOf("@");
                 str2 = str1.Substring(0, n1);
-                Session["stuID"]= str2;
+                Session["stuID"] = str2;
                 Session["ID"] = str2;
                 string conString =
                     "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
@@ -58,19 +58,17 @@ namespace M3Proj.NewFolder1
                     gender = Convert.ToString(dr["stu_gender"]);
                     fees = Convert.ToDecimal(dr["stu_Fees"]);
                     cont = Convert.ToString(dr["parentContact"]);
-                    em= Convert.ToString(dr["stu_email"]);
-
+                    em = Convert.ToString(dr["stu_email"]);
                 }
-
                 FullName = name + " " + Surname;
                 FirstName.Text = name;
                 FirstName.ReadOnly = true;
-                lastname.Text=Surname;
-                
-                lastname.ReadOnly= true;
-                email.Text=em;
-                email.ReadOnly= true;
-                TextBox1.Text= gender;
+                lastname.Text = Surname;
+
+                lastname.ReadOnly = true;
+                email.Text = em;
+                email.ReadOnly = true;
+                TextBox1.Text = gender;
                 TextBox1.ReadOnly = true;
 
                 /*
@@ -81,12 +79,12 @@ namespace M3Proj.NewFolder1
             }
             else if (Session["userType"].ToString() == "Teacher")
             {
-                Session["userType2"]= "Teacher";
+                Session["userType2"] = "Teacher";
                 Search.Visible = false;
                 string str1 = Session["Email"].ToString();
                 int n1 = str1.IndexOf("@");
                 str2 = str1.Substring(0, n1);
-                Session["teachID"]=str2;
+                Session["teachID"] = str2;
                 Session["ID"] = str2;
                 string conString =
                     "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
@@ -108,33 +106,34 @@ namespace M3Proj.NewFolder1
                     //fees = Convert.ToDecimal(dr["stu_Fees"]);
                     cont = Convert.ToString(dr["contactNum"]);
                     title = Convert.ToString(dr["teach_title"]);
-                    em= Convert.ToString(dr["teach_email"]);
+                    em = Convert.ToString(dr["teach_email"]);
 
                 }
-             
+
                 FullName = name + " " + Surname;
                 FirstName.Text = name;
                 FirstName.ReadOnly = true;
-                lastname.Text=Surname;
-                lastname.ReadOnly= true;
-                email.Text=em;
-                email.ReadOnly= true;
-                TextBox1.Text= gender;
+                lastname.Text = Surname;
+                lastname.ReadOnly = true;
+                email.Text = em;
+                email.ReadOnly = true;
+                TextBox1.Text = gender;
                 TextBox1.ReadOnly = true;
-
-                
-
-                //.Controls.Add(new LiteralControl("<script type = 'text/javascript'> alert('The user is a student')<script>"));
-
             }
-
+            else if (Session["userType"].ToString() == "Administrator")
+            {
+                Search.Visible = true;
+            }
         }
+
+
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
 
             if (Session["userType2"].ToString() == "Student")
             {
+
                 string sqlStmt;
                 string conString;
                 SqlConnection cn = null;
@@ -144,25 +143,19 @@ namespace M3Proj.NewFolder1
                 conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
                 cn = new SqlConnection(conString);
                 cmd = new SqlCommand(sqlStmt, cn);
+                if (addre.Text == "")
+                {
+                    addre.Text = Address;
+                }
+                else if (contac.Text == "")
+                {
+                    contac.Text = cont;
+                }
                 cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
                 cmd.Parameters.AddWithValue("@LastName", lastname.Text);
                 cmd.Parameters.AddWithValue("@Address", addre.Text);
-                cmd.Parameters.AddWithValue("@contact",contac.Text);
-                cmd.Parameters.AddWithValue("@Email",em);//Remeber to use local var instead
-                /*
-                if (contac.Text == " ")
-                {
-                    Label1.Text= "Contact cannot be empty";
-                }
-                else if (addre.Text ==" ")
-                {
-                    Label1.Text= "Address cannot be empty";
-                }
-                else if (Mobile.Text== " ")
-                {
-                    Label1.Text= "Mobile cannot be empty";
-                }
-                */
+                cmd.Parameters.AddWithValue("@contact", contac.Text);
+                cmd.Parameters.AddWithValue("@Email", em);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 Label1.Text = "Record Inserted Succesfully";
@@ -180,41 +173,33 @@ namespace M3Proj.NewFolder1
                 conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
                 cn = new SqlConnection(conString);
                 cmd = new SqlCommand(sqlStmt, cn);
+                if (addre.Text == "")
+                {
+                    addre.Text = Address;
+                }
+                else if (contac.Text == "")
+                {
+                    contac.Text = cont;
+                }
+                addre.Text = Server.HtmlEncode(addre.Text);
                 cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
                 cmd.Parameters.AddWithValue("@LastName", lastname.Text);
                 cmd.Parameters.AddWithValue("@Address", addre.Text);
                 cmd.Parameters.AddWithValue("@contact", contac.Text);
-                cmd.Parameters.AddWithValue("@Email",em);//Remeber to use local var instead
-                /*
-                if (contac.Text == " ")
-                {
-                    Label1.Text= "Contact cannot be empty";
-                }
-                else if (addre.Text ==" ")
-                {
-                    Label1.Text= "Address cannot be empty";
-                }
-                else if (Mobile.Text== " ")
-                {
-                    Label1.Text= "Mobile cannot be empty";
-                }
-                */
+                cmd.Parameters.AddWithValue("@Email", em);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 Label1.Text = "Record Inserted Succesfully";
                 Response.Redirect("/NewFolder1/Geninfo.aspx");
 
-            }else if (Session["userType"].ToString() == "Administrator")
-            {
-                Search.Visible = true;
-                
             }
         }
+
         protected void Button2_Click(object sender, EventArgs e)
         {
-            
+
             string userinput = searchID.Text;
-            if (userinput.Length >=5)
+            if (userinput.Length >= 5)
             {
                 string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
                 string query1 = "SELECT* FROM student where stu_ID = @email";
@@ -245,7 +230,7 @@ namespace M3Proj.NewFolder1
                     string str1 = Session["Email"].ToString();
                     int n1 = str1.IndexOf("@");
                     str2 = str1.Substring(0, n1);
-                    Session["stuID"]= str2;
+                    Session["stuID"] = str2;
                     Session["ID"] = str2;
                     conString =
                         "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
@@ -270,7 +255,7 @@ namespace M3Proj.NewFolder1
                     }
                     FullName = name + " " + Surname;
                 }
-                else if(dt2.Rows.Count == 1)
+                else if (dt2.Rows.Count == 1)
                 {
 
                 }

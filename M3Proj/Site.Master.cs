@@ -88,9 +88,12 @@ namespace M3Proj
             dropdown4.Visible = false;
             dropdown5.Visible = false;
             dropdown6.Visible = false;
-            
+            dropdown7.Visible = false;
+            dropdown8.Visible = false;
+            dropdown9.Visible = false;
 
-            if (Session["userType"].ToString().Equals("Student")) 
+
+            if (Session["userType"].ToString().Equals("Student"))
             {
                 page1.Visible = true;
                 dropdown1.Visible = true;
@@ -109,12 +112,12 @@ namespace M3Proj
                     name = Convert.ToString(dr["stu_name"]);
                 }
 
-                }
-            else if(Session["userType"].ToString().Equals("Teacher"))
+            }
+            else if (Session["userType"].ToString().Equals("Teacher"))
             {
                 page1.Visible = true;
                 dropdown1.Visible = true;
-                dropdown3.Visible= true;
+                dropdown3.Visible = true;
                 dropdown4.Visible = true;
                 SqlConnection con = new SqlConnection(conString);
                 string query = "SELECT * FROM Teachers WHERE teach_email = @Email";
@@ -140,16 +143,24 @@ namespace M3Proj
                 dropdown4.Visible = true;
                 dropdown5.Visible = true;
                 dropdown6.Visible = true;
+                dropdown7.Visible = true;
+                dropdown8.Visible = true;
+                dropdown9.Visible = true;
+
             }
-            else 
+            else
             {
                 page1.Visible = false;
                 dropdown1.Visible = false;
-                dropdown2.Visible= false;
+                dropdown2.Visible = false;
                 dropdown3.Visible = false;
                 dropdown4.Visible = false;
                 dropdown5.Visible = false;
                 dropdown6.Visible = false;
+                dropdown7.Visible = false;
+                dropdown8.Visible = false;
+                dropdown9.Visible = false;
+
             }
 
         }
