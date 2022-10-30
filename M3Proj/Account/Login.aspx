@@ -19,10 +19,10 @@
                 <div class="form">
                     <div class ="box1">
                    
-                        <div class="head">
-                            <h1>
+                        <div CssClass="head">
+                            <h4>
                             Welcome Back 
-                            </h1>
+                            </h4>
 
                             <asp:HyperLink ID="RegisterHyperLink"  ccsclass="reglink" ViewStateMode="Disabled" runat ="server"></asp:HyperLink>
                         </div>

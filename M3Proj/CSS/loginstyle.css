@@ -11,7 +11,6 @@ height:80vh;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    background:red;
     width:75%;
     height:73vh;
     border-radius:15px;
@@ -46,7 +45,8 @@ height:80vh;
 }
 
 .logincontrol{
-    width:290px;
+    /*width:290px;*/
+    width: 80%;
     border-radius:5px;
     border:1px solid;
     height:25px;
@@ -65,7 +65,8 @@ height:80vh;
 
 .loginBtn{
     margin-top:10px;
-    width:290px;
+    /*width:290px;*/
+    width: 80%;
     height:27px;
     font-size:16px;
     background-color:#407BFF;
@@ -88,7 +89,8 @@ height:80vh;
 
 .head h1{
     font-size:21px;
-    margin-right:12px;
+    /*margin-right:12px;*/
+    text-align:center;
 }
 
 .head .reglink{
@@ -108,3 +110,17 @@ height:80vh;
     padding: 10rem 0 6rem 0;
 }
 
+@media only screen and (max-width: 768px) {
+    .panel {
+        display: none;
+    }
+
+    .box1 {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .loginForm{
+        justify-content:center;
+    }
+}

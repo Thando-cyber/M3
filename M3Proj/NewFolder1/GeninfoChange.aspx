@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GeninfoChange.aspx.cs" Inherits="M3Proj.NewFolder1.GeninfoChange" %>
+﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GeninfoChange.aspx.cs" Inherits="M3Proj.NewFolder1.GeninfoChange" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
