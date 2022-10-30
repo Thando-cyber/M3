@@ -185,7 +185,7 @@
                     <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
                         <img class="img-fluid" src="img/Teacher student-amico.svg">
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-6 wow fadeInUp section3" data-wow-delay="0.1s" >
                         <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="margin-top:20px" >Our Goals</div>
                         <h2 class="mb-4">Inspiring The Next Generation Of Leaders </h2>
                         <p class="mb-4">Here at Kharina we strive to help every learner reach their own greatest potential. We don&#39;t just measure success in academic merits alone but allow every student the oppurtunity to show us and themselves what they&#39;re really capable of. We offer many extra curricular activities and mental health support services to give students as many experiences in their life.</p>
@@ -227,7 +227,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Met the most pleasant and polite students. A true reflection of the teachers and members at the institute. An amazing and welcoming visit.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg">
+                           
                             <div class="ps-3">
                                 <h6 class="mb-1">Mthokozisi Nxumalo</h6>
                                 <small>Parent</small>
@@ -238,7 +238,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Great boarding school for boys. Fantastic facilities and grounds</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg">
+                           
                             <div class="ps-3">
                                 <h6 class="mb-1">Ihsaan Bhamjee</h6>
                                 <small>Parent</small>
@@ -250,7 +250,7 @@
                         <<p>Brilliant school.The Best in southern hemisphere
                         </p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg">
+                           
                             <div class="ps-3">
                                 <h6 class="mb-1">Thandolwethu Sithole</h6>
                                 <small>Parent</small>
@@ -261,7 +261,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Awesome staff and a very warm welcoming I senced solidarity between staff and management. Keep it up. Very clean environment.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg">
+                          
                             <div class="ps-3">
                                 <h6 class="mb-1">Telamiso</h6>
                                 <small>Parent</small>
@@ -272,7 +272,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Beautiful place with a lovely atmosphere and very friendly people. Very good academic track record. Wonderful sporting facilties.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg">
+                           
                             <div class="ps-3">
                                 <h6 class="mb-1">Chris</h6>
                                 <small>Parent</small>
@@ -283,7 +283,23 @@
             </div>
         </div>
         <!-- Testimonial End -->
+
+
+
+<style type="text/css">
+
+    .section3{
+            margin-top:20vh;
+    
+    }
+
+
+</style>
+  
 </asp:Content>
+
+
+
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder">
     <link rel="stylesheet" href="CSS/masterstyle.css" />
     
