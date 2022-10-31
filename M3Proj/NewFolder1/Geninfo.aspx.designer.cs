@@ -51,6 +51,24 @@ namespace M3Proj.NewFolder1
         protected global::System.Web.UI.WebControls.Label warn1;
 
         /// <summary>
+        /// reportButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton reportButton;
+
+        /// <summary>
+        /// SubjectButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton SubjectButton;
+
+        /// <summary>
         /// text2 control.
         /// </summary>
         /// <remarks>

@@ -1,7 +1,7 @@
-﻿<%@ Page Title="Results Capture" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  CodeBehind="Subjects.aspx.cs" Inherits="M3Proj.NewFolder1.Subjects" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  CodeBehind="Subjects.aspx.cs" Inherits="M3Proj.NewFolder1.Subjects" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <link rel="stylesheet" href="~/CSS/info.css" />
     <div class="container-xxl position-relative p-0">
         <div class="container-xxl bg-primary page-header">
             <div class="container text-center">
@@ -12,277 +12,361 @@
             
         </div>
     </div>
-
-                        
+    
                    
                     <center>
                         <div>
+                            <br />
                             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                            <asp:Button ID="Button1" runat="server" Text="Button" />
+                            <asp:Button ID="Search" runat="server" Text="Search" OnClick="Search_Click" />
+                            <br />
+                            <br />
                         </div>
-                       
-                        
-                            <label for="lan">Term</label>
-                            <select name="Term" id="lang">
-                                <option value="1">Term 1</option>
-                                <option value="2">Term 2</option>
-                                <option value="3">Term 3</option>
-                                <option value="4">Term 4</option>
-                             </select>
+                        <select name="Term" id="lang">
+                            <option value="1">Term 1</option>
+                            <option value="2">Term 2</option>
+                            <option value="3">Term 3</option>
+                            <option value="4">Term 4</option>
+                        </select>
+                        <div>
+                            <strong>
+                            <asp:Label ID="Label2" runat="server"></asp:Label>
+                            </strong>
+                        </div>
+                        <div>
+                            <strong><asp:Label ID="Label1" runat="server"></asp:Label></strong></div>
+                        <br />
                         </center>
                         <center>
-                        <table border="1" cellspacing="5" class="auto-style4" bgcolor="white"  style="width:1000px">
+                        <table border="1" cellspacing="5" class="card-body" bgcolor="white"  style="width:900px">
                             <caption><b>Enter Marks</b></caption>
                             
                             <tr style="background: silver;">
-                                <th rowspan="2" class="auto-style10">Subject</th>
+                                <th rowspan="2" class="auto-style22">Subject</th>
                                 <!--th colspan="6">Marks</!th-->
                             </tr>
                             <tr style="background: silver;">
-                                <th class="auto-style9">Assessment 1</th>
-                                <th class="auto-style9">Assessment 2</th>
-                                <th class="auto-style9">Assessment 3</th>
-                                <th class="auto-style10">Assessment 4</th>
-                                <th class="auto-style9">Test 1</th>
-                                <th class="auto-style11">Test 2</th>
+                                <th class="auto-style20">Assessment 1</th>
+                                <th class="auto-style20">Assessment 2</th>
+                                <th class="auto-style20">Assessment 3</th>
+                                <th class="auto-style20">Assessment 4</th>
+                                <th class="auto-style20">Test 1</th>
+                                <th class="auto-style20">Test 2</th>
 
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" Text="English" ID="Textbox44"></asp:TextBox>
+                                <td class="auto-style23">
+                                    &nbsp;&nbsp;&nbsp;
+                                    <asp:DropDownList ID="DropDownList6" runat="server" DataSourceID="SqlDataSource2" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" />
+                                    &nbsp;&nbsp;
+                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button2_Click" />
                                 </td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses1"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses1" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
                                     <br />
                                     </td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses2"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses2" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                                     <br />
                                     </td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses3"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses3" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                                     <br />
                                     </td>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses4"></asp:TextBox>
+                                <td class="auto-style19">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses4" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    </td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test1"></asp:TextBox>
+                                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
                                     <br />
                                     </td>
-                                <td class="auto-style5">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test2"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test1" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test2" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
                                     <br />
                                     </td> 
+                                
                             </tr>
                            
                             <tr>
-                                <td class="auto-style3">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox2"></asp:TextBox>
+                                <td class="auto-style23">
+                                    &nbsp;&nbsp;
+                                    <asp:DropDownList ID="DropDownList5" runat="server" DataSourceID="SqlDataSource2" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <asp:Button ID="Button3" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" />
+                                    &nbsp;
+                                    <asp:Button ID="Button3" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button3_Click" />
                                 </td>
-                                <td class="auto-style8">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox3"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox3" Width="80px"></asp:TextBox>
                                     <br />
-                                    <span class="auto-style1">-</span></td>
-                                <td class="auto-style8">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox4"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style8">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox5"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox4" Width="80px"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style3">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox6"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox5" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    </td>
+                                <td class="auto-style17">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox6" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style8">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox7"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style6">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox8"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox7" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
+
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox8" Width="80px"></asp:TextBox>
+
+                                    <br />
+
+                                    <br />
+                                    </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" Text="Life Orientation" ID="TextBox9"></asp:TextBox>
+                                <td class="auto-style23">
+                                    <asp:DropDownList ID="DropDownList7" runat="server" DataSourceID="SqlDataSource2" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1">&nbsp;<asp:Button ID="Button4"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" />
+                                    <span class="auto-style1"><asp:Button ID="Button4"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button4_Click" />
                                     </span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox10"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox10" Width="80px"></asp:TextBox>
                                     <br />
-                                    <span class="auto-style1">-</span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox11"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox12"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox11" Width="80px"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox13"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox12" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    </td>
+                                <td class="auto-style17">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox13" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox14"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox14" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style5">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox15"></asp:TextBox>
 
                                     <br />
-                                    -</td>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox15" Width="80px"></asp:TextBox>
+
+                                    <br />
+
+                                    <br />
+                                    </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox16"></asp:TextBox>
+                                <td class="auto-style23">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button5" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" />
+                                    <span class="auto-style1"><asp:Button ID="Button5"   runat="server" Text="Capture" Width="102px" style="Margin-Top:5px; height: 25px;" OnClick="Button5_Click" />
                                     </span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox17"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox17" Width="80px"></asp:TextBox>
                                     <br />
-                                    <span class="auto-style1">-</span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox18"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox19"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox18" Width="80px"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox20"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox19" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    </td>
+                                <td class="auto-style17">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox20" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox21"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style5">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox22"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox21" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
+
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox22" Width="80px"></asp:TextBox>
+
+                                    <br />
+
+                                    <br />
+                                    </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox23"></asp:TextBox>
+                                <td class="auto-style23">
+                                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button6"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" />
+                                    <span class="auto-style1"><asp:Button ID="Button6"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button6_Click" />
                                     </span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox24"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox24" Width="80px"></asp:TextBox>
                                     <br />
-                                    <span class="auto-style1">-</span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox25"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox26"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox25" Width="80px"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox27"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox26" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    </td>
+                                <td class="auto-style17">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox27" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox28"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style5">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox29"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox28" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
+
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox29" Width="80px"></asp:TextBox>
+
+                                    <br />
+
+                                    <br />
+                                    </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox30"></asp:TextBox>
+                                <td class="auto-style23">
+                                    <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button7" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" />
+                                    <span class="auto-style1"><asp:Button ID="Button7" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button7_Click" />
                                     </span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox31"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox31" Width="80px"></asp:TextBox>
                                     <br />
-                                    <span class="auto-style1">-</span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox32"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox33"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox32" Width="80px"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox34"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox33" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    </td>
+                                <td class="auto-style17">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox34" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox35"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style5">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox36"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox35" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
+
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox36" Width="80px"></asp:TextBox>
+
+                                    <br />
+
+                                    <br />
+                                    </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox37"></asp:TextBox>
+                                <td class="auto-style23">
+                                    <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
+                                    </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button8"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px"/>
+                                    <span class="auto-style1"><asp:Button ID="Button8"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button8_Click"/>
                                     </span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox38"></asp:TextBox>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox38" Width="80px"></asp:TextBox>
                                     <br />
-                                    <span class="auto-style1">-</span></td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox39"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox40"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox39" Width="80px"></asp:TextBox>
                                     <br />
-                                    -</td>
-                                <td>
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox41"></asp:TextBox>
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox40" Width="80px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    </td>
+                                <td class="auto-style17">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox41" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style7">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox42"></asp:TextBox>
 
                                     <br />
-                                    -</td>
-                                <td class="auto-style5">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox43"></asp:TextBox>
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox42" Width="80px"></asp:TextBox>
 
                                     <br />
-                                    -</td>
+
+                                    <br />
+                                    </td>
+                                <td class="auto-style21">
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox43" Width="80px"></asp:TextBox>
+
+                                    <br />
+
+                                    <br />
+                                    </td>
                             </tr>
                             <!--tr>
                                 <th colspan="7" height="30">
@@ -296,7 +380,16 @@
                         <center>
                         <table border="1" cellspacing="5" bgcolor="white"
                             height="100" width="500" cellpadding="5" id="TableScore">
-                            <caption><b>Student Data</b></caption>
+                            <caption>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [subjects] WHERE ([Divis] = @Divis)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="Divis" SessionField="Division" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT subject_ID, subject_name, subjDetails, Divis FROM subjects WHERE (Divis = 'E')"></asp:SqlDataSource>
+                                <br />
+                                <asp:Label ID="subjectAll" runat="server" Text="E"></asp:Label>
+                            </caption>
                             <tr>
                                 <th width="180">Name</th>
                                 <th>Final</th>
@@ -353,42 +446,31 @@
         .auto-style1 {
             font-size: xx-small;
         }
-        .auto-style3 {
-            height: 53px;
+        .auto-style17 {
+            height: 80px;
+            text-align: left;
+            width: 100px;
         }
-        .auto-style4 {
-            border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 0.9em;
-            font-family: sans-serif;
-            min-width: 400px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            width: 1036px;
+        .auto-style19 {
+            height: 80px;
+            text-align: center;
+            width: 100px;
         }
-        .auto-style5 {
-            width: 89px;
-        }
-        .auto-style6 {
-            height: 53px;
-            width: 89px;
-        }
-        .auto-style7 {
-            width: 90px;
-        }
-        .auto-style8 {
-            height: 53px;
-            width: 90px;
-        }
-        .auto-style9 {
-            width: 90px;
+        .auto-style20 {
+            width: 100px;
             font-size: small;
         }
-        .auto-style10 {
+        .auto-style21 {
+            width: 100px;
+            height: 80px;
+        }
+        .auto-style22 {
+            width: 115px;
             font-size: small;
         }
-        .auto-style11 {
-            width: 89px;
-            font-size: small;
+        .auto-style23 {
+            width: 115px;
+            height: 80px;
         }
     </style>
 </asp:Content>

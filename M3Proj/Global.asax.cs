@@ -15,17 +15,18 @@ namespace M3Proj
         {
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-           
+
         }
         void Session_Start(object sender, EventArgs e)
         {
             Session.Add("Email", "");
             Session.Add("userType", "");
-            Session.Add("classID",0);
-            Session.Add("stuID","");
-            Session.Add("ID","");
+            Session.Add("classID", 0);
+            Session.Add("stuID", "");
+            Session.Add("ID", "");
             Session.Add("teachID", "");
             Session.Add("userType2", " ");
+            Session.Add("Division", "");
 
 
 
