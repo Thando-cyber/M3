@@ -11,7 +11,10 @@ namespace M3Proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Session["userType"].ToString().Equals("Administrator"))
+            {
+                Response.Redirect("~/Account/Login.aspx");
+            }
         }
     }
 }
