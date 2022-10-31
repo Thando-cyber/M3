@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GeninfoChange.aspx.cs" Inherits="M3Proj.NewFolder1.GeninfoChange" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GeninfoChange.aspx.cs" Inherits="M3Proj.NewFolder1.GeninfoChange" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="CSS/masterstyle.css" />
     <link rel="stylesheet" href ="../CSS/info.css" /> 
      <link rel="stylesheet" href ="../CSS/masterstyle.css" /> 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+                        
        
     <div class="container-xxl position-relative p-0">
         <div class="container-xxl bg-primary page-header">
@@ -44,10 +45,11 @@
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
                                     <div>
-                                        <img src="../logos/<%=Session["ID"].ToString()%>.png" title="<%=FullName%>"" alt="<%= FullName %>" class="rounded-circle" width="150">
+                                        <img src="../logos/<%=Session["ID"].ToString()%>.png" title="<%=FullName%>"" alt="<%= FullName %>" class="rounded-circle" width="150" height="150">
                                     </div>
                                     <div class="mt-3">
                                         <h4><%= name %></h4>
+                                        
                                         <p class="text-secondary mb-1"><%= title %></p>
                                         <p class="text-muted font-size-sm"><%=age%> Years Old</p>
                                         <p class="text-muted font-size-sm"><%= Address %></p>
@@ -69,8 +71,9 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">First Name</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div ng-app="" class="col-sm-9 text-secondary">
                                         <asp:TextBox runat="server" ID="FirstName" Style="width: 300px" value=""></asp:TextBox>
+                                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <hr />
@@ -78,8 +81,9 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0">Last Name</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div  ng-app="" class="col-sm-9 text-secondary">
                                         <asp:TextBox runat="server" ID="lastname" Style="width: 300px" value=""></asp:TextBox>
+                                        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <hr>
@@ -89,6 +93,7 @@
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <asp:TextBox runat="server" ID="email" Style="width: 300px"></asp:TextBox>
+                                        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <hr>
@@ -101,7 +106,15 @@
                                     </div>
                                 </div>
                                 <hr>
-
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Age</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <asp:TextBox runat="server" ID="stuAge" Style="width: 300px"></asp:TextBox>
+                                        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                                    </div>
+                                </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -109,6 +122,11 @@
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <asp:TextBox runat="server" ID="TextBox1" Style="width: 300px"></asp:TextBox>
+                                        <select runat="server" name="Gender" id="lang">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <hr>
