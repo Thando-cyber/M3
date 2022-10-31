@@ -14,12 +14,13 @@ namespace M3Proj.NewFolder1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            GridView2.Visible=true;
             string str1 = Session["Email"].ToString();
             int n1 = str1.IndexOf("@");
             string str2 = str1.Substring(0, n1);
             Session["stuID"] = str2;
 
-
+            
             string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
             SqlConnection con = new SqlConnection(conString);
 
@@ -32,10 +33,13 @@ namespace M3Proj.NewFolder1
             //sqlCommand1.Parameters.AddWithValue("@Email", Session["Email"]);
             SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
             //SqlDataAdapter DA1 = new SqlDataAdapter(sqlCommand1);
-
+            DataSet dataSet = new DataSet();
             //DataTable daTa = new DataTable();
             DataTable dt = new DataTable();
             DA.Fill(dt);
+            
+            
+
             //DA1.Fill(daTa);
 
            

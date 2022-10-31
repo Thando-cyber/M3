@@ -253,12 +253,24 @@
     <Content Include="lib\waypoints\waypoints.min.js" />
     <Content Include="lib\wow\wow.js" />
     <Content Include="lib\wow\wow.min.js" />
+    <Content Include="logos\22001.png" />
     <Content Include="logos\22002.png" />
     <Content Include="logos\22004.png" />
     <Content Include="logos\22005.png" />
     <Content Include="logos\22006.png" />
-    <Content Include="logos\22007.png" />
+    <Content Include="logos\22007.jpg" />
+    <Content Include="logos\22008.png" />
     <Content Include="logos\22011.png" />
+    <Content Include="logos\22012.png" />
+    <Content Include="logos\22014.png" />
+    <Content Include="logos\22020.png" />
+    <Content Include="logos\22022.png" />
+    <Content Include="logos\22023.png" />
+    <Content Include="logos\22024.png" />
+    <Content Include="logos\22025.png" />
+    <Content Include="logos\22026.png" />
+    <Content Include="logos\22027.png" />
+    <Content Include="logos\22031.png" />
     <Content Include="logos\AndrewGreet7860.png" />
     <Content Include="logos\CraigFedi9.png" />
     <Content Include="logos\GeorgeMalty3515.png" />
@@ -270,6 +282,7 @@
     <Content Include="logos\OwenWilson6688.png" />
     <Content Include="logos\ResseGrant231.png" />
     <Content Include="logos\RettaSmith1219.png" />
+    <Content Include="logos\TreadLight5327.png" />
     <Content Include="NewFolder1\AdminControl.aspx" />
     <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
@@ -629,7 +642,6 @@
     </Compile>
     <Compile Include="NewFolder1\Subjects.aspx.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NewFolder1\Subjects.aspx.designer.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>

@@ -26,6 +26,7 @@ namespace M3Proj
             Session.Add("ID","");
             Session.Add("teachID", "");
             Session.Add("userType2", " ");
+            Session.Add("Division", "");
 
 
 

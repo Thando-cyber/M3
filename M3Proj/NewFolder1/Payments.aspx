@@ -35,12 +35,13 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="receiptNum" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#DCDCDC" />
             <Columns>
-                <asp:BoundField DataField="receiptNum" HeaderText="Receipt" ReadOnly="True" SortExpression="receiptNum" />
-                <asp:BoundField DataField="stu_ID" HeaderText="Student" SortExpression="stu_ID" />
-                <asp:BoundField DataField="pay_Date" DataFormatString="{0:d}" HeaderText="Date" SortExpression="pay_Date" />
-                <asp:BoundField DataField="pay_Amount" HeaderText="Amount" SortExpression="pay_Amount" />
-                <asp:BoundField DataField="pay_Type" HeaderText="Type" SortExpression="pay_Type" />
-                <asp:BoundField DataField="pay_Details" HeaderText="Details" SortExpression="pay_Details" />
+                <asp:BoundField DataField="receiptNum" HeaderText="receiptNum" ReadOnly="True" SortExpression="receiptNum" />
+                <asp:BoundField DataField="AdminID" HeaderText="AdminID" SortExpression="AdminID" />
+                <asp:BoundField DataField="stu_ID" HeaderText="stu_ID" SortExpression="stu_ID" />
+                <asp:BoundField DataField="pay_Date" HeaderText="pay_Date" SortExpression="pay_Date" />
+                <asp:BoundField DataField="pay_Amount" HeaderText="pay_Amount" SortExpression="pay_Amount" />
+                <asp:BoundField DataField="pay_Type" HeaderText="pay_Type" SortExpression="pay_Type" />
+                <asp:BoundField DataField="pay_Details" HeaderText="pay_Details" SortExpression="pay_Details" />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
             <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />

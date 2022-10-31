@@ -36,6 +36,7 @@ namespace M3Proj.NewFolder1
           
             if (Session["userType"].ToString() == "Student")
             {
+                SubjectButton.Visible =false;
                 sear.Visible= false;
                 int idClass = 0;
                 int grade = 0;
@@ -111,6 +112,7 @@ namespace M3Proj.NewFolder1
             }
             else if (Session["userType"].ToString() == "Teacher")
             {
+                SubjectButton.Visible =true;
                 sear.Visible= false;
                 text1.Visible= false;
                 text2.Visible=false;
@@ -178,6 +180,12 @@ namespace M3Proj.NewFolder1
                 //da3.Fill(dt3);
                 if (dt.Rows.Count == 1)
                 {
+                    SubjectButton.Visible =false;
+                    text1.Visible= true;
+                    text2.Visible=true;
+                    tex7.Visible = true;
+                    line6.Visible=true;
+                    line7.Visible= true;
                     Session["userType2"] = "Student";
                     Session["ID"] = userinput;
                     Session["stuID"] = userinput;
@@ -250,7 +258,45 @@ namespace M3Proj.NewFolder1
                 }
                 else if (dt2.Rows.Count == 1)
                 {
+                    SubjectButton.Visible =true;
+                    text1.Visible= false;
+                    text2.Visible=false;
+                    tex7.Visible = false;
+                    line6.Visible=false;
+                    line7.Visible= false;
                     Session["userType2"] = "Teacher";
+                    Session["ID"] = userinput;
+                    title = Session["userType2"].ToString();
+                    Session["teachID"] =userinput;
+                    /*string str1 = Session["Email"].ToString();
+                    int n1 = str1.IndexOf("@");
+                    str2 = str1.Substring(0, n1);
+                    Session["teachID"] = str2;
+                    Session["ID"]= str2;*/
+                    //string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
+                    SqlConnection con2 = new SqlConnection(conString);
+                    string query = "SELECT * FROM Teachers WHERE teach_ID = @ID";
+                    SqlCommand sqlCommand = new SqlCommand(query, con2);
+                    sqlCommand.Parameters.AddWithValue("@ID", Session["ID"]);
+                    SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
+                    DataTable dt4 = new DataTable();
+                    DA.Fill(dt4);
+
+                    foreach (DataRow dr in dt4.Rows)
+                    {
+                        Name = Convert.ToString(dr["teach_firstname"]);
+                        Surname = Convert.ToString(dr["teach_lastname"]);
+                        Address = Convert.ToString(dr["Address"]);
+                        age = Convert.ToInt32(dr["age"]);
+                        gender = Convert.ToString(dr["gender"]);
+                        //fees = Convert.ToDecimal(dr["stu_Fees"]);
+                        cont = Convert.ToString(dr["contactNum"]);
+                        title = Convert.ToString(dr["teach_title"]);
+                        elecmail =Convert.ToString(dr["teach_email"]);
+                    }
+
+                    FullName = Name + " " + Surname;
+
                 }
                 else
                 {

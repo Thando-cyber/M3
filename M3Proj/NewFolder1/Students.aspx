@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Students.aspx.cs" Inherits="M3Proj.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <link rel="stylesheet" href="\teacherstyle.css" />
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+        <link rel="stylesheet" href="~/CSS/info.css" />
      <div class="container-xxl position-relative p-0">        
     <div class="container-xxl bg-primary page-header">
                 <div class="container text-center">
@@ -23,7 +24,7 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+								<img src="../logos/<%=sID%>.png" class="rounded-circle" width="150" height="150">
 								<div class="mt-3">
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
 									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
@@ -63,9 +64,9 @@
 					<div class="card">
                       
                       
-						<div class="card-body">
-                          <asp:GridView  style="border-radius:5px;" ID  ="datagrid" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
- HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" DataSourceID="SqlDataSource1"   DataKeyNames="stu_ID" AutoGenerateColumns="False" OnRowDataBound="datagrid_RowDataBound"   >
+                        <div class="card-body">
+                            <asp:GridView Style="border-radius: 5px;" ID="datagrid" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
+                                HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" OnSelectedIndexChanged="datagrid_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataKeyNames="stu_ID" AutoGenerateColumns="False" OnRowDataBound="datagrid_RowDataBound">
                                 <Columns>
                                     <asp:CommandField ShowSelectButton="True" />
                                     <asp:BoundField DataField="stu_ID" HeaderText="stu_ID" ReadOnly="True" SortExpression="stu_ID" />
@@ -75,24 +76,25 @@
                                     <asp:BoundField DataField="stu_age" HeaderText="stu_age" SortExpression="stu_age" />
                                     <asp:BoundField DataField="stu_gender" HeaderText="stu_gender" SortExpression="stu_gender" />
                                     <asp:BoundField DataField="parentContact" HeaderText="parentContact" SortExpression="parentContact" />
+                                    <asp:BoundField DataField="classID" HeaderText="classID" SortExpression="classID" />
                                 </Columns>
-<HeaderStyle CssClass="header"></HeaderStyle>
+                                <HeaderStyle CssClass="header"></HeaderStyle>
 
-<PagerStyle CssClass="pager"></PagerStyle>
+                                <PagerStyle CssClass="pager"></PagerStyle>
 
-<RowStyle CssClass="rows"></RowStyle>
+                                <RowStyle CssClass="rows"></RowStyle>
                             </asp:GridView>
 
 
-						        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString2 %>" SelectCommand="SELECT [stu_ID], [stu_name], [stu_surname], [stu_email], [stu_age], [stu_gender], [parentContact] FROM [student] WHERE ([classID] = @classID)">
-                                    <SelectParameters>
-                                        <asp:ControlParameter ControlID="Label1" Name="classID" PropertyName="Text" Type="Int32" />
-                                    </SelectParameters>
-                                </asp:SqlDataSource>
-                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString2 %>" SelectCommand="SELECT stu_ID, stu_name, stu_surname, stu_email, stu_age, stu_gender, parentContact, classID FROM student WHERE (classID = @classID)">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="Label1" Name="classID" PropertyName="Text" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
 
-						</div>
+                        </div>
 					</div>
 					
 				</div>

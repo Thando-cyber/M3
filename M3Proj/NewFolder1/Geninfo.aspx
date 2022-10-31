@@ -36,9 +36,9 @@
                 </nav>
                 <!-- /Breadcrumb -->
                 <center>
-                <div runat="server" id="sear">
+                <div runat="server" id="sear" >
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox type="text" ID="Box2" runat="server" AutoPostBack="true" value="" CssClass="offset-sm-0" Width="122px"></asp:TextBox>
+                    <asp:TextBox type="text" ID="Box2" runat="server" AutoPostBack="false" value="" CssClass="offset-sm-0" Width="122px"></asp:TextBox>
                     <asp:Button ID="But2" runat="server" Text="Search" Cssclass="btn btn-outline-primary" OnClick="Button2_Click" />
                     <asp:Label runat="server" ID="warn1" Style="color:red"></asp:Label>
                 </div>
@@ -58,8 +58,8 @@
                                         <p class="text-muted font-size-sm"><%= Address %></p>
 
 
-                                        <button type="button" runat="server" href="#" class="btn btn-primary">Report</button>
-                                        <button type="button" runat="server" class="btn btn-outline-primary">Subject</button>
+                                        <button type="button" id="reportButton" runat="server" href="#" class="btn btn-primary">Report</button>
+                                        <button type="button" id="SubjectButton"  runat="server" class="btn btn-outline-primary">Subject</button>
                                         <button type="button" runat="server" href="~/Account/ManagePassword" class="btn btn-outline-primary">Change Password</button>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                 </div>
             </div>
             
-
+        </div>
 
  </asp:Content>
 
