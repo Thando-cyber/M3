@@ -28,41 +28,67 @@
         <div runat="server" id="sear">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox type="text" ID="Box2" runat="server" AutoPostBack="true" value=""></asp:TextBox>
-            <asp:Button ID="But2" runat="server" Text="Search" />
+            <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click" />
+            <asp:Button ID="Button2" runat="server" Text="Clear" OnClick="Button2_Click" />
             <asp:Label runat="server" ID="warn1" Style="color: red"></asp:Label>
         </div>
-        <div></div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="receiptNum" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
-            <AlternatingRowStyle BackColor="#DCDCDC" />
-            <Columns>
-                <asp:BoundField DataField="receiptNum" HeaderText="receiptNum" ReadOnly="True" SortExpression="receiptNum" />
-                <asp:BoundField DataField="AdminID" HeaderText="AdminID" SortExpression="AdminID" />
-                <asp:BoundField DataField="stu_ID" HeaderText="stu_ID" SortExpression="stu_ID" />
-                <asp:BoundField DataField="pay_Date" HeaderText="pay_Date" SortExpression="pay_Date" />
-                <asp:BoundField DataField="pay_Amount" HeaderText="pay_Amount" SortExpression="pay_Amount" />
-                <asp:BoundField DataField="pay_Type" HeaderText="pay_Type" SortExpression="pay_Type" />
-                <asp:BoundField DataField="pay_Details" HeaderText="pay_Details" SortExpression="pay_Details" />
-            </Columns>
-            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
-            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#0000A9" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#000065" />
-        </asp:GridView>
+        <br />
+        <br />
+        <div id="all">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="receiptNum" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AllowPaging="True" Width="773px">
+                <AlternatingRowStyle BackColor="#DCDCDC" />
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="receiptNum" HeaderText="Receipt No" ReadOnly="True" SortExpression="receiptNum" />
+                    <asp:BoundField DataField="stu_ID" HeaderText="Student ID" SortExpression="stu_ID" />
+                    <asp:BoundField DataField="pay_Date" DataFormatString="{0:d}" HeaderText="Date" SortExpression="pay_Date" />
+                    <asp:BoundField DataField="pay_Amount" HeaderText="Amount" SortExpression="pay_Amount" DataFormatString="{0:n2}" />
+                    <asp:BoundField DataField="pay_Type" HeaderText="Type" SortExpression="pay_Type" />
+                    <asp:BoundField DataField="pay_Details" HeaderText="Details" SortExpression="pay_Details" />
+                </Columns>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#000065" />
+            </asp:GridView>
+        </div>
+
+        <div id="student_payments">
+            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="receiptNum" DataSourceID="SqlDataSource2" GridLines="Vertical" Width="771px">
+                <AlternatingRowStyle BackColor="Gainsboro" />
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="receiptNum" HeaderText="Receipt No" ReadOnly="True" SortExpression="receiptNum" />
+                    <asp:BoundField DataField="stu_ID" HeaderText="Student ID" SortExpression="stu_ID" />
+                    <asp:BoundField DataField="pay_Date" HeaderText="Date" SortExpression="pay_Date" />
+                    <asp:BoundField DataField="pay_Amount" HeaderText="Amount" SortExpression="pay_Amount" />
+                    <asp:BoundField DataField="pay_Type" HeaderText="Type" SortExpression="pay_Type" />
+                    <asp:BoundField DataField="pay_Details" HeaderText="Details" SortExpression="pay_Details" />
+                </Columns>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#000065" />
+            </asp:GridView>
+        </div>
+
     </center>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [PaymentService] WHERE ([stu_ID] = @stu_ID)">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT [receiptNum], [stu_ID], [pay_Date], [pay_Amount], [pay_Type], [pay_Details] FROM [PaymentService] WHERE ([stu_ID] = @stu_ID) ORDER BY [receiptNum]">
         <SelectParameters>
-            <asp:SessionParameter Name="stu_ID" SessionField="stuID" Type="String" />
+            <asp:ControlParameter ControlID="Box2" Name="stu_ID" PropertyName="Text" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [PaymentService] WHERE ([stu_ID] = @stu_ID)">
-        <SelectParameters>
-            <asp:SessionParameter Name="stu_ID" SessionField="ID" Type="Int32" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT [receiptNum], [stu_ID], [pay_Date], [pay_Amount], [pay_Type], [pay_Details] FROM [PaymentService] ORDER BY [receiptNum] DESC">
     </asp:SqlDataSource>
     <br />
     <br />
