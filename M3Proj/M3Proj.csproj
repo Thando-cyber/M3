@@ -205,6 +205,8 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="ClassList.aspx" />
+    <Content Include="FormClass.aspx" />
     <Content Include="logos\22001.png" />
     <Content Include="logos\22003.png" />
     <Content Include="logos\22007.jpg" />
@@ -576,6 +578,20 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassList.aspx.cs">
+      <DependentUpon>ClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassList.aspx.designer.cs">
+      <DependentUpon>ClassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormClass.aspx.cs">
+      <DependentUpon>FormClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormClass.aspx.designer.cs">
+      <DependentUpon>FormClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Admins.aspx.cs">
       <DependentUpon>Admins.aspx</DependentUpon>
