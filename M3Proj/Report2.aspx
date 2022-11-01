@@ -7,7 +7,7 @@
     <title>Kharina Report Viewer</title>
      <link href="CSS/bootstrap.min.css" rel="stylesheet"/>
 </head>
-<body>
+
     <body>
     <form id="form1" runat="server">
 

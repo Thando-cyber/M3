@@ -23,7 +23,7 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+								<img src="../logos/<%= sID%>.png" alt="student" class="rounded-circle p-1 bg-primary" width="150" height="150" />
 								<div class="mt-3">
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
 									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
