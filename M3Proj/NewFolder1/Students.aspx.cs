@@ -22,12 +22,19 @@ namespace M3Proj
         public String sGender;
         public String pNum;
         public String sAge;
+        public int classId;
+        public string teachname;
+        public string teachlastname;
+        public string stuname;
+        
+        
         string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
+           
 
             SqlConnection con = new SqlConnection(conString);
 
@@ -47,6 +54,8 @@ namespace M3Proj
             foreach (DataRow dr in DT.Rows)
             {
                 teachID = Convert.ToString(dr[0]);
+                teachname = Convert.ToString(dr[1]);
+                teachlastname = Convert.ToString(dr[2]);
             }
 
 
@@ -58,7 +67,7 @@ namespace M3Proj
             SqlDataAdapter DA = new SqlDataAdapter(command2);
             DataTable dt = new DataTable();
             DA.Fill(dt);
-            int classId = 0;
+           
             foreach (DataRow dr in dt.Rows)
             {
                 classId = Convert.ToInt32(dr["class_id"]);
@@ -100,6 +109,28 @@ namespace M3Proj
             sGender = datagrid.Rows[datagrid.SelectedIndex].Cells[6].Text.ToString();
             pNum = datagrid.Rows[datagrid.SelectedIndex].Cells[7].Text.ToString();
             sAge = datagrid.Rows[datagrid.SelectedIndex].Cells[5].Text.ToString();
+
+            Session["rName"] = sName +"\t"+sLast;
+            Session["rID"] = int.Parse(sID);
+
+            SqlConnection con = new SqlConnection(conString);
+            string query = "SELECT* FROM student where stu_ID = @ID";
+            SqlCommand cmd = new SqlCommand(query,con);
+
+            cmd.Parameters.AddWithValue("@ID", sID.ToString());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows) {
+                Session["rFees"] = Convert.ToInt16(dr["stu_Fees"]);
+            
+            }
+
+           
+
+
+
         }
 
 
@@ -129,6 +160,54 @@ namespace M3Proj
                 
                 e.Row.Cells[7].Visible = false;
             }
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+            string query = "SELECT * FROM classes WHERE class_id = @Id";
+            SqlConnection con = new SqlConnection(conString);
+            SqlCommand command = new SqlCommand(query, con);
+            command.Parameters.AddWithValue("@Id", classId);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            String div = "";
+            int grade = 0;
+            int termNo = 1;
+
+            foreach (DataRow dr in dt.Rows) {
+                grade = Convert.ToInt32(dr["grade"]);
+                div = Convert.ToString(dr["Division"]);
+            
+            }
+
+           
+
+
+
+            if (datagrid.SelectedValue != null)
+            {
+               
+                Session["rDivison"] = div;
+                Session["rGrade"] = grade;
+                Session["rTerm"] = termNo;
+                Session["rTeachName"] = teachname+"\t"+teachlastname;
+              
+
+                Response.Redirect("/Report2.aspx");
+            }
+            else {
+                Response.Write("Please select a row on Gridview");
+            
+            }
+           
 
         }
     }

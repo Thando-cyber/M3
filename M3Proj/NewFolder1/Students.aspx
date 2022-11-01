@@ -28,8 +28,9 @@
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
 									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
 									<p class="text-muted font-size-sm"><%= sEmail %></p>
-									<asp:Button ID="Button3" Cssclass="btn btn-primary" runat="server" Text="Add Mark"  />
-                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary" runat="server" Text="View Report" />
+									<asp:Button ID="Button3" Cssclass="btn btn-primary" runat="server" Text="Add Mark" OnClick="Button3_Click"  />
+                                    
+                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary" runat="server" Text="View Report" OnClick="Button2_Click" />
 									
 								</div>
 							</div>

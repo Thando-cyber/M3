@@ -317,7 +317,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="NewFolder1\Fees.aspx" />
-    <Content Include="NewFolder1\Report.aspx" />
     <Content Include="NewFolder1\Subjects.aspx" />
     <Content Include="NewFolder1\Web.config" />
     <Content Include="Default.aspx" />
@@ -629,13 +628,6 @@
     </Compile>
     <Compile Include="NewFolder1\Payments.aspx.designer.cs">
       <DependentUpon>Payments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewFolder1\Report.aspx.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\Report.aspx.designer.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Geninfo.aspx.cs">
       <DependentUpon>Geninfo.aspx</DependentUpon>
