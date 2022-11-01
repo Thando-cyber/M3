@@ -22,21 +22,21 @@
                             <br />
                             <br />
                         </div>
-                        <select name="Term" id="lang">
-                            <option value="1">Term 1</option>
-                            <option value="2">Term 2</option>
-                            <option value="3">Term 3</option>
-                            <option value="4">Term 4</option>
-                        </select>
-                        <div>
+                        <asp:DropDownList ID="DropDownList8" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" DataTextField="Term" DataValueField="TermNo">
+                        </asp:DropDownList>
+&nbsp;<div>
                             <strong>
                             <asp:Label ID="Label2" runat="server"></asp:Label>
                             </strong>
                         </div>
                         <div>
                             <strong><asp:Label ID="Label1" runat="server"></asp:Label></strong></div>
-                        <br />
+                        
+                        <div>
+
+                        </div>
                         </center>
+<br />
                         <center>
                         <table border="1" cellspacing="5" class="card-body" bgcolor="white"  style="width:900px">
                             <caption><b>Enter Marks</b></caption>
@@ -64,40 +64,53 @@
                                     <asp:Button ID="Button2" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button2_Click" />
                                 </td>
                                 <td class="auto-style21">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses1" Width="80px"></asp:TextBox>
-                                    <br />
+                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" Text="" ID="Asses1" Width="80px"></asp:TextBox>
+                                    <strong>
                                     <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+                                    <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
-                                    <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses2" Width="80px"></asp:TextBox>
-                                    <br />
+                                    <asp:TextBox type="text" ClientIDMode="static"  runat="server" ID="Asses2" Width="80px"></asp:TextBox>
+                                    <strong>
                                     <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+                                    <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses3" Width="80px"></asp:TextBox>
-                                    <br />
+                                    <strong>
                                     <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+                                    <br />
                                     <br />
                                     </td>
                                 <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Asses4" Width="80px"></asp:TextBox>
 
-                                    <br />
+                                    <strong>
                                     <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
+                                    <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test1" Width="80px"></asp:TextBox>
-                                    <br />
+                                    <strong>
                                     <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+                                    <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="Test2" Width="80px"></asp:TextBox>
-                                    <br />
+                                    <strong>
                                     <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+                                    <br />
                                     <br />
                                     </td> 
                                 
@@ -114,21 +127,34 @@
                                 </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox3" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox4" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox5" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
-                                <td class="auto-style17">
+                                <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox6" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label12" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -137,12 +163,20 @@
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox7" Width="80px"></asp:TextBox>
 
+                                    <strong>
+                                    <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
                                     <br />
 
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox8" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label14" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -154,25 +188,38 @@
                                     <asp:DropDownList ID="DropDownList7" runat="server" DataSourceID="SqlDataSource2" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button4"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button4_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button4"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button4_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox10" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label15" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox11" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label16" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox12" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label17" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
-                                <td class="auto-style17">
+                                <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox13" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label18" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
                                     <br />
@@ -180,12 +227,20 @@
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox14" Width="80px"></asp:TextBox>
 
+                                    <strong>
+                                    <asp:Label ID="Label19" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
                                     <br />
 
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox15" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -197,25 +252,38 @@
                                     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button5"   runat="server" Text="Capture" Width="102px" style="Margin-Top:5px; height: 25px;" OnClick="Button5_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button5"   runat="server" Text="Capture" Width="102px" style="Margin-Top:5px; height: 25px;" OnClick="Button5_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox17" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox18" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox19" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label23" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
-                                <td class="auto-style17">
+                                <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox20" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label24" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -224,12 +292,20 @@
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox21" Width="80px"></asp:TextBox>
 
+                                    <strong>
+                                    <asp:Label ID="Label25" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
                                     <br />
 
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox22" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label26" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -241,25 +317,38 @@
                                     <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button6"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button6_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button6"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button6_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox24" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label27" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox25" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label28" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox26" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label29" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
-                                <td class="auto-style17">
+                                <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox27" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label30" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -268,12 +357,20 @@
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox28" Width="80px"></asp:TextBox>
 
+                                    <strong>
+                                    <asp:Label ID="Label31" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
                                     <br />
 
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox29" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label32" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -285,25 +382,38 @@
                                     <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button7" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button7_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button7" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button7_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox31" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label33" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox32" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label34" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox33" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label35" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
-                                <td class="auto-style17">
+                                <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox34" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label36" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -312,12 +422,20 @@
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox35" Width="80px"></asp:TextBox>
 
+                                    <strong>
+                                    <asp:Label ID="Label37" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
                                     <br />
 
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox36" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label38" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -329,25 +447,38 @@
                                     <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button8"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button8_Click"/>
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button8"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button8_Click"/>
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox38" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label39" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox39" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label40" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox40" Width="80px"></asp:TextBox>
+                                    <strong>
+                                    <asp:Label ID="Label41" runat="server" Text="Label"></asp:Label>
+                                    </strong>
                                     <br />
                                     <br />
                                     </td>
-                                <td class="auto-style17">
+                                <td class="auto-style19">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox41" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label42" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -356,12 +487,20 @@
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox42" Width="80px"></asp:TextBox>
 
+                                    <strong>
+                                    <asp:Label ID="Label43" runat="server" Text="Label"></asp:Label>
+                                    </strong>
+
                                     <br />
 
                                     <br />
                                     </td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox43" Width="80px"></asp:TextBox>
+
+                                    <strong>
+                                    <asp:Label ID="Label44" runat="server" Text="Label"></asp:Label>
+                                    </strong>
 
                                     <br />
 
@@ -386,15 +525,14 @@
                                         <asp:SessionParameter Name="Divis" SessionField="Division" Type="String" />
                                     </SelectParameters>
                                 </asp:SqlDataSource>
+                                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Term]"></asp:SqlDataSource>
                                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT subject_ID, subject_name, subjDetails, Divis FROM subjects WHERE (Divis = 'E')"></asp:SqlDataSource>
                                 <br />
                                 <asp:Label ID="subjectAll" runat="server" Text="E"></asp:Label>
                             </caption>
                             <tr>
-                                <th width="180">Name</th>
-                                <th>Final</th>
                                 <!--th>Average</th-->
-                                <th>Pass Or Fail</th>
+                                <th>&nbsp;</th>
                             </tr>
                         </table>
                     </center>
@@ -445,11 +583,6 @@
     <style type="text/css">
         .auto-style1 {
             font-size: xx-small;
-        }
-        .auto-style17 {
-            height: 80px;
-            text-align: left;
-            width: 100px;
         }
         .auto-style19 {
             height: 80px;

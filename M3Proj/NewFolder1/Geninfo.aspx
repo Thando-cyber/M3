@@ -1,4 +1,4 @@
-﻿ <%@ Page Title="" Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind ="~/NewFolder1/Geninfo.aspx.cs" Inherits="M3Proj.NewFolder1.stuGeninfo"%>
+﻿ <%@ Page Title="Update Profile" Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind ="~/NewFolder1/Geninfo.aspx.cs" Inherits="M3Proj.NewFolder1.stuGeninfo"%>
 
 
 
