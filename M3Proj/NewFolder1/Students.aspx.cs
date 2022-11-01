@@ -79,15 +79,6 @@ namespace M3Proj
 
               da3.Fill(data);*/
 
-
-
-
-
-
-
-
-
-
         }
 
 
@@ -129,6 +120,16 @@ namespace M3Proj
                 
                 e.Row.Cells[7].Visible = false;
             }
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
 
         }
     }

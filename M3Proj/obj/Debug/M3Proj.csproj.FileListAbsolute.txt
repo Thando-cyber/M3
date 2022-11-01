@@ -927,3 +927,5 @@ C:\Users\Makro\source\repos\M4_Project\M3Proj\obj\Debug\M3Proj.csproj.CoreCompil
 C:\Users\Makro\source\repos\M4_Project\M3Proj\obj\Debug\M3Proj.csproj.CopyComplete
 C:\Users\Makro\source\repos\M4_Project\M3Proj\obj\Debug\M3Proj.dll
 C:\Users\Makro\source\repos\M4_Project\M3Proj\obj\Debug\M3Proj.pdb
+C:\Users\Makro\source\repos\M4_Project\M3Proj\obj\Debug\RdlCompile.cache
+C:\Users\Makro\source\repos\M4_Project\M3Proj\obj\Debug\RdlCompile.compiled
