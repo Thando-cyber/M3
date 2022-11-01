@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -251,6 +251,7 @@ namespace M3Proj.NewFolder1
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 
@@ -372,6 +373,7 @@ namespace M3Proj.NewFolder1
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 
@@ -453,16 +455,24 @@ namespace M3Proj.NewFolder1
             DataTable table = new DataTable();
             SqlDataAdapter da1 = new SqlDataAdapter(sqlCommand1);
             SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand3);
-            if (dt.Rows.Count >= 1)
+
+            da1.Fill(dt);
+            sqlData.Fill(table);
+            if (table.Rows.Count ==1)
+            { 
+
+            }
+                if (dt.Rows.Count >= 1)
             {
                 MessageBox.Show(Page, "Mark has already added");
             }
             else
             {
-                MessageBox.Show(Page, "Mark successfully added !");
+                
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 
@@ -556,6 +566,7 @@ namespace M3Proj.NewFolder1
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 
@@ -645,6 +656,7 @@ namespace M3Proj.NewFolder1
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 
@@ -737,6 +749,7 @@ namespace M3Proj.NewFolder1
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 
@@ -828,6 +841,7 @@ namespace M3Proj.NewFolder1
                 connection.Open();
                 sqlCommand0.ExecuteNonQuery();
                 sqlCommand2.ExecuteNonQuery();
+                MessageBox.Show(Page, "Mark Added");
             }
         }
 

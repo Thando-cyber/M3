@@ -188,7 +188,7 @@
                                     <asp:DropDownList ID="DropDownList7" runat="server" DataSourceID="SqlDataSource2" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button4"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button4_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button4"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button4_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox10" Width="80px"></asp:TextBox>
@@ -252,7 +252,7 @@
                                     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button5"   runat="server" Text="Capture" Width="102px" style="Margin-Top:5px; height: 25px;" OnClick="Button5_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button5"   runat="server" Text="Capture" Width="102px" style="Margin-Top:5px; height: 25px;" OnClick="Button5_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox17" Width="80px"></asp:TextBox>
@@ -317,7 +317,7 @@
                                     <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button6"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button6_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button6"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button6_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox24" Width="80px"></asp:TextBox>
@@ -382,7 +382,7 @@
                                     <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button7" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button7_Click" />
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button7" CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button7_Click" />
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox31" Width="80px"></asp:TextBox>
@@ -447,7 +447,7 @@
                                     <asp:DropDownList ID="DropDownList4" runat="server" DataSourceID="SqlDataSource1" DataTextField="subject_name" DataValueField="subject_ID">
                                     </asp:DropDownList>
                                     <br />
-                                    <span class="auto-style1"><asp:Button ID="Button8"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button8_Click"/>
+                                    <span class="auto-style1">&nbsp; <asp:Button ID="Button8"  CssClass="btn btn-outline-primary"  runat="server" Text="Capture" Width="102px" style="Margin-Top:5px" OnClick="Button8_Click"/>
                                     </span></td>
                                 <td class="auto-style21">
                                     <asp:TextBox type="text" ClientIDMode="static" runat="server" ID="TextBox38" Width="80px"></asp:TextBox>
