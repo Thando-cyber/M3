@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace M3Proj
 {
-    public partial class Teachers : System.Web.UI.Page
+    public partial class FormClass : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Session["userType"].ToString().Equals("Administrator"))
-            {
-                Response.Redirect("~/Account/Login.aspx");
-            }
+
         }
     }
 }

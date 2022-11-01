@@ -98,7 +98,6 @@ namespace M3Proj
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
-                dropdown6.Visible = true;
                 SqlConnection con = new SqlConnection(conString);
                 string query = "SELECT * FROM student WHERE stu_email = @Email";
                 SqlCommand sqlCommand = new SqlCommand(query, con);
