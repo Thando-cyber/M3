@@ -187,14 +187,21 @@ namespace M3Proj.NewFolder1
                 {
                     addre.Text= Address;
                 }
-                else if (contac.Text == "")
+                if (contac.Text == "")
                 {
                     contac.Text = cont;
                 }
-                else if (addre.Text =="" && contac.Text == "")
+                if (FirstName.Text =="")
                 {
-                    contac.Text = cont;
-                    addre.Text= Address;
+                    FirstName.Text = name;
+                }
+                if (lastname.Text =="")
+                {
+
+                }
+                if (stuAge.Text =="")
+                {
+
                 }
                 cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
                 cmd.Parameters.AddWithValue("@LastName", lastname.Text);
@@ -216,7 +223,7 @@ namespace M3Proj.NewFolder1
                 SqlConnection cn = null;
                 SqlCommand cmd = null;
                 //SqlDateTime sqldatenull;
-                sqlStmt = "Update Teachers SET teach_firstname=@FirstName ,teach_lastname=@LastName,Address=@Address,contactNum=@contact WHERE  teach_ID = @id";
+                sqlStmt = "Update Teachers SET teach_firstname=@FirstName ,teach_lastname=@LastName,Address=@Address,contactNum=@contact , age=@age WHERE  teach_ID = @id";
                 conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
                 cn = new SqlConnection(conString);
                 cmd = new SqlCommand(sqlStmt, cn);
@@ -224,21 +231,29 @@ namespace M3Proj.NewFolder1
                 {
                     addre.Text= Address;
                 }
-                else if (contac.Text == "")
+                if (contac.Text == "")
                 {
                     contac.Text = cont;
                 }
-                else if (addre.Text =="" && contac.Text == "")
+                if (FirstName.Text =="")
                 {
-                    contac.Text = cont;
-                    addre.Text= Address;
+                    FirstName.Text = name;
                 }
-                addre.Text = Server.HtmlEncode(addre.Text);
+                if (lastname.Text =="")
+                {
+                    lastname.Text= Surname;
+                }
+                if (stuAge.Text =="")
+                {
+                    stuAge.Text=age.ToString();
+                }
                 cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
                 cmd.Parameters.AddWithValue("@LastName", lastname.Text);
                 cmd.Parameters.AddWithValue("@Address", addre.Text);
                 cmd.Parameters.AddWithValue("@contact", contac.Text);
                 cmd.Parameters.AddWithValue("@id", Session["ID"]);
+                cmd.Parameters.AddWithValue("@age",stuAge.Text);
+
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 Label1.Text = "Record Inserted Succesfully";
