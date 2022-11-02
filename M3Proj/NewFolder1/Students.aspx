@@ -23,12 +23,13 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<img src="../logos/<%= sID%>.png" alt="student" class="rounded-circle p-1 bg-primary" width="150" height="150">
+								<img src="../logos/<%= sID%>.png" alt="student" class="rounded-circle p-1 bg-primary" width="150" height="150" />
 								<div class="mt-3">
 									<h4><%= sName  %> &nbsp <%= sLast%></h4>
 									<p class="text-secondary mb-1">Student ID:<%= sID%></p>
 									<p class="text-muted font-size-sm"><%= sEmail %></p>
 									<asp:Button ID="Button3" Cssclass="btn btn-primary" runat="server" Text="Add Mark" OnClick="Button3_Click"  />
+                                    
                                     <asp:Button ID="Button2" CssClass="btn btn-outline-primary" runat="server" Text="View Report" OnClick="Button2_Click" />
 									
 								</div>

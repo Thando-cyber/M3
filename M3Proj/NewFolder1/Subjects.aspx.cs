@@ -896,6 +896,7 @@ namespace M3Proj.NewFolder1
                     }
                     Label1.Text = Name+" "+Surname;
                     Label2.Text= elecmail;
+                    
                 }
             }
 
