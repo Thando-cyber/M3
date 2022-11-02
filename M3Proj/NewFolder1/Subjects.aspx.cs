@@ -51,86 +51,93 @@ namespace M3Proj.NewFolder1
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            subjectAll.Visible=false;
-            string str1 = Session["Email"].ToString();
-            int n1 = str1.IndexOf("@");
-            str2 = str1.Substring(0, n1);
-            Session["teachID"] = str2;
-            SqlConnection sqlConnection = new SqlConnection(conString);
-            string query = "SELECT * FROM subjectTeacher WHERE teacherID= @teachID";
-            SqlCommand command = new SqlCommand(query, sqlConnection);
-            command.Parameters.AddWithValue("@teachID", str2);
-
-            SqlDataAdapter DA = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            DA.Fill(dt);
-
-            foreach (DataRow dr in dt.Rows)
+            if ((Session["userType"].ToString().Equals("Administrator")) || (Session["userType"].ToString().Equals("Teacher")))
             {
-                subteachID = Convert.ToInt32(dr["subjteach_ID"]);
-                classID = Convert.ToInt32(dr["classID"]);
-                subjID = Convert.ToString(dr["subjectID"]);
-                teachName = Convert.ToString(dr["teach_name"]);
-            }
-            //Textbox44.ReadOnly= true;
-            /*TextBox2.ReadOnly= true;
-            TextBox2.Text= "Afrikaans";*/
-            //TextBox9.ReadOnly = true;
-            string q1 = "SELECT * FROM classes WHERE class_id =@classID";
-            SqlCommand command1 = new SqlCommand(q1, sqlConnection);
-            command1.Parameters.AddWithValue("@classID", classID);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command1);
-            DataTable dt1 = new DataTable();
-            dataAdapter.Fill(dt1);
-            foreach (DataRow dr in dt1.Rows)
-            {
-                divis= Convert.ToChar(dr["Division"]);
-                gra = Convert.ToInt32(dr["grade"]);
-            }
-            Session["Division"]= divis;
-            Label3.Visible= false; Label4.Visible= false;
-            Label5.Visible= false;
-            Label6.Visible= false;
-            Label7.Visible= false;
-            Label8.Visible= false;
-            Label9.Visible= false;
-            Label10.Visible= false;
-            Label11.Visible= false;
-            Label12.Visible= false;
-            Label13.Visible= false;
-            Label14.Visible= false;
-            Label15.Visible= false;
-            Label16.Visible= false;
-            Label17.Visible= false;
-            Label18.Visible= false;
-            Label19.Visible= false;
-            Label20.Visible= false;
-            Label21.Visible= false;
-            Label22.Visible= false;
-            Label23.Visible= false;
-            Label24.Visible= false;
-            Label25.Visible= false;
-            Label26.Visible= false;
-            Label27.Visible= false;
-            Label28.Visible= false;
-            Label29.Visible= false;
-            Label30.Visible= false;
-            Label31.Visible= false;
-            Label32.Visible= false;
-            Label33.Visible= false;
-            Label34.Visible= false;
-            Label35.Visible= false;
-            Label36.Visible= false;
-            Label37.Visible= false;
-            Label38.Visible= false;
-            Label39.Visible= false;
-            Label40.Visible= false;
-            Label41.Visible= false;
-            Label42.Visible= false;
-            Label43.Visible= false;
-            Label44.Visible= false;
-             
+                subjectAll.Visible = false;
+                string str1 = Session["Email"].ToString();
+                int n1 = str1.IndexOf("@");
+                str2 = str1.Substring(0, n1);
+                Session["teachID"] = str2;
+                SqlConnection sqlConnection = new SqlConnection(conString);
+                string query = "SELECT * FROM subjectTeacher WHERE teacherID= @teachID";
+                SqlCommand command = new SqlCommand(query, sqlConnection);
+                command.Parameters.AddWithValue("@teachID", str2);
 
+                SqlDataAdapter DA = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                DA.Fill(dt);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    subteachID = Convert.ToInt32(dr["subjteach_ID"]);
+                    classID = Convert.ToInt32(dr["classID"]);
+                    subjID = Convert.ToString(dr["subjectID"]);
+                    teachName = Convert.ToString(dr["teach_name"]);
+                }
+                //Textbox44.ReadOnly= true;
+                /*TextBox2.ReadOnly= true;
+                TextBox2.Text= "Afrikaans";*/
+                //TextBox9.ReadOnly = true;
+                string q1 = "SELECT * FROM classes WHERE class_id =@classID";
+                SqlCommand command1 = new SqlCommand(q1, sqlConnection);
+                command1.Parameters.AddWithValue("@classID", classID);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command1);
+                DataTable dt1 = new DataTable();
+                dataAdapter.Fill(dt1);
+                foreach (DataRow dr in dt1.Rows)
+                {
+                    divis = Convert.ToChar(dr["Division"]);
+                    gra = Convert.ToInt32(dr["grade"]);
+                }
+                Session["Division"] = divis;
+                Label3.Visible = false; Label4.Visible = false;
+                Label5.Visible = false;
+                Label6.Visible = false;
+                Label7.Visible = false;
+                Label8.Visible = false;
+                Label9.Visible = false;
+                Label10.Visible = false;
+                Label11.Visible = false;
+                Label12.Visible = false;
+                Label13.Visible = false;
+                Label14.Visible = false;
+                Label15.Visible = false;
+                Label16.Visible = false;
+                Label17.Visible = false;
+                Label18.Visible = false;
+                Label19.Visible = false;
+                Label20.Visible = false;
+                Label21.Visible = false;
+                Label22.Visible = false;
+                Label23.Visible = false;
+                Label24.Visible = false;
+                Label25.Visible = false;
+                Label26.Visible = false;
+                Label27.Visible = false;
+                Label28.Visible = false;
+                Label29.Visible = false;
+                Label30.Visible = false;
+                Label31.Visible = false;
+                Label32.Visible = false;
+                Label33.Visible = false;
+                Label34.Visible = false;
+                Label35.Visible = false;
+                Label36.Visible = false;
+                Label37.Visible = false;
+                Label38.Visible = false;
+                Label39.Visible = false;
+                Label40.Visible = false;
+                Label41.Visible = false;
+                Label42.Visible = false;
+                Label43.Visible = false;
+                Label44.Visible = false;
+
+
+            }
+            else
+            {
+                Response.Redirect("~/Account/Login.aspx");
+            }
         }
 
         protected void Button2_Click(object sender, EventArgs e)

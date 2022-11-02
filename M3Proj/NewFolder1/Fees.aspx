@@ -14,7 +14,8 @@
     <br />
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="769px" AutoGenerateColumns="False" DataKeyNames="stu_ID" DataSourceID="SqlDataSource4" HorizontalAlign="Center">
+    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="769px" AutoGenerateColumns="False" DataKeyNames="stu_ID" DataSourceID="SqlDataSource4" HorizontalAlign="Center" GridLines="Vertical">
+        <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
             <asp:BoundField DataField="stu_ID" HeaderText="Student ID" ReadOnly="True" SortExpression="stu_ID" />
             <asp:BoundField DataField="stu_name" HeaderText="Student Name" SortExpression="stu_name" />
@@ -24,15 +25,15 @@
             <HeaderStyle HorizontalAlign="Center" />
             </asp:BoundField>
         </Columns>
-        <FooterStyle BackColor="White" ForeColor="#000066" />
-        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-        <RowStyle ForeColor="#000066" />
-        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
+        <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
         <SortedAscendingCellStyle BackColor="#F1F1F1" />
-        <SortedAscendingHeaderStyle BackColor="#007DBB" />
+        <SortedAscendingHeaderStyle BackColor="#0000A9" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
-        <SortedDescendingHeaderStyle BackColor="#00547E" />
+        <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT [stu_ID], [stu_name], [stu_surname], [stu_email], [stu_Fees] FROM [student] WHERE ([stu_email] = @stu_email)">
         <SelectParameters>
@@ -48,41 +49,28 @@
     <br />
     <br />
     <h4 style="text-align:center;">Payment History</h4>
-    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="receiptNum" DataSourceID="SqlDataSource1" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="896px">
+    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="receiptNum" DataSourceID="SqlDataSource1" HorizontalAlign="Center" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" Width="896px" GridLines="Vertical">
+        <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
-            <asp:BoundField DataField="receiptNum" HeaderText="Receipt No" ReadOnly="True" SortExpression="receiptNum">
-            <FooterStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="stu_ID" HeaderText="Student ID" SortExpression="stu_ID">
-            <HeaderStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="pay_Date" DataFormatString="{0:d}" HeaderText="Date " SortExpression="pay_Date">
-            <FooterStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="pay_Amount" DataFormatString="{0:n2}" HeaderText="Amount" SortExpression="pay_Amount">
-            <HeaderStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="pay_Type" HeaderText="Type" SortExpression="pay_Type">
-            <HeaderStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="pay_Details" HeaderText="Details" SortExpression="pay_Details">
-            <HeaderStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="AdminID" HeaderText="Payment recorded by:" SortExpression="AdminID">
-            <HeaderStyle HorizontalAlign="Center" />
-            </asp:BoundField>
+            <asp:BoundField DataField="receiptNum" HeaderText="Receipt No" ReadOnly="True" SortExpression="receiptNum" />
+            <asp:BoundField DataField="stu_ID" HeaderText="Student ID" SortExpression="stu_ID" />
+            <asp:BoundField DataField="pay_Date" DataFormatString="{0:d}" HeaderText="Date " SortExpression="pay_Date" />
+            <asp:BoundField DataField="pay_Amount" DataFormatString="{0:n2}" HeaderText="Amount" SortExpression="pay_Amount" />
+            <asp:BoundField DataField="pay_Type" HeaderText="Type" SortExpression="pay_Type" />
+            <asp:BoundField DataField="balance" DataFormatString="{0:n2}" HeaderText="Balance" SortExpression="balance" />
         </Columns>
-        <FooterStyle BackColor="White" ForeColor="#000066" />
-        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-        <RowStyle ForeColor="#000066" />
-        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        
+        <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
+        <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
         <SortedAscendingCellStyle BackColor="#F1F1F1" />
-        <SortedAscendingHeaderStyle BackColor="#007DBB" />
+        <SortedAscendingHeaderStyle BackColor="#0000A9" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
-        <SortedDescendingHeaderStyle BackColor="#00547E" />
+        <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT [receiptNum], [stu_ID], [pay_Date], [pay_Amount], [pay_Type], [pay_Details], [AdminID] FROM [PaymentService] WHERE ([stu_ID] = @stu_ID)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT [receiptNum], [stu_ID], [pay_Date], [pay_Amount], [pay_Type], [balance] FROM [PaymentService] WHERE ([stu_ID] = @stu_ID)">
         <SelectParameters>
             <asp:SessionParameter Name="stu_ID" SessionField="stuID" Type="String" />
         </SelectParameters>

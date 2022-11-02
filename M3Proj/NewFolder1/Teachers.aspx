@@ -18,19 +18,19 @@
     <br />
 
     <div style="display:flex; justify-content:center;  text-align:center;">
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="teach_ID" DataSourceID="SqlDataSource1" GridLines="Vertical" Width="1055px">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="teach_ID" DataSourceID="SqlDataSource1" GridLines="Vertical" Width="939px">
             <AlternatingRowStyle BackColor="#DCDCDC" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" ShowSelectButton="True" />
                 <asp:BoundField DataField="teach_ID" HeaderText="Teacher ID" SortExpression="teach_ID" ReadOnly="True" />
-                <asp:BoundField DataField="teach_firstname" HeaderText="Name(s)" SortExpression="teach_firstname" />
-                <asp:BoundField DataField="teach_lastname" HeaderText="Last Name" SortExpression="teach_lastname" />
-                <asp:BoundField DataField="teach_email" HeaderText="Email Address" SortExpression="teach_email" />
-                <asp:BoundField DataField="teach_title" HeaderText="Title" SortExpression="teach_title" />
-                <asp:BoundField DataField="gender" HeaderText="Gender" SortExpression="gender" />
-                <asp:BoundField DataField="contactNum" HeaderText="Contact Details" SortExpression="contactNum" />
-                <asp:BoundField DataField="Address" HeaderText="Physical Address" SortExpression="Address" />
-                <asp:BoundField DataField="age" HeaderText="Age" SortExpression="age" />
+                <asp:BoundField DataField="teach_firstname" HeaderText="Name(s)" SortExpression="teach_firstname" ControlStyle-Width="100px"/>
+                <asp:BoundField DataField="teach_lastname" HeaderText="Last Name" SortExpression="teach_lastname" ControlStyle-Width="100px"/>
+                <asp:BoundField DataField="teach_email" HeaderText="Email Address" SortExpression="teach_email" ControlStyle-Width="200px"/>
+                <asp:BoundField DataField="teach_title" HeaderText="Title" SortExpression="teach_title" ControlStyle-Width="100px"/>
+                <asp:BoundField DataField="gender" HeaderText="Gender" SortExpression="gender" ControlStyle-Width="100px"/>
+                <asp:BoundField DataField="contactNum" HeaderText="Contact Details" SortExpression="contactNum" ControlStyle-Width="100px"/>
+                <asp:BoundField DataField="Address" HeaderText="Physical Address" SortExpression="Address" ControlStyle-Width="230px" />
+                <asp:BoundField DataField="age" HeaderText="Age" SortExpression="age" ControlStyle-Width="40px" />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
             <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />

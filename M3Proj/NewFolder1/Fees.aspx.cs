@@ -14,6 +14,11 @@ namespace M3Proj.NewFolder1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["userType"].ToString().Equals("Student"))
+            {
+
+            
             string str1 = Session["Email"].ToString();
             int n1 = str1.IndexOf("@");
             string str2 = str1.Substring(0, n1);
@@ -48,14 +53,18 @@ namespace M3Proj.NewFolder1
 
 
 
-            /*GridView1.DataSource = dt;
-            GridView1.DataBind();
+                /*GridView1.DataSource = dt;
+                GridView1.DataBind();
 
-            GridView2.DataSource = daTa;
-            GridView2.DataBind();
-            */
+                GridView2.DataSource = daTa;
+                GridView2.DataBind();
+                */
 
-
+            }
+            else
+            {
+                Response.Redirect("~/Account/Login.aspx");
+            }
         }
 
         

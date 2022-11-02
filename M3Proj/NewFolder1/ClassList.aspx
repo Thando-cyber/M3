@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-
+<div class="general">
      <div class="container-xxl position-relative p-0">        
     <div class="container-xxl bg-primary page-header">
                 <div class="container text-center">
@@ -29,10 +29,29 @@
         <br />
         <br />
         <br />
+    
+        <Button ID="Button2" Text="print" style="width:80px; height:30px;" OnClick="window.print();"/>
+            Print</div>
+    <div class="print-container" style="display:flex; justify-content:center; flex-direction:column">
         
+        <div class="report-header">
+                    <div class="logo">
+                        <img src="../Photos/download-removebg-preview-modified.png"/>
+                    </div>
+                    <h1>Kharina Secondary School  <br />
+                    Class List
+                    </h1>
+            
 
-    <div style="display:flex; justify-content:center;"">
+                </div>
 
+        <div style="color:#000000"><asp:Label ID="Label1" runat="server" Text=""></asp:Label></div>
+        <div style="color:#000000"><asp:Label ID="Label3" runat="server" Text=""></asp:Label></div>
+         <div style="color:#000000"><asp:Label ID="Label2" runat="server" Text=""></asp:Label></div>
+         
+
+        
+        <div style="flex-wrap:nowrap; flex-direction:column">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" CellPadding="4" DataKeyNames="class_id,teach_ID,stu_ID" DataSourceID="ClassListDDL" ForeColor="Black" HorizontalAlign="Center" BackColor="#F9F9F9" GridLines="Horizontal">
             <Columns>
                  <asp:TemplateField ItemStyle-Width="100px" ItemStyle-BorderStyle="Solid" ItemStyle-BorderColor="Black" ItemStyle-BorderWidth="1px">
@@ -103,12 +122,57 @@
             </SelectParameters>
         </asp:SqlDataSource>
             </div>
+            </div>
     
         
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+    <style>
+        
+        .report-header{
+            display:none;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            Content1 {
+            display:none;
+        }
+            Content2 {
+            display:none;
+        }
+            .general {
+                display: none;
+            }
+
+            .print-container, .print-container * {
+                visibility: visible;
+                margin-top: 0;
+                
+            }
+
+            .report-header {
+                
+                display: flex;
+                margin-bottom: 1vh;
+                margin-top: -30px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .logo {
+                width: 20vh;
+                height: 20vh;
+                margin-right: 5vh;
+            }
+
+            .logo img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    </style>
     
 </asp:Content>
 
