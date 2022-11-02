@@ -25,7 +25,7 @@ namespace M3Proj
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+
             string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
             SqlConnection con = new SqlConnection(conString);
             string query = "SELECT * FROM classes WHERE grade = @grade AND Division = @Division";

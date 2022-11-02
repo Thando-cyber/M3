@@ -205,6 +205,8 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="ClassList.aspx" />
+    <Content Include="FormClass.aspx" />
     <Content Include="logos\22001.png" />
     <Content Include="logos\22003.png" />
     <Content Include="logos\22007.jpg" />
@@ -312,6 +314,7 @@
     <Content Include="Photos\9.jpg" />
     <Content Include="Photos\sport.jpg" />
     <Content Include="Photos\7.jpg" />
+    <Content Include="recordPayment.aspx" />
     <Content Include="Report2.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -575,6 +578,20 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClassList.aspx.cs">
+      <DependentUpon>ClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassList.aspx.designer.cs">
+      <DependentUpon>ClassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormClass.aspx.cs">
+      <DependentUpon>FormClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormClass.aspx.designer.cs">
+      <DependentUpon>FormClass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewFolder1\Admins.aspx.cs">
       <DependentUpon>Admins.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -668,6 +685,13 @@
     </Compile>
     <Compile Include="NewFolder1\Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recordPayment.aspx.cs">
+      <DependentUpon>recordPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recordPayment.aspx.designer.cs">
+      <DependentUpon>recordPayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report2.aspx.cs">
       <DependentUpon>Report2.aspx</DependentUpon>
