@@ -29,7 +29,7 @@ namespace M3Proj
                 Response.Redirect("~/Account/Login.aspx");
             }
 
-            
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -64,11 +64,11 @@ namespace M3Proj
                 teacherSurname = Convert.ToString(dr["teach_lastname"]);
 
             }
-            teacherFullName = teacherName +" "+ teacherSurname;
+            teacherFullName = teacherName + " " + teacherSurname;
 
-            Label1.Text = "Grade: "+DropDownList1.SelectedValue + DropDownList2.SelectedValue;
-            Label2.Text = "Roll of Class: "+roll;
-            Label3.Text = "Educator: "+teacherFullName;
+            Label1.Text = "Grade: " + DropDownList1.SelectedValue + DropDownList2.SelectedValue;
+            Label2.Text = "Roll of Class: " + roll;
+            Label3.Text = "Educator: " + teacherFullName;
 
             GridView1.Visible = true;
             this.GridView1.DataSource = null;
