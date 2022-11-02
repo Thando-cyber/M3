@@ -16,6 +16,7 @@ namespace M3Proj
     //string currpage = HttpContext.Current.Request.Url.AbsolutePath;
     public partial class SiteMaster : MasterPage
     {
+        string str2;
         public string name = " ";
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -91,13 +92,16 @@ namespace M3Proj
             dropdown7.Visible = false;
             dropdown8.Visible = false;
             dropdown9.Visible = false;
-            dropdown10.Visible = false;
-            dropdown11.Visible = false;
-            dropdown12.Visible = false;
+            dropdown10.Visible=false;
 
 
             if (Session["userType"].ToString().Equals("Student"))
             {
+                string str1 = Session["Email"].ToString();
+                int n1 = str1.IndexOf("@");
+                str2 = str1.Substring(0, n1);
+                Session["stuID"] = str2;
+                Session["ID"] = str2;
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
@@ -117,6 +121,11 @@ namespace M3Proj
             }
             else if (Session["userType"].ToString().Equals("Teacher"))
             {
+                string str1 = Session["Email"].ToString();
+                int n1 = str1.IndexOf("@");
+                //str2 = str1.Substring(0, n1);
+                //Session["teachID"] = str2;
+                //Session["ID"] = str2;
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown3.Visible = true;
@@ -148,9 +157,8 @@ namespace M3Proj
                 dropdown7.Visible = true;
                 dropdown8.Visible = true;
                 dropdown9.Visible = true;
-                dropdown10.Visible = true;
-                dropdown11.Visible = true;
-                dropdown12.Visible = true;
+                dropdown10.Visible=true;
+                name = "Admin";
 
             }
             else
@@ -165,9 +173,7 @@ namespace M3Proj
                 dropdown7.Visible = false;
                 dropdown8.Visible = false;
                 dropdown9.Visible = false;
-                dropdown10.Visible = false;
-                dropdown11.Visible = false;
-                dropdown12.Visible = false;
+                dropdown10.Visible=false;
 
             }
 

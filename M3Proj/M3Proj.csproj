@@ -205,12 +205,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="NewFolder1\ClassList.aspx" />
-    <Content Include="NewFolder1\FormClass.aspx" />
     <Content Include="logos\22001.png" />
     <Content Include="logos\22003.png" />
-    <Content Include="logos\22007.jpg" />
+    <Content Include="logos\22007.png" />
     <Content Include="logos\22008.png" />
+    <Content Include="logos\22009.png" />
+    <Content Include="logos\22010.png" />
     <Content Include="logos\22012.png" />
     <Content Include="logos\22014.png" />
     <Content Include="logos\22020.png" />
@@ -226,7 +226,15 @@
     <Content Include="logos\22031.png" />
     <Content Include="logos\22032.png" />
     <Content Include="logos\22033.png" />
+    <Content Include="logos\22034.png" />
+    <Content Include="logos\22035.png" />
+    <Content Include="logos\22036.png" />
+    <Content Include="logos\22037.png" />
+    <Content Include="logos\22038.png" />
+    <Content Include="logos\22039.png" />
+    <Content Include="logos\22040.png" />
     <Content Include="logos\TreadLight5327.png" />
+    <Content Include="NewFolder1\AddStudents.aspx" />
     <Content Include="NewFolder1\Admins.aspx" />
     <Content Include="CSS\about_contact.css" />
     <Content Include="CSS\bootstrap.min.css" />
@@ -314,7 +322,6 @@
     <Content Include="Photos\9.jpg" />
     <Content Include="Photos\sport.jpg" />
     <Content Include="Photos\7.jpg" />
-    <Content Include="NewFolder1\recordPayment.aspx" />
     <Content Include="Report2.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -579,19 +586,12 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\ClassList.aspx.cs">
-      <DependentUpon>ClassList.aspx</DependentUpon>
+    <Compile Include="NewFolder1\AddStudents.aspx.cs">
+      <DependentUpon>AddStudents.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NewFolder1\ClassList.aspx.designer.cs">
-      <DependentUpon>ClassList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewFolder1\FormClass.aspx.cs">
-      <DependentUpon>FormClass.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\FormClass.aspx.designer.cs">
-      <DependentUpon>FormClass.aspx</DependentUpon>
+    <Compile Include="NewFolder1\AddStudents.aspx.designer.cs">
+      <DependentUpon>AddStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Admins.aspx.cs">
       <DependentUpon>Admins.aspx</DependentUpon>
@@ -693,13 +693,6 @@
     </Compile>
     <Compile Include="NewFolder1\Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NewFolder1\recordPayment.aspx.cs">
-      <DependentUpon>recordPayment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\recordPayment.aspx.designer.cs">
-      <DependentUpon>recordPayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report2.aspx.cs">
       <DependentUpon>Report2.aspx</DependentUpon>

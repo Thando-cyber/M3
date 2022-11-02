@@ -221,10 +221,10 @@ namespace M3Proj.NewFolder1
 
             da1.Fill(dt);
             sqlData.Fill(table);
-            if (table.Rows.Count ==1)
+            if (table.Rows.Count ==1 || dt.Rows.Count >= 1)
             {
 
-                MessageBox.Show(Page, "marks Test 1");
+                MessageBox.Show(Page, "Marks Already added");
                 foreach (DataRow dr in table.Rows)
                 {
                     Ass1= Convert.ToInt32(dr["Asses1"]);
@@ -346,7 +346,7 @@ namespace M3Proj.NewFolder1
             if (table.Rows.Count ==1)
             {
 
-                MessageBox.Show(Page, "marks Test 1");
+                MessageBox.Show(Page, "Marks Already Added");
                 foreach (DataRow dr in table.Rows)
                 {
                     Ass1= Convert.ToInt32(dr["Asses1"]);
@@ -386,6 +386,7 @@ namespace M3Proj.NewFolder1
 
         protected void Button4_Click(object sender, EventArgs e)
         {
+            //int Ass1 = 0; int Ass2 = 0; int Ass3 = 0; int Ass4 = 0; int Tes1 = 0; int Tes2 = 0;
             double A1, A2, A3, A4, T1, T2, sum;
             string As1, As2, As3, As4, Ts1, Ts2;
             
@@ -902,6 +903,7 @@ namespace M3Proj.NewFolder1
                     }
                     Label1.Text = Name+" "+Surname;
                     Label2.Text= elecmail;
+                    
                 }
             }
 
