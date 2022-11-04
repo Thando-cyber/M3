@@ -243,6 +243,7 @@
     <Content Include="CSS\info2.css" />
     <Content Include="CSS\loginstyle.css" />
     <Content Include="CSS\masterstyle.css" />
+    <Content Include="NewFolder1\businessReport.aspx" />
     <Content Include="NewFolder1\GenSubjectInfo.aspx" />
     <Content Include="img\about.png" />
     <Content Include="img\hero.png" />
@@ -305,6 +306,7 @@
     <Content Include="NewFolder1\GeninfoChange.aspx" />
     <Content Include="NewFolder1\Payments.aspx" />
     <Content Include="NewFolder1\Geninfo.aspx" />
+    <Content Include="NewFolder1\recordPayment.aspx" />
     <Content Include="NewFolder1\Students.aspx" />
     <Content Include="Photos\1.jpg" />
     <Content Include="Photos\2.jpg" />
@@ -346,7 +348,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="NewFolder1\Fees.aspx" />
-    <Content Include="NewFolder1\Report.aspx" />
     <Content Include="NewFolder1\Subjects.aspx" />
     <Content Include="NewFolder1\Web.config" />
     <Content Include="Default.aspx" />
@@ -622,6 +623,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsStudent.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\businessReport.aspx.cs">
+      <DependentUpon>businessReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\businessReport.aspx.designer.cs">
+      <DependentUpon>businessReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewFolder1\GenSubjectInfo.aspx.cs">
       <DependentUpon>GenSubjectInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -666,19 +674,19 @@
     <Compile Include="NewFolder1\Payments.aspx.designer.cs">
       <DependentUpon>Payments.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Report.aspx.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewFolder1\Report.aspx.designer.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
-    </Compile>
     <Compile Include="NewFolder1\Geninfo.aspx.cs">
       <DependentUpon>Geninfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NewFolder1\Geninfo.aspx.designer.cs">
       <DependentUpon>Geninfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\recordPayment.aspx.cs">
+      <DependentUpon>recordPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\recordPayment.aspx.designer.cs">
+      <DependentUpon>recordPayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Subjects.aspx.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>

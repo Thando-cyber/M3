@@ -50,7 +50,32 @@ namespace M3Proj.NewFolder1
         public string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["stuID"] !=null)
+            {
+                // =Session["stuID"].ToString();
+                SqlConnection con1 = new SqlConnection(conString);
+                string query1 = "SELECT * FROM student WHERE stu_ID = @ID";
+                SqlCommand sqlCommand = new SqlCommand(query1, con1);
+                sqlCommand.Parameters.AddWithValue("@ID", Session["stuID"]);
+                SqlDataAdapter DA1 = new SqlDataAdapter(sqlCommand);
+                DataTable dt2 = new DataTable();
+                DA1.Fill(dt2);
 
+                foreach (DataRow dr in dt2.Rows)
+                {
+                    Name = Convert.ToString(dr["stu_name"]);
+                    Surname = Convert.ToString(dr["stu_surname"]);
+                    Address = Convert.ToString(dr["stu_address"]);
+                    age = Convert.ToInt32(dr["stu_age"]);
+                    gender = Convert.ToString(dr["stu_gender"]);
+                    fees = Convert.ToDecimal(dr["stu_Fees"]);
+                    cont = Convert.ToString(dr["parentContact"]);
+                    elecmail = Convert.ToString(dr["stu_email"]);
+                }
+                Label1.Text = Name+" "+Surname;
+                Label2.Text= elecmail;
+
+            }
             subjectAll.Visible=false;
             string str1 = Session["Email"].ToString();
             int n1 = str1.IndexOf("@");
@@ -129,7 +154,51 @@ namespace M3Proj.NewFolder1
             Label42.Visible= false;
             Label43.Visible= false;
             Label44.Visible= false;
-             
+
+            Asses1.Visible=true;
+            Asses2.Visible=true;
+            Asses3.Visible=true;
+            Asses4.Visible=true;
+            Test1.Visible= true;
+            Test2.Visible= true;
+            TextBox3.Visible =true;
+            TextBox4.Visible =true;
+            TextBox5.Visible =true;
+            TextBox6.Visible =true;
+            TextBox7.Visible =true;
+            TextBox8.Visible =true;
+            TextBox10.Visible =true;
+            TextBox11.Visible =true;
+            TextBox12.Visible =true;
+            TextBox13.Visible =true;
+            TextBox14.Visible =true;
+            TextBox15.Visible =true;
+            TextBox17.Visible =true;
+            TextBox18.Visible =true;
+            TextBox19.Visible =true;
+            TextBox20.Visible =true;
+            TextBox21.Visible =true;
+            TextBox22.Visible =true;
+            TextBox24.Visible =true;
+            TextBox25.Visible =true;
+            TextBox26.Visible =true;
+            TextBox27.Visible =true;
+            TextBox28.Visible =true;
+            TextBox29.Visible =true;
+            TextBox31.Visible =true;
+            TextBox32.Visible =true;
+            TextBox33.Visible =true;
+            TextBox34.Visible =true;
+            TextBox35.Visible =true;
+            TextBox36.Visible =true;
+            TextBox38.Visible =true;
+            TextBox39.Visible =true;
+            TextBox40.Visible =true;
+            TextBox41.Visible =true;
+            TextBox42.Visible =true;
+            TextBox43.Visible =true;
+
+
 
         }
 
@@ -281,6 +350,7 @@ namespace M3Proj.NewFolder1
             else { Ts2 ="0"; }
             
             A1 =Convert.ToDouble(As1); A2 =Convert.ToDouble(As2); A3 = Convert.ToDouble(As3); A4 =Convert.ToDouble(As4); T1 = Convert.ToDouble(Ts1); T2= Convert.ToDouble(Ts2);
+            
             A1 = A1 * 0.1;
             A2 = A2 * 0.1;
             A3 = A3 * 0.1;
@@ -849,7 +919,7 @@ namespace M3Proj.NewFolder1
         protected void Search_Click(object sender, EventArgs e)
         {
             string stu = TextBox1.Text;
-            if (stu.Length >= 5)
+            if (stu.Length >= 5 && Session["userType"].ToString()=="Teacher")
             {
                 string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
                 string query1 = "SELECT* FROM student where stu_ID = @email and classID=@classID";
@@ -897,10 +967,72 @@ namespace M3Proj.NewFolder1
                     Label1.Text = Name+" "+Surname;
                     Label2.Text= elecmail;
                     
+                } 
+                else
+                {
+                        MessageBox.Show(Page, "This Student is not in your Class");
                 }
+            }else if(stu.Length >= 5 && Session["userType"].ToString()=="Administrator")
+            {
+                string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
+                string query1 = "SELECT* FROM student where stu_ID = @id";
+                SqlConnection con = new SqlConnection(conString);
+                SqlCommand command = new SqlCommand(query1, con);
+                DataTable dt = new DataTable(); 
+                SqlDataAdapter da1 = new SqlDataAdapter(command);
+                command.Parameters.AddWithValue("@id", stu);
+                da1.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    Session["stuID"]= stu;
+                    SqlConnection con1 = new SqlConnection(conString);
+                    string query = "SELECT * FROM student WHERE stu_ID = @ID";
+                    SqlCommand sqlCommand = new SqlCommand(query, con1);
+                    sqlCommand.Parameters.AddWithValue("@ID", Session["stuID"]);
+                    SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
+                    DataTable dt1 = new DataTable();
+                    DA.Fill(dt1);
+
+                    foreach (DataRow dr in dt1.Rows)
+                    {
+                        Name = Convert.ToString(dr["stu_name"]);
+                        Surname = Convert.ToString(dr["stu_surname"]);
+                        Address = Convert.ToString(dr["stu_address"]);
+                        age = Convert.ToInt32(dr["stu_age"]);
+                        gender = Convert.ToString(dr["stu_gender"]);
+                        fees = Convert.ToDecimal(dr["stu_Fees"]);
+                        cont = Convert.ToString(dr["parentContact"]);
+                        elecmail = Convert.ToString(dr["stu_email"]);
+                        classID = Convert.ToInt32(dr["classID"]);
+                    }
+                    Label1.Text = Name+" "+Surname;
+                    Label2.Text= elecmail;
+
+                    string q1 = "SELECT * FROM classes WHERE class_id =@classID";
+                    SqlConnection con2 = new SqlConnection(conString);
+                    SqlCommand command1 = new SqlCommand(q1, con2);
+                    command1.Parameters.AddWithValue("@classID", classID);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command1);
+                    DataTable dt2 = new DataTable();
+                    dataAdapter.Fill(dt2);
+                    foreach (DataRow dr in dt2.Rows)
+                    {
+                        divis= Convert.ToChar(dr["Division"]);
+                        gra = Convert.ToInt32(dr["grade"]);
+                    }
+                    Session["Division"]= divis;
+
+                }
+
             }
+            else
+            {
+                MessageBox.Show(Page, "Invalid Student Number");
+            }
+           
 
         }
+        
     }
 }
 

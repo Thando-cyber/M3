@@ -57,8 +57,8 @@
                                         <p class="text-muted font-size-sm"><%=age%> Years Old</p>
                                         <p class="text-muted font-size-sm"><%= Address %></p>
 
-
-                                        <button type="button" id="reportButton" runat="server" href="#" class="btn btn-primary">Report</button>
+                                        <asp:Button ID="Button1" Text="Report" CssClass="btn btn-outline-primary" runat="server" OnClick="Report_click" />
+                                        
                                         <button type="button" id="SubjectButton"  runat="server" class="btn btn-outline-primary">Subject</button>
                                         <button type="button" runat="server" href="~/Account/ManagePassword" class="btn btn-outline-primary">Change Password</button>
                                     </div>
@@ -137,7 +137,7 @@
                                     <div class="col-sm-3">
                                         <h6 class="mb-0"> Class Teacher</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary" style="width: 300px"><%=clateac%>(@<%=teachId %>)</div>
+                                    <div class="col-sm-9 text-secondary" style="width: 300px"><%=clateac%></div>
                                 </div>
                                 <hr runat="server" id="hr1"/>
                                 <div class="row">

@@ -25,7 +25,17 @@
 
         </div>
 
- <div class="centre">
+        <div class="print">
+             <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" onclick="window.print()">Print</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Term" DataValueField="TermNo">
+             </asp:DropDownList>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [Term]"></asp:SqlDataSource>
+
+        </div>
+
+        
+
+ <div class="centre  print-container">
 
         
  <div class="gradient-custom-2 h-100">
@@ -53,7 +63,7 @@
                 <tbody>
                   <tr>
                     <th scope="row" style="width:350.28px;" >Name:<%= name %></th>
-                      <th scope="row" style="width:350.28px;" >School year: <% Response.Write(DateTime.Now.ToShortDateString()); %> </th>
+                      <th scope="row" style="width:350.28px;" >School year: <% Response.Write(DateTime.Now.Year.ToString()); %> </th>
                     
 
                     
@@ -62,7 +72,7 @@
 
                     <tr>
                     <th scope="row" style="width:350.28px;" >Grade: <%= grade %></th>
-                    <th scope="row" style="width:350.28px;" >Term:<%= term %></th>
+                    <th scope="row" style="width:350.28px;" >Term: <%= term %></th>
                     
 
                     
@@ -73,7 +83,7 @@
                     <tr>
                    
                      <th scope="row" style="width:350.28px;" >Division:<%= division %></th>
-                    <th scope="row" style="width:350.28px;" >Fees:<%= fees %></th>
+                    <th scope="row" style="width:350.28px;" >Fees: R<%= fees %></th>
 
                     
                    
@@ -81,7 +91,7 @@
 
                     <tr>
                    
-                     <th scope="row" style="width:350.28px;" >Teacher: <%= teachername %> </th>
+                     <th scope="row" style="width:350.28px;" >Class Teacher: <%= teachername %> </th>
                     <th scope="row" style="width:350.28px;" >Student ID:<%= stuID%> </th>
 
                     
@@ -258,12 +268,6 @@
                    
                   </tr>
 
-                <tr>
-                  <th scope="col" >Total Average: <%=total %></th>  
-                    
-
-
-                </tr>
                   
                 </tbody>
               </table>
@@ -344,6 +348,16 @@
 }
 
 
+.btndiv{
+    margin-bottom: 3vh;
+    margin-left:25vh;
+}
+
+.print{
+    margin-bottom: 10vh;
+    margin-left:25vh;
+}
+
  .btn-primary {
     color: white;
     background-color: #000000;
@@ -351,7 +365,7 @@
 }
 
  .btn-primary:hover{
-     background-color:#a7a4a4;
+     background-color: #058ff7;
  }
 
 
@@ -431,6 +445,18 @@ tbody td {
 
 body{
     background: #fafafa;
+}
+
+@media print{
+    body *{
+        visibility:hidden;
+    }
+
+    .print-container, .print-container *{
+        visibility:visible;
+    }
+
+
 }
 
 

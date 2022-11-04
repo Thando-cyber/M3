@@ -31,6 +31,7 @@
                     <div class="d-flex flex-column align-items-center text-center">
                         <div id="form1" runat="server" enctype="multipart/form-data">
                             <br />
+                            Enter student picture<br />
                             New Student ID:<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                             <br />
                             <input type="file" name="FileUpload" />
@@ -114,7 +115,7 @@
                                 <hr />
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Address</h6>
+                                        <h6 class="mb-0">Grade</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <select runat="server" name="Grade" id="Select1">

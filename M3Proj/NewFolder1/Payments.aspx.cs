@@ -28,8 +28,15 @@ namespace M3Proj.NewFolder1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            GridView1.Visible = false;
-            GridView2.Visible = true;
+            if (GridView2.Rows.Count > 0)
+            {
+                GridView1.Visible = false;
+                GridView2.Visible = true;
+            }
+            else
+            {
+                warn1.Text = "No Data to Display";
+            }
         }
 
         protected void Button2_Click(object sender, EventArgs e)

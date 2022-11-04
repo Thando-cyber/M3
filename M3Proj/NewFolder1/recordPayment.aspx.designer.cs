@@ -7,48 +7,75 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M3Proj.NewFolder1
+namespace M3Proj
 {
 
 
-    public partial class stuGeninfo
+    public partial class recordPayment
     {
 
         /// <summary>
-        /// sear control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sear;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Box2 control.
+        /// studentID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Box2;
+        protected global::System.Web.UI.WebControls.TextBox studentID;
 
         /// <summary>
-        /// But2 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button But2;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// warn1 control.
+        /// amount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label warn1;
+        protected global::System.Web.UI.WebControls.TextBox amount;
+
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+
+        /// <summary>
+        /// balanceLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label balanceLbl;
 
         /// <summary>
         /// Button1 control.
@@ -60,75 +87,93 @@ namespace M3Proj.NewFolder1
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// SubjectButton control.
+        /// receiptLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton SubjectButton;
+        protected global::System.Web.UI.WebControls.Label receiptLbl;
 
         /// <summary>
-        /// text2 control.
+        /// adminLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl text2;
+        protected global::System.Web.UI.WebControls.Label adminLbl;
 
         /// <summary>
-        /// fee2 control.
+        /// studentlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fee2;
+        protected global::System.Web.UI.WebControls.Label studentlbl;
 
         /// <summary>
-        /// line6 control.
+        /// datelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl line6;
+        protected global::System.Web.UI.WebControls.Label datelbl;
 
         /// <summary>
-        /// text1 control.
+        /// amountlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl text1;
+        protected global::System.Web.UI.WebControls.Label amountlbl;
 
         /// <summary>
-        /// line7 control.
+        /// typeLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl line7;
+        protected global::System.Web.UI.WebControls.Label typeLbl;
 
         /// <summary>
-        /// tex7 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tex7;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// hr1 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hr1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+
+        /// <summary>
+        /// GridView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView2;
+
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
     }
 }

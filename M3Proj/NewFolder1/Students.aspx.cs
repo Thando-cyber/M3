@@ -165,7 +165,17 @@ namespace M3Proj
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            if (datagrid.SelectedValue != null)
+            {
 
+                Session["stuID"]= Session["rID"].ToString();
+                Response.Redirect("~/NewFolder1/Subjects.aspx");
+            }
+            else
+            {
+                Response.Write("Please select a row on Gridview");
+
+            }
         }
 
         protected void Button2_Click(object sender, EventArgs e)

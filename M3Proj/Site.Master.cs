@@ -16,7 +16,7 @@ namespace M3Proj
     //string currpage = HttpContext.Current.Request.Url.AbsolutePath;
     public partial class SiteMaster : MasterPage
     {
-        string str2;
+        public string str2=" ";
         public string name = " ";
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -87,21 +87,25 @@ namespace M3Proj
             dropdown2.Visible = false;
             dropdown3.Visible = false;
             dropdown4.Visible = false;
-            dropdown5.Visible = false;
             dropdown6.Visible = false;
             dropdown7.Visible = false;
             dropdown8.Visible = false;
             dropdown9.Visible = false;
             dropdown10.Visible=false;
+            dropdown12.Visible = false;
+            
+            dropdown13.Visible = false;
 
 
-            if (Session["userType"].ToString().Equals("Student"))
+            if (Session["userType"].ToString().Equals("Student") && Session["Email"] != null)
             {
-                string str1 = Session["Email"].ToString();
-                int n1 = str1.IndexOf("@");
-                str2 = str1.Substring(0, n1);
-                Session["stuID"] = str2;
-                Session["ID"] = str2;
+                //string str1 = " "; 
+                //str1= Session["Email"].ToString();
+                //int n1 = str1.IndexOf("@");
+
+                //str2 = str1.Substring(0, n1);
+                //Session["stuID"] = str2;
+                //Session["ID"] = str2;
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown2.Visible = true;
@@ -112,24 +116,29 @@ namespace M3Proj
                 SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
                 DataTable dt = new DataTable();
                 DA.Fill(dt);
-
+                str2="Student";
                 foreach (DataRow dr in dt.Rows)
                 {
                     name = Convert.ToString(dr["stu_name"]);
+                    Session["stuID"]=  Convert.ToString(dr["stu_ID"]);
+                    Session["ID"] = Convert.ToString(dr["stu_ID"]);
                 }
 
             }
-            else if (Session["userType"].ToString().Equals("Teacher"))
+            else if (Session["userType"].ToString().Equals("Teacher") && Session["Email"] != null)
             {
-                string str1 = Session["Email"].ToString();
+                str2= "Teacher";
+                /*string str1 = " ";
+                str1 = Session["Email"].ToString();
                 int n1 = str1.IndexOf("@");
-                //str2 = str1.Substring(0, n1);
-                //Session["teachID"] = str2;
-                //Session["ID"] = str2;
+                str2 = str1.Substring(0, n1);
+                Session["teachID"] = str2;
+                Session["ID"] = str2;*/
                 page1.Visible = true;
                 dropdown1.Visible = true;
                 dropdown3.Visible = true;
                 dropdown4.Visible = true;
+                //dropdown12.Visible= true;
                 SqlConnection con = new SqlConnection(conString);
                 string query = "SELECT * FROM Teachers WHERE teach_email = @Email";
                 SqlCommand sqlCommand = new SqlCommand(query, con);
@@ -141,24 +150,30 @@ namespace M3Proj
                 foreach (DataRow dr in dt.Rows)
                 {
                     name = Convert.ToString(dr["teach_firstname"]);
+                    Session["teachID"] = Convert.ToString(dr["teach_ID"]);
+                    Session["ID"] = Convert.ToString(dr["teach_ID"]);
                 }
 
 
             }
-            else if (Session["userType"].ToString().Equals("Administrator"))
+            else if (Session["userType"].ToString().Equals("Administrator")&& Session["Email"] != null)
             {
                 page1.Visible = true;
                 dropdown1.Visible = true;
-                dropdown2.Visible = true;
-                dropdown3.Visible = true;
+                dropdown2.Visible = false;
+                //dropdown3.Visible = true;
                 dropdown4.Visible = true;
-                dropdown5.Visible = true;
                 dropdown6.Visible = true;
                 dropdown7.Visible = true;
-                dropdown8.Visible = true;
+                //dropdown8.Visible = true;
                 dropdown9.Visible = true;
                 dropdown10.Visible=true;
+                dropdown12.Visible= true;
+                //dropdown11.Visible = true;
+
+                dropdown13.Visible = true;
                 name = "Admin";
+                str2 = "Admin";
 
             }
             else
@@ -168,7 +183,6 @@ namespace M3Proj
                 dropdown2.Visible = false;
                 dropdown3.Visible = false;
                 dropdown4.Visible = false;
-                dropdown5.Visible = false;
                 dropdown6.Visible = false;
                 dropdown7.Visible = false;
                 dropdown8.Visible = false;

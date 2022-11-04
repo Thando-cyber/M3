@@ -16,6 +16,8 @@ namespace M3Proj.NewFolder1
 {
     public partial class stuGeninfo : System.Web.UI.Page
     {
+        public int grade = 0;
+        public char divi = ' ';
         public string Name = " ";
         public string elecmail;
         public string Surname = " ";
@@ -37,10 +39,10 @@ namespace M3Proj.NewFolder1
             if (Session["userType"].ToString() == "Student")
             {
                 SubjectButton.Visible =false;
+
                 sear.Visible= false;
                 int idClass = 0;
-                int grade = 0;
-                char divi = ' ';
+                
                 title = Session["userType"].ToString();
                 string str1 = Session["Email"].ToString();
                 int n1 = str1.IndexOf("@");
@@ -113,6 +115,7 @@ namespace M3Proj.NewFolder1
             else if (Session["userType"].ToString() == "Teacher")
             {
                 SubjectButton.Visible =true;
+                //reportButton.Visible=false;
                 sear.Visible= false;
                 text1.Visible= false;
                 text2.Visible=false;
@@ -190,8 +193,8 @@ namespace M3Proj.NewFolder1
                     Session["ID"] = userinput;
                     Session["stuID"] = userinput;
                     int idClass = 0;
-                    int grade = 0;
-                    char divi = ' ';
+                   
+                    
                     title = Session["userType2"].ToString();
                     /*string str1 = Session["Email"].ToString();
                     int n1 = str1.IndexOf("@");
@@ -217,6 +220,7 @@ namespace M3Proj.NewFolder1
                         cont = Convert.ToString(dr["parentContact"]);
                         idClass = Convert.ToInt32(dr["classID"]);
                         elecmail = Convert.ToString(dr["stu_email"]);
+                         
 
                     }
                     string query3 = "SELECT * FROM classes WHERE class_id= @classID";
@@ -305,6 +309,28 @@ namespace M3Proj.NewFolder1
 
             }
 
+        }
+        protected void Report_click(object sender, EventArgs e)
+        {
+            if (Session["stuID"] != null)
+            {
+
+                Session["rDivison"] = divi;
+                Session["rGrade"] = grade;
+                Session["rTerm"] = 1;
+                Session["rTeachName"] = clateac;
+                Session["rName"]= FullName;
+                Session["rID"]= Session["stuID"].ToString();
+                Session["rFees"]= fees;
+
+
+                Response.Redirect("/Report2.aspx");
+            }
+            else
+            {
+                Response.Write("Please select a row on Gridview");
+
+            }
         }
 
 
