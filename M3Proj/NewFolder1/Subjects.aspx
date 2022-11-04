@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  CodeBehind="Subjects.aspx.cs" Inherits="M3Proj.NewFolder1.Subjects" %>
+﻿<%@ Page Title="Results Capture" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  CodeBehind="Subjects.aspx.cs" Inherits="M3Proj.NewFolder1.Subjects" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="~/CSS/info.css" />
