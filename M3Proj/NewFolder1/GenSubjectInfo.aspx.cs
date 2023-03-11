@@ -11,9 +11,15 @@ namespace M3Proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["userType"].ToString().Equals("Administrator"))
+            {
 
+            }
+            else
+            {
+                Response.Redirect("~/Account/Login.aspx");
+            }
         }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             string name = TextBox1.Text;
@@ -32,7 +38,7 @@ namespace M3Proj
             }
             else
             {
-                Label1.Text = "Please fill in all the boxes, and ensure the division box only contains one character!";
+                Response.Write("<script>alert('Please fill in all the boxes, and ensure the division box only contains one character')</script>");
 
             }
         }

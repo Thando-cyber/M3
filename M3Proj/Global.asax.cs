@@ -28,6 +28,14 @@ namespace M3Proj
             Session.Add("userType2", " ");
             Session.Add("Division", "");
 
+            Session.Add("rName", "");
+            Session.Add("rDivision", "");
+            Session.Add("rTerm", "");
+            Session.Add("rGrade", 0);
+            Session.Add("rTeachName", "");
+            Session.Add("rID",0);
+            Session.Add("rFees", 0);
+
 
 
             // Code that runs on application startup

@@ -7,7 +7,8 @@
     <title>Kharina Report Viewer</title>
      <link href="CSS/bootstrap.min.css" rel="stylesheet"/>
 </head>
-<body>
+
+    <body>
     <form id="form1" runat="server">
 
         <div class="container-xxl position-relative p-0 top">        
@@ -19,7 +20,22 @@
             </div>
         </div>
 
- <div class="centre">
+        <div class="btndiv">
+             <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" onclick="history.back()">Click to go back</a>
+
+        </div>
+
+        <div class="print">
+             <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" onclick="window.print()">Print</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Term" DataValueField="TermNo">
+             </asp:DropDownList>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GroupPmb2ConnectionString %>" SelectCommand="SELECT * FROM [Term]"></asp:SqlDataSource>
+
+        </div>
+
+        
+
+ <div class="centre  print-container">
 
         
  <div class="gradient-custom-2 h-100">
@@ -46,7 +62,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" style="width:350.28px;" >Name:</th>
+                    <th scope="row" style="width:350.28px;" >Name:<%= name %></th>
                       <th scope="row" style="width:350.28px;" >School year: <% Response.Write(DateTime.Now.Year.ToString()); %> </th>
                     
 
@@ -55,8 +71,8 @@
                   </tr>
 
                     <tr>
-                    <th scope="row" style="width:350.28px;" >Grade:</th>
-                    <th scope="row" style="width:350.28px;" >Term:</th>
+                    <th scope="row" style="width:350.28px;" >Grade: <%= grade %></th>
+                    <th scope="row" style="width:350.28px;" >Term: <%= term %></th>
                     
 
                     
@@ -66,8 +82,8 @@
                     
                     <tr>
                    
-                     <th scope="row" style="width:350.28px;" >Division:</th>
-                    <th scope="row" style="width:350.28px;" >Fees:</th>
+                     <th scope="row" style="width:350.28px;" >Division:<%= division %></th>
+                    <th scope="row" style="width:350.28px;" >Fees: R<%= fees %></th>
 
                     
                    
@@ -75,8 +91,8 @@
 
                     <tr>
                    
-                     <th scope="row" style="width:350.28px;" >Teacher:</th>
-                    <th scope="row" style="width:350.28px;" >Date:<%Response.Write(DateTime.Now.ToShortDateString()); %> </th>
+                     <th scope="row" style="width:350.28px;" >Class Teacher: <%= teachername %> </th>
+                    <th scope="row" style="width:350.28px;" >Student ID:<%= stuID%> </th>
 
                     
                    
@@ -106,75 +122,115 @@
             <div class="table-responsive">
                  
               <table class="table table-dark table-bordered mb-0">
-                <thead>
+               
+                <tbody>
+                    <tr>
+                   
+                        
+                   <td>
+                     <table class="table table-dark table-bordered mb-0">   
+                     <thead>
                   <tr>
                     <th scope="col" style="background-color:#000000; color:white;" >Subjects</th>
                     <th scope="col" style="background-color:#424242; color:white;">Term 1</th>
-                    <th scope="col" style="background-color:#424242; color:white;">Term 2</th>
-                    <th scope="col" style="background-color:#424242; color:white;">Term 3</th>
-                    <th scope="col" style="background-color:#424242; color:white;">Term 4</th>
+                    
                    
                   </tr>
                 </thead>
-                <tbody>
+                    <% 
+                        foreach(System.Data.DataRow dr in dt.Rows) {
+                            Response.Write("<tr>");
+                           
+                            Response.Write("<th scope='row'>"+dr["subjectID"]+"</th>");
+                            if (dr["termResult"] != DBNull.Value && dr["termNo"].Equals("1")) {
+                                 Response.Write("<td>"+dr["termResult"]+"</td>");
+                            }
+                             
+                            Response.Write(" </tr>");
+                        }
+                 %>
+                    </table>
+                    </td>
+
+                         <td>
+                     <table class="table table-dark table-bordered mb-0">   
+                     <thead>
                   <tr>
-                    <th scope="row" >English</th>
-                    <td>64</td>
-                    <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
+                    <th scope="col" style="background-color:#000000; color:white;" >Subjects</th>
+                    <th scope="col" style="background-color:#424242; color:white;">Term 2</th>
+                    
                    
                   </tr>
+                </thead>
+                    <% 
+                        foreach(System.Data.DataRow dr in dt2.Rows) {
+                            Response.Write("<tr>");
+                           
+                            Response.Write("<th scope='row'>"+dr["subjectID"]+"</th>");
+                            if (dr["termResult"] != DBNull.Value && dr["termNo"].Equals("2")) {
+                                 Response.Write("<td>"+dr["termResult"]+"</td>");
+                            }
+                             
+                            Response.Write(" </tr>");
+                        }
+                 %>
+                    </table>
+                    </td>
+
+                        <td>
+                     <table class="table table-dark table-bordered mb-0">   
+                     <thead>
                   <tr>
-                    <th scope="row">Afrikaans</th>
-                    <td>64</td>
-                      <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
+                    <th scope="col" style="background-color:#000000; color:white;" >Subjects</th>
+                    <th scope="col" style="background-color:#424242; color:white;">Term 3</th>
+                    
                    
                   </tr>
-                  <tr>
-                    <th scope="row">Math</th>
-                    <td>64</td>
-                      <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row">Accounting</th>
-                     <td>64</td>
-                      <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
-                  </tr>
+                </thead>
+                    <% 
+                        foreach(System.Data.DataRow dr in dt3.Rows) {
+                            Response.Write("<tr>");
+                           
+                            Response.Write("<th scope='row'>"+dr["subjectID"]+"</th>");
+                            if (dr["termResult"] != DBNull.Value && dr["termNo"].Equals("3")) {
+                                 Response.Write("<td>"+dr["termResult"]+"</td>");
+                            }
+                             
+                            Response.Write(" </tr>");
+                        }
+                 %>
+                    </table>
+                    </td>
+                        
 
 
+                         <td>
+                     <table class="table table-dark table-bordered mb-0">   
+                     <thead>
                   <tr>
-                    <th scope="row">History</th>
-                   <td>64</td>
-                      <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
-                  
-                  </tr>
-                  <tr>
-                    <th scope="row">Arts & Culture</th>
-                    <td>64</td>
-                      <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
+                  <th scope="col" style="background-color:#000000; color:white;" >Subjects</th>
+                    <th scope="col" style="background-color:#424242; color:white;">Term 4</th>
+                    
                    
                   </tr>
-
-                     <tr>
-                    <th scope="row">Physical Science</th>
-                    <td>64</td>
-                      <td>90</td>
-                    <td>61</td>
-                    <td>23</td>
-                   
-                  </tr>
+                </thead>
+                    <% 
+                        foreach(System.Data.DataRow dr in dt4.Rows) {
+                            Response.Write("<tr>");
+                           
+                            Response.Write("<th scope='row'>"+dr["subjectID"]+"</th>");
+                            if (dr["termResult"] != DBNull.Value && dr["termNo"].Equals("4")) {
+                                 Response.Write("<td>"+dr["termResult"]+"</td>");
+                            }
+                             
+                            Response.Write(" </tr>");
+                        }
+                 %>
+                    </table>
+                    </td>
+                    
+               
+                    </tr>
                  
                 </tbody>
               </table>
@@ -202,22 +258,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" style="width:322.28px;" >Average</th>
-                    <td>64/P</td>
-                    <td>90/P</td>
-                     <td>41/F</td>
-                     <td>30/C</td>
-
+                   
+                    <td scope="col" style="background-color: #424242; color: white;">Term 1 average: <%= avg1 %>/<%= rate1  %></td>
+                    <td scope="col" style="background-color:#424242; color:white;">Term 2 average: <%= avg2 %>/<%= rate2  %></td>
+                    <td scope="col" style="background-color:#424242; color:white;">Term 3 average: <%= avg3 %>/<%= rate3  %></td>
+                    <td scope="col" style="background-color:#424242; color:white;">Term 4 average: <%= avg4 %>/<%= rate4  %></td>
+                  
                     
                    
                   </tr>
 
-                <tr>
-                  <th scope="row" style="width:322.28px;" >Total Average</th>  
-                     <td>75</td>
-
-
-                </tr>
                   
                 </tbody>
               </table>
@@ -241,7 +291,7 @@
         Grading Status:
     </h5>
     <h6>
-        P: Pass Achieved &nbsp F: Fail &nbsp  C: Condoned to another grade
+        P: Pass Achieved &nbsp F: Fail
 
     </h6>
 
@@ -260,10 +310,6 @@
 
 
  <style type="text/css">
-
-
-
-
 
 
 
@@ -293,8 +339,35 @@
 }
 
 .top{
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
+
+.btndiv{
+    margin-bottom: 10vh;
+    margin-left:25vh;
+}
+
+
+.btndiv{
+    margin-bottom: 3vh;
+    margin-left:25vh;
+}
+
+.print{
+    margin-bottom: 10vh;
+    margin-left:25vh;
+}
+
+ .btn-primary {
+    color: white;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+ .btn-primary:hover{
+     background-color: #058ff7;
+ }
+
 
 .bg-primary {
     background-color: #000000 !important;
@@ -374,7 +447,17 @@ body{
     background: #fafafa;
 }
 
+@media print{
+    body *{
+        visibility:hidden;
+    }
 
+    .print-container, .print-container *{
+        visibility:visible;
+    }
+
+
+}
 
 
 
