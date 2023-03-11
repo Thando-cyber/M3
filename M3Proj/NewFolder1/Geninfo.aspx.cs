@@ -16,10 +16,10 @@ namespace M3Proj.NewFolder1
 {
     public partial class stuGeninfo : System.Web.UI.Page
     {
-        public string Name = " ";
+        public string Name = "";
         public string elecmail;
-        public string Surname = " ";
-        public string Address = " ";
+        public string Surname = "";
+        public string Address = "";
         public int age = 0;
         public string gender = " ";
         public decimal fees = 0;
