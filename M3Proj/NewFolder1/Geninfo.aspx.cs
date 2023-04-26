@@ -96,7 +96,6 @@ namespace M3Proj.NewFolder1
                 SqlDataAdapter sql1Da = new SqlDataAdapter(sql);
                 DataTable data = new DataTable();
                 sql1Da.Fill(data);
-
                 foreach (DataRow dr in data.Rows)
                 {
                     fir= Convert.ToString(dr["teach_firstname"]);
@@ -139,14 +138,12 @@ namespace M3Proj.NewFolder1
                     Address = Convert.ToString(dr["Address"]);
                     age = Convert.ToInt32(dr["age"]);
                     gender = Convert.ToString(dr["gender"]);
-                    //fees = Convert.ToDecimal(dr["stu_Fees"]);
+                    fees = Convert.ToDecimal(dr["stu_Fees"]);
                     cont = Convert.ToString(dr["contactNum"]);
                     title = Convert.ToString(dr["teach_title"]);
                     elecmail =Convert.ToString(dr["teach_email"]);
                 }
-
                 FullName = Name + " " + Surname;
-
             }
 
         }
@@ -159,24 +156,24 @@ namespace M3Proj.NewFolder1
                 string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
                 string query1 = "SELECT* FROM student where stu_ID = @email";
                 string query2 = "SELECT* FROM Teachers where teach_ID = @email2";
-                string query4 = "SELECT* FROM student WHERE stu_ = @email3";
+                //string query4 = "SELECT* FROM student WHERE stu_ = @email3";
                 SqlConnection con = new SqlConnection(conString);
 
                 SqlCommand command = new SqlCommand(query1, con);
                 SqlCommand command2 = new SqlCommand(query2, con);
-                SqlCommand command3 = new SqlCommand(query4, con);
+                //SqlCommand command3 = new SqlCommand(query4, con);
                 DataTable dt = new DataTable();
                 DataTable dt2 = new DataTable();
-                DataTable dt3 = new DataTable();
+                //DataTable dt3 = new DataTable();
                 SqlDataAdapter da1 = new SqlDataAdapter(command);
                 SqlDataAdapter da2 = new SqlDataAdapter(command2);
-                SqlDataAdapter da3 = new SqlDataAdapter(command3);
+                //SqlDataAdapter da3 = new SqlDataAdapter(command3);
                 command.Parameters.AddWithValue("@email", userinput);
                 command2.Parameters.AddWithValue("@email2", userinput);
-                command3.Parameters.AddWithValue("@email3", Session["Email"]);
+                //command3.Parameters.AddWithValue("@email3", Session["Email"]);
                 da1.Fill(dt);
                 da2.Fill(dt2);
-                da3.Fill(dt3);
+                //da3.Fill(dt3);
                 if (dt.Rows.Count == 1)
                 {
                     SubjectButton.Visible =false;
@@ -297,7 +294,7 @@ namespace M3Proj.NewFolder1
                     FullName = Name + " " + Surname;
 
                 }
-                else if(dt3.Rows.Count == 1){
+                /*else if(dt3.Rows.Count == 1){
 
                     SubjectButton.Visible =false;
                     text1.Visible= true;
@@ -369,7 +366,7 @@ namespace M3Proj.NewFolder1
                     clateac = fir+" "+sec;
                     //con.Close();
 
-                }
+                }*/
                 else
                 {
                     warn1.Text= "Wrong ID Enterd";
