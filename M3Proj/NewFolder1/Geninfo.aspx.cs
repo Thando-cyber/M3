@@ -108,7 +108,6 @@ namespace M3Proj.NewFolder1
 
 
 
-
             }
             else if (Session["userType"].ToString() == "Teacher")
             {
@@ -252,7 +251,7 @@ namespace M3Proj.NewFolder1
                         gen = Convert.ToString(dr["gender"]);
                     }
                     clateac = fir+" "+sec;
-                    //con.Close();
+                    con1.Close();
 
 
                 }
