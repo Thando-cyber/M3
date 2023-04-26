@@ -153,7 +153,7 @@ namespace M3Proj.NewFolder1
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
-            
+
             string userinput = Box2.Text;
             if (userinput.Length >= 5)
             {
@@ -177,7 +177,7 @@ namespace M3Proj.NewFolder1
                 command3.Parameters.AddWithValue("@email3", Session["Email"]);
                 da1.Fill(dt);
                 da2.Fill(dt2);
-                //da3.Fill(dt3);
+                da3.Fill(dt3);
                 if (dt.Rows.Count == 1)
                 {
                     SubjectButton.Visible =false;
@@ -296,6 +296,79 @@ namespace M3Proj.NewFolder1
                     }
 
                     FullName = Name + " " + Surname;
+
+                }
+                else if(dt3.Rows.Count == 1){
+
+                    SubjectButton.Visible =false;
+                    text1.Visible= true;
+                    text2.Visible=true;
+                    tex7.Visible = true;
+                    line6.Visible=true;
+                    line7.Visible= true;
+                    Session["userType2"] = "Student";
+                    Session["ID"] = userinput;
+                    Session["stuID"] = userinput;
+                    int idClass = 0;
+                    int grade = 0;
+                    char divi = ' ';
+                    title = Session["userType2"].ToString();
+                    
+                    SqlConnection con1 = new SqlConnection(conString);
+                    string query = "SELECT * FROM student WHERE stu_ID = @ID";
+                    SqlCommand sqlCommand = new SqlCommand(query, con1);
+                    sqlCommand.Parameters.AddWithValue("@ID", Session["ID"]);
+                    SqlDataAdapter DA = new SqlDataAdapter(sqlCommand);
+                    DataTable dt1 = new DataTable();
+                    DA.Fill(dt1);
+
+                    foreach (DataRow dr in dt1.Rows)
+                    {
+                        Name = Convert.ToString(dr["stu_name"]);
+                        Surname = Convert.ToString(dr["stu_surname"]);
+                        Address = Convert.ToString(dr["stu_address"]);
+                        age = Convert.ToInt32(dr["stu_age"]);
+                        gender = Convert.ToString(dr["stu_gender"]);
+                        fees = Convert.ToDecimal(dr["stu_Fees"]);
+                        cont = Convert.ToString(dr["parentContact"]);
+                        idClass = Convert.ToInt32(dr["classID"]);
+                        elecmail = Convert.ToString(dr["stu_email"]);
+
+                    }
+                    string query3 = "SELECT * FROM classes WHERE class_id= @classID";
+                    SqlCommand com = new SqlCommand(query3, con);
+                    com.Parameters.AddWithValue("@classID", idClass);
+                    SqlDataAdapter da = new SqlDataAdapter(com);
+                    DataTable DT = new DataTable();
+                    da.Fill(DT);
+                    foreach (DataRow dr in DT.Rows)
+                    {
+                        grade = Convert.ToInt32(dr["grade"]);
+                        divi = Convert.ToChar(dr["Division"]);
+                        teachId = Convert.ToString(dr["teacher_id"]);
+                    }
+
+                    FullName = Name + " " + Surname;
+                    gradeDiv = grade.ToString()+divi.ToString();
+
+                    string fir = "";
+                    string sec = "";
+                    string gen = "";
+                    string q = "SELECT * FROM Teachers WHERE teach_ID = @id";
+                    SqlCommand sql = new SqlCommand(q, con);
+                    sql.Parameters.AddWithValue("@id", teachId);
+                    SqlDataAdapter sql1Da = new SqlDataAdapter(sql);
+                    DataTable data = new DataTable();
+                    sql1Da.Fill(data);
+
+                    foreach (DataRow dr in data.Rows)
+                    {
+                        fir= Convert.ToString(dr["teach_firstname"]);
+                        sec =Convert.ToString(dr["teach_lastname"]);
+                        gen = Convert.ToString(dr["gender"]);
+                    }
+                    clateac = fir+" "+sec;
+                    //con.Close();
 
                 }
                 else
