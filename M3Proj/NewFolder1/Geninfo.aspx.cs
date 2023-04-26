@@ -33,7 +33,6 @@ namespace M3Proj.NewFolder1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (Session["userType"].ToString() == "Student")
             {
                 SubjectButton.Visible =false;
@@ -111,7 +110,7 @@ namespace M3Proj.NewFolder1
             else if (Session["userType"].ToString() == "Teacher")
             {
                 SubjectButton.Visible =true;
-                sear.Visible= false;
+                sear.Visible= true;
                 text1.Visible= false;
                 text2.Visible=false;
                 tex7.Visible = false;
@@ -158,7 +157,6 @@ namespace M3Proj.NewFolder1
                 string query2 = "SELECT* FROM Teachers where teach_ID = @email2";
                 //string query4 = "SELECT* FROM student WHERE stu_ = @email3";
                 SqlConnection con = new SqlConnection(conString);
-
                 SqlCommand command = new SqlCommand(query1, con);
                 SqlCommand command2 = new SqlCommand(query2, con);
                 //SqlCommand command3 = new SqlCommand(query4, con);
