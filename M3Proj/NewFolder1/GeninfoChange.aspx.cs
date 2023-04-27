@@ -39,8 +39,7 @@ namespace M3Proj.NewFolder1
                 str2 = str1.Substring(0, n1);
                 Session["stuID"]= str2;
                 Session["ID"] = str2;
-                string conString =
-                    "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
+                string conString ="Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
                 SqlConnection con = new SqlConnection(conString);
                 string query = "SELECT * FROM student WHERE stu_ID = @ID";
                 SqlCommand sqlCommand = new SqlCommand(query, con);

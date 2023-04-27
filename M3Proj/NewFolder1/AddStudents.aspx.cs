@@ -83,12 +83,12 @@ namespace M3Proj.NewFolder1
                 int fees = 5000;
                 string classes = "SELECT * FROM classes WHERE grade=@grade AND Division=@division";
                 string query = "INSERT INTO student(stu_ID,classID,stu_name,stu_surname,stu_address,stu_email,stu_age,stu_gender,stu_Fees,parentContact,DOB) VALUES(@stu_ID,@classID,@stu_name,@stu_surname,@stu_address,@stu_email,@stu_age,@stu_gender,@stu_Fees,@parentContact,@DOB)";
-                //string query2 = "SELECT * FROM student WHERE stu_name=@name AND DOB";
+                string query2 = "SELECT * FROM student WHERE stu_name=@name AND DOB";
                 SqlConnection con = new SqlConnection(conString);
                 SqlCommand sqlCommand = new SqlCommand(query, con);
                 SqlCommand sqlCommand1 = new SqlCommand(classes, con);
-                sqlCommand1.Parameters.AddWithValue("@grade", grade);
-                sqlCommand1.Parameters.AddWithValue("@division", division);
+                sqlCommand1.Parameters.AddWithValue("@grade",grade);
+                sqlCommand1.Parameters.AddWithValue("@division",division);
                 SqlDataAdapter DA = new SqlDataAdapter(sqlCommand1);
                 DataTable dt = new DataTable();
                 DA.Fill(dt);
@@ -96,7 +96,6 @@ namespace M3Proj.NewFolder1
                 {
                     classid= Convert.ToInt32(dr["class_id"]);
                 }
-
                 sqlCommand.Parameters.AddWithValue("@stu_ID", Convert.ToString(newNum));
                 sqlCommand.Parameters.AddWithValue("@classID", classid);
                 sqlCommand.Parameters.AddWithValue("@stu_name", FirstName.Text);
@@ -116,11 +115,9 @@ namespace M3Proj.NewFolder1
                 IdentityResult result = manager.Create(user, Password);
                 if (result.Succeeded)
                 {
-
                     signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                     IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                 }
-
                 sqlCommand.ExecuteNonQuery();
             }
             else
