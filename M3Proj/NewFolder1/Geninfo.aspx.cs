@@ -103,9 +103,6 @@ namespace M3Proj.NewFolder1
 
                 }
                 clateac = fir+" "+sec;
-
-
-
             }
             else if (Session["userType"].ToString() == "Teacher")
             {
