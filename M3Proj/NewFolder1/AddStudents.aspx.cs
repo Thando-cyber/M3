@@ -22,10 +22,7 @@ namespace M3Proj.NewFolder1
         public int stunum;
         public int rowNum;
         public int newNum = 0;
-        public string conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
-
-
-       
+        public string conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userType"].ToString() == "Administrator")
@@ -52,9 +49,6 @@ namespace M3Proj.NewFolder1
                 AdminContent.Visible=false;
             }
         }
-
-
-
         protected void Upload(object sender, EventArgs e)
         {
             //Access the File using the Name of HTML INPUT File.
@@ -72,7 +66,7 @@ namespace M3Proj.NewFolder1
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            if (FirstName.Text!=""&& lastname.Text!=""&& DOB.Text!="" && addre.Text!="" && stuAge.Text!= "" &&contac.Text!="") {
+            if (FirstName.Text!="" && lastname.Text!="" && DOB.Text!="" && addre.Text!="" && stuAge.Text!= "" && contac.Text!="") {
                 string Password = Convert.ToString(newNum)+"a";
                 string a = Select1.Value;
                 int grade = Convert.ToInt32(a);
@@ -106,13 +100,13 @@ namespace M3Proj.NewFolder1
                 sqlCommand.Parameters.AddWithValue("@stu_Fees", fees);
                 sqlCommand.Parameters.AddWithValue("@parentContact", contac.Text);
                 sqlCommand.Parameters.AddWithValue("@DOB", DOB.Text);
-                sqlCommand.Parameters.AddWithValue("@stu_gender", lang.Value);
+                sqlCommand.Parameters.AddWithValue("@stu_gender",lang.Value);
                 con.Open();
                 MessageBox.Show(Page, "Student added");
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-                var user = new ApplicationUser() { UserName = email, Email = email };
-                IdentityResult result = manager.Create(user, Password);
+                var user = new ApplicationUser() { UserName =email, Email = email };
+                IdentityResult result = manager.Create(user,Password);
                 if (result.Succeeded)
                 {
                     signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
