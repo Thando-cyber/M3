@@ -11,6 +11,7 @@ using System.Security.Principal;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
 using System.Web.UI.HtmlControls;
+using System.Windows.Forms;
 
 namespace M3Proj.NewFolder1
 {
@@ -30,7 +31,7 @@ namespace M3Proj.NewFolder1
         public string gradeDiv = " ";
         public string teachId = " ";
         public string clateac = "";
-
+        string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -306,7 +307,45 @@ namespace M3Proj.NewFolder1
             }
 
         }
+        /*protected void Button3_Click(object sender, EventArgs e)
+        {
 
+            string query = "SELECT * FROM classes WHERE class_id = @Id";
+            SqlConnection con = new SqlConnection(conString);
+            SqlCommand command = new SqlCommand(query, con);
+            command.Parameters.AddWithValue("@Id", classId);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            String div = "";
+            int grade = 0;
+            int termNo = 1;
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                grade = Convert.ToInt32(dr["grade"]);
+                div = Convert.ToString(dr["Division"]);
+            }
+
+            if (datagrid.SelectedValue != null)
+            {
+
+                Session["rDivison"] = div;
+                Session["rGrade"] = grade;
+                Session["rTerm"] = termNo;
+                Session["rTeachName"] = teachname+"\t"+teachlastname;
+
+
+                Response.Redirect("/Report2.aspx");
+            }
+            else
+            {
+                Response.Write("Please select a row on Gridview");
+
+            }
+
+
+        }*/
 
 
     }

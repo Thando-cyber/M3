@@ -27,29 +27,18 @@ namespace M3Proj
         public string teachlastname;
         public string stuname;
         
-        
         string conString = "Data Source=146.230.177.46;Initial Catalog=GroupPmb2;User ID=GroupPmb2;Password=b45dc2;Integrated Security=False";
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-           
-
             SqlConnection con = new SqlConnection(conString);
-
             string query = "SELECT * FROM Teachers WHERE teach_email = @email ";
             SqlCommand command = new SqlCommand(query, con);
             string email = Session["Email"].ToString();
             command.Parameters.AddWithValue("@email", Session["Email"].ToString());
-
-
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable DT = new DataTable();
             DataSet ds = new DataSet();
             da.Fill(DT);
-
-
             string teachID = " ";
             foreach (DataRow dr in DT.Rows)
             {
@@ -134,9 +123,6 @@ namespace M3Proj
         }
 
 
-
-       
-
         protected void datagrid_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.Header)
@@ -198,10 +184,6 @@ namespace M3Proj
             
             }
 
-           
-
-
-
             if (datagrid.SelectedValue != null)
             {
                
@@ -209,8 +191,6 @@ namespace M3Proj
                 Session["rGrade"] = grade;
                 Session["rTerm"] = termNo;
                 Session["rTeachName"] = teachname+"\t"+teachlastname;
-              
-
                 Response.Redirect("/Report2.aspx");
             }
             else {

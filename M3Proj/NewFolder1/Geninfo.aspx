@@ -56,9 +56,10 @@
                                         <p class="text-secondary mb-1"><%= title %></p>
                                         <p class="text-muted font-size-sm"><%=age%> Years Old</p>
                                         <p class="text-muted font-size-sm"><%= Address %></p>
-
-                                        <asp:Button ID="Button1" Text="Report" CssClass="btn btn-outline-primary" runat="server" OnClick="Report_click" />
                                         
+                                        <asp:Button ID="Button2" CssClass="btn btn-outline-primary" runat="server" Text="View Report" OnClick="Button3_Click" />
+                                        <!--<asp:Button ID="Button1" Text="Report" CssClass="btn btn-outline-primary" runat="server" OnClick="Report_click" /> -->
+                                       
                                         <button type="button" id="SubjectButton"  runat="server" class="btn btn-outline-primary">Subject</button>
                                         <button type="button" runat="server" href="~/Account/ManagePassword" class="btn btn-outline-primary">Change Password</button>
                                     </div>
