@@ -197,9 +197,6 @@ namespace M3Proj.NewFolder1
             TextBox41.Visible =true;
             TextBox42.Visible =true;
             TextBox43.Visible =true;
-
-
-
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -281,6 +278,7 @@ namespace M3Proj.NewFolder1
             SqlDataAdapter da1 = new SqlDataAdapter(sqlCommand1);
             SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand3);
 
+            
             da1.Fill(dt);
             sqlData.Fill(table);
             if (table.Rows.Count ==1 || dt.Rows.Count >= 1)
@@ -535,7 +533,7 @@ namespace M3Proj.NewFolder1
             }
                 if (dt.Rows.Count >= 1)
             {
-                MessageBox.Show(Page, "Mark has already added");
+                MessageBox.Show(Page, "Mark has already been added");
             }
             else
             {

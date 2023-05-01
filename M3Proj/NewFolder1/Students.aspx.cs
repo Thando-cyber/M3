@@ -46,10 +46,6 @@ namespace M3Proj
                 teachname = Convert.ToString(dr[1]);
                 teachlastname = Convert.ToString(dr[2]);
             }
-
-
-
-
             string query2 = "SELECT * FROM classes WHERE teacher_id = @Id";
             SqlCommand command2 = new SqlCommand(query2, con);
             command2.Parameters.AddWithValue("@Id", teachID);
@@ -68,23 +64,13 @@ namespace M3Proj
 
 
            
-            /*  string query3 = "SELECT * FROM student WHERE classID = @classId";
-              SqlCommand command3 = new SqlCommand(query3, con);
-              command3.Parameters.AddWithValue("@classID", Session["classID"]);
-              SqlDataAdapter da3 = new SqlDataAdapter(command3);
-              DataTable DT3 = new DataTable();
-              DataSet data = new DataSet();
-
-              da3.Fill(data);*/
-
-
-
-
-
-
-
-
-
+            string query3 = "SELECT * FROM student WHERE classID = @classId";
+            SqlCommand command3 = new SqlCommand(query3, con);
+            command3.Parameters.AddWithValue("@classID", Session["classID"]);
+            SqlDataAdapter da3 = new SqlDataAdapter(command3);
+            DataTable DT3 = new DataTable();
+            DataSet data = new DataSet();
+            da3.Fill(data);
 
         }
 
@@ -115,14 +101,12 @@ namespace M3Proj
                 Session["rFees"] = Convert.ToInt16(dr["stu_Fees"]);
             
             }
-
-           
-
-
-
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 2b491ba2d550170df0c9d99a8fe9006694b125fc
         protected void datagrid_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.Header)
@@ -131,15 +115,10 @@ namespace M3Proj
                 e.Row.Cells[2].Text = "Name";
                 e.Row.Cells[3].Text = "Surname";
                 e.Row.Cells[4].Text = "Email";
-
                 e.Row.Cells[6].Text = "Gender";
                 e.Row.Cells[5].Text = "Age";
                 e.Row.Cells[7].Visible = false;
-
-
             }
-
-
 
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
@@ -160,13 +139,11 @@ namespace M3Proj
             else
             {
                 Response.Write("Please select a row on Gridview");
-
             }
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
             string query = "SELECT * FROM classes WHERE class_id = @Id";
             SqlConnection con = new SqlConnection(conString);
             SqlCommand command = new SqlCommand(query, con);
@@ -181,9 +158,13 @@ namespace M3Proj
             foreach (DataRow dr in dt.Rows) {
                 grade = Convert.ToInt32(dr["grade"]);
                 div = Convert.ToString(dr["Division"]);
+<<<<<<< HEAD
             
             }
 
+=======
+            } 
+>>>>>>> 2b491ba2d550170df0c9d99a8fe9006694b125fc
             if (datagrid.SelectedValue != null)
             {
                

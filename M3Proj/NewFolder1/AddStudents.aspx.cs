@@ -22,10 +22,7 @@ namespace M3Proj.NewFolder1
         public int stunum;
         public int rowNum;
         public int newNum = 0;
-        public string conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";
-
-
-       
+        public string conString = "Data Source = 146.230.177.46; Initial Catalog = GroupPmb2; User ID = GroupPmb2; Password=b45dc2; Integrated Security = False";       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userType"].ToString() == "Administrator")
@@ -52,9 +49,6 @@ namespace M3Proj.NewFolder1
                 AdminContent.Visible=false;
             }
         }
-
-
-
         protected void Upload(object sender, EventArgs e)
         {
             //Access the File using the Name of HTML INPUT File.
@@ -72,7 +66,7 @@ namespace M3Proj.NewFolder1
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            if (FirstName.Text!=""&& lastname.Text!=""&& DOB.Text!="" && addre.Text!="" && stuAge.Text!= "" &&contac.Text!="") {
+            if (FirstName.Text!="" && lastname.Text!="" && DOB.Text!="" && addre.Text!="" && stuAge.Text!= "" && contac.Text!="") {
                 string Password = Convert.ToString(newNum)+"a";
                 string a = Select1.Value;
                 int grade = Convert.ToInt32(a);
@@ -83,12 +77,12 @@ namespace M3Proj.NewFolder1
                 int fees = 5000;
                 string classes = "SELECT * FROM classes WHERE grade=@grade AND Division=@division";
                 string query = "INSERT INTO student(stu_ID,classID,stu_name,stu_surname,stu_address,stu_email,stu_age,stu_gender,stu_Fees,parentContact,DOB) VALUES(@stu_ID,@classID,@stu_name,@stu_surname,@stu_address,@stu_email,@stu_age,@stu_gender,@stu_Fees,@parentContact,@DOB)";
-                //string query2 = "SELECT * FROM student WHERE stu_name=@name AND DOB";
+                string query2 = "SELECT * FROM student WHERE stu_name=@name AND DOB";
                 SqlConnection con = new SqlConnection(conString);
                 SqlCommand sqlCommand = new SqlCommand(query, con);
                 SqlCommand sqlCommand1 = new SqlCommand(classes, con);
-                sqlCommand1.Parameters.AddWithValue("@grade", grade);
-                sqlCommand1.Parameters.AddWithValue("@division", division);
+                sqlCommand1.Parameters.AddWithValue("@grade",grade);
+                sqlCommand1.Parameters.AddWithValue("@division",division);
                 SqlDataAdapter DA = new SqlDataAdapter(sqlCommand1);
                 DataTable dt = new DataTable();
                 DA.Fill(dt);
@@ -96,7 +90,6 @@ namespace M3Proj.NewFolder1
                 {
                     classid= Convert.ToInt32(dr["class_id"]);
                 }
-
                 sqlCommand.Parameters.AddWithValue("@stu_ID", Convert.ToString(newNum));
                 sqlCommand.Parameters.AddWithValue("@classID", classid);
                 sqlCommand.Parameters.AddWithValue("@stu_name", FirstName.Text);
@@ -107,20 +100,18 @@ namespace M3Proj.NewFolder1
                 sqlCommand.Parameters.AddWithValue("@stu_Fees", fees);
                 sqlCommand.Parameters.AddWithValue("@parentContact", contac.Text);
                 sqlCommand.Parameters.AddWithValue("@DOB", DOB.Text);
-                sqlCommand.Parameters.AddWithValue("@stu_gender", lang.Value);
+                sqlCommand.Parameters.AddWithValue("@stu_gender",lang.Value);
                 con.Open();
                 MessageBox.Show(Page, "Student added");
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-                var user = new ApplicationUser() { UserName = email, Email = email };
-                IdentityResult result = manager.Create(user, Password);
+                var user = new ApplicationUser() { UserName =email, Email = email };
+                IdentityResult result = manager.Create(user,Password);
                 if (result.Succeeded)
                 {
-
                     signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                     IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                 }
-
                 sqlCommand.ExecuteNonQuery();
             }
             else
