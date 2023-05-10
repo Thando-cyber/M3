@@ -9,6 +9,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <NameOfLastUsedPublishProfile>C:\Users\Makro\source\repos\M4Proj\M3Proj\Properties\PublishProfiles\registry.hub.docker.com_tnsithole.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugTarget>ContainerToolsProjectDebugExtension</ActiveDebugTarget>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
@@ -30,7 +32,7 @@
           <StartWorkingDirectory>
           </StartWorkingDirectory>
           <EnableENC>True</EnableENC>
-          <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

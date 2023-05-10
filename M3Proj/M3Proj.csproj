@@ -25,6 +25,10 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <Use64BitIISExpress />
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerLaunchUrl>http://{ServiceIPAddress}</DockerLaunchUrl>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -343,13 +347,16 @@
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="NewFolder1\academicResults.rdlc" />
     <Content Include="GroupPmb2DataSet.xsc">
       <DependentUpon>GroupPmb2DataSet.xsd</DependentUpon>
     </Content>
     <Content Include="dsStudent.xsc">
       <DependentUpon>dsStudent.xsd</DependentUpon>
     </Content>
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <None Include="dsStudent.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
