@@ -1,0 +1,40 @@
+name: dockercompose14010094079156319182
+services:
+  m3proj:
+    build:
+      context: C:\Users\Makro\source\repos\M4Proj\M3Proj
+      dockerfile: Dockerfile
+      args:
+        source: obj/Docker/publish/
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: M3Proj
+    container_name: M3Proj
+    entrypoint:
+    - cmd
+    - /c
+    - start /B C:\ServiceMonitor.exe w3svc & C:\remote_debugger\x64\msvsmon.exe /noauth
+      /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn
+      /timeout:2147483646
+    image: m3proj
+    labels:
+      com.microsoft.visual-studio.project-name: M3Proj
+      com.microsoft.visualstudio.debuggee.program: C:\inetpub\wwwroot\bin\M3Proj.dll
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Remote
+        Debugger
+      target: C:\remote_debugger
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose14010094079156319182_default

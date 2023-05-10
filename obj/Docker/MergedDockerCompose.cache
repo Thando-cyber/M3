@@ -1,0 +1,16 @@
+name: dockercompose14010094079156319182
+services:
+  m3proj:
+    build:
+      context: C:\Users\Makro\source\repos\M4Proj\M3Proj
+      dockerfile: Dockerfile
+    image: m3proj
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose14010094079156319182_default

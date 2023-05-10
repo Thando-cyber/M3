@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  m3proj:
+    image: m3proj:dev
+    container_name: M3Proj
+    build:
+      args:
+        source: obj/Docker/empty/
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "M3Proj"
+    volumes:
+      - C:\Users\Makro\source\repos\M4Proj\M3Proj:C:\inetpub\wwwroot
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Remote Debugger:C:\remote_debugger:ro
+    entrypoint: cmd /c "start /B C:\\ServiceMonitor.exe w3svc & C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646"
+
