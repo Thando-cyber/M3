@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  m3proj:
+    image: ${DOCKER_REGISTRY-}m3proj
+    build:
+      context: .\M3Proj
+      dockerfile: Dockerfile
